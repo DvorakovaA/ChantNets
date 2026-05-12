@@ -4,45 +4,41 @@ File containing utility functions for the experiments in this NA project.
 
 import pycantus
 import graph_tool.all as gt
+from collections import Counter
+import numpy as np
 
 
 def construct_bipart_source_feast_graph(corpus):
     """
     """
-    pass
+    g = gt.Graph(directed=False)
+    source_map, feast_map = {}, {}
+    vprop_name = g.new_vertex_property("string")
+    vprop_type = g.new_vertex_property("string")
+    print('Constructing bipartite graph between sources and feasts...')
+
+    for chant in corpus.chants:
+        if chant.srclink not in source_map:
+            source_vertex = g.add_vertex()
+            source_map[chant.srclink] = source_vertex
+            vprop_name[source_vertex] = chant.srclink
+            vprop_type[source_vertex] = 'source'
+
+        if chant.feast not in feast_map:
+            feast_vertex = g.add_vertex()
+            feast_map[chant.feast] = feast_vertex
+            vprop_name[feast_vertex] = chant.feast
+            vprop_type[feast_vertex] = 'feast'
+
+        g.add_edge(source_map[chant.srclink], feast_map[chant.feast])
+
+    g.vp["name"] = vprop_name
+    g.vp["type"] = vprop_type
+    return g
 
 
-def fit_sbm(graph, n_init=10):
-    """
-    Try fitting SBM to the graph using graph-tool's built-in functions
-    multiple times and keep the best result.
-    """
-    # gt.minimize_blockmodel_dl
-    pass
+def save_graph(g, path):
+    """Save graph to file."""
+    g.save(path)
 
-
-def fit_nested_sbm(graph, n_init=10):
-    """
-    Try fitting nested SBM to the graph using graph-tool's built-in functions
-    multiple times and keep the best result.
-    """
-    # gt.minimize_nested_blockmodel_dl
-    pass
-
-def fit_sbm_weighted(graph, weight_label, n_init=10):
-    """
-    Try fitting SBM to the graph using graph-tool's built-in functions
-    multiple times and keep the best result.
-    """
-    # gt.minimize_blockmodel_dl
-    pass
-
-
-def fit_nested_sbm_weighted(graph, weight_label, n_init=10):
-    """
-    Try fitting nested SBM to the graph using graph-tool's built-in functions
-    multiple times and keep the best result.
-    """
-    # gt.minimize_nested_blockmodel_dl
-    pass
 
