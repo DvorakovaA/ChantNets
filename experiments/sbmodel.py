@@ -1,9 +1,11 @@
 """
 
 """
+
 import pickle
 import graph_tool.all as gt
 from collections import defaultdict
+import os
 
 class SBModel:
     """
@@ -65,7 +67,7 @@ class SBModel:
 
         best = min(self.states['Nested_DC_SBM'], key=lambda s: s["model"])
         self.model = best["model"]
-        print(self.states)
+        #print(self.states)
 
     def fit_sbm_weighted(self, weight_label, n_init=10):
         """
@@ -75,7 +77,6 @@ class SBModel:
         # gt.minimize_blockmodel_dl
         pass
 
-
     def fit_nested_sbm_weighted(self, weight_label, n_init=10):
         """
         Try fitting nested SBM to the graph using graph-tool's built-in functions
@@ -83,7 +84,6 @@ class SBModel:
         """
         # gt.minimize_nested_blockmodel_dl
         pass
-
 
     def load_states(self, path):
         """
@@ -95,4 +95,5 @@ class SBModel:
         """
         Save the fitted model to a file.
         """
+        os.makedirs(os.path.dirname(path), exist_ok=True)
         pickle.dump(self.states, open(path, 'wb'))
