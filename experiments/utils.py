@@ -51,8 +51,9 @@ def construct_bipart_source_feast_graph(corpus):
             vprop_type[feast_vertex] = 1
 
         edge = g.add_edge(source_map[source], feast_map[feast])
-        eprop_count[edge] = len(cantus_ids)
-        eprop_weight[edge] = np.log2(len(cantus_ids))
+        count = len(cantus_ids)
+        eprop_count[edge] = count
+        eprop_weight[edge] = 0.5 if count == 1 else np.log2(count)
 
     g.vp["name"] = vprop_name
     g.vp["type"] = vprop_type

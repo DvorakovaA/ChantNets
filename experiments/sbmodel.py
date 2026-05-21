@@ -1,7 +1,3 @@
-"""
-
-"""
-
 import pickle
 import graph_tool.all as gt
 from collections import defaultdict
@@ -71,19 +67,55 @@ class SBModel:
 
     def fit_sbm_weighted(self, weight_label, n_init=10):
         """
-        Try fitting SBM to the graph using graph-tool's built-in functions
-        multiple times and keep the best result.
+        weighted SBM to the graph using graph-tool's built-in functions
         """
-        # gt.minimize_blockmodel_dl
-        pass
+        self.states = defaultdict(list)
+        print(f"Fitting weighted SBM to graph with {self.graph.num_vertices()} vertices and {self.graph.num_edges()} edges...")
 
-    def fit_nested_sbm_weighted(self, weight_label, n_init=10):
+        weight_prop = self.graph.ep[weight_label]
+
+        for i in range(n_init):
+            print(f"Fitting weighted SBM (init {i+1}/{n_init})...")
+
+            args = dict(
+                deg_corr = self.deg_corrected,
+                clabel = self.graph.vp["type"],
+                recs = [weight_prop],
+                rec_types = ["real-normal"])
+
+            state = gt.minimize_blockmodel_dl(self.graph, state_args = args)
+
+            self.states['Weighted_DC_SBM'].append({"state": state, "model": state.entropy()})
+            print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
+
+        best = min(self.states['Weighted_DC_SBM'], key = lambda s: s["model"])
+        self.model = best["model"]
+
+    def fit_nested_sbm_weighted(self, weight_label="weight", n_init=10):
         """
-        Try fitting nested SBM to the graph using graph-tool's built-in functions
-        multiple times and keep the best result.
+        weighted nested SBM to the graph using graph-tool's built-in functions
         """
-        # gt.minimize_nested_blockmodel_dl
-        pass
+        self.states = defaultdict(list)
+        print(f"Fitting weighted nested SBM to graph with {self.graph.num_vertices()} vertices and {self.graph.num_edges()} edges...")
+
+        weight_prop = self.graph.ep[weight_label]
+
+        for i in range(n_init):
+            print(f"Fitting weighted nested SBM (init {i+1}/{n_init})...")
+
+            state = gt.minimize_nested_blockmodel_dl(
+                self.graph,
+                state_args = dict(
+                    deg_corr = self.deg_corrected,
+                    clabel = self.graph.vp["type"],
+                    recs = [weight_prop],
+                    rec_types = ["real-normal"]))
+
+            self.states['Weighted_Nested_DC_SBM'].append({"state": state, "model": state.entropy()})
+            print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
+
+        best = min(self.states['Weighted_Nested_DC_SBM'], key = lambda s: s["model"])
+        self.model = best["model"]
 
     def load_states(self, path):
         """
