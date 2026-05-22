@@ -9,6 +9,7 @@ import numpy as np
 import os
 import networkx as nx
 import itertools
+import pandas as pd
 
 
 def construct_bipart_source_feast_graph(corpus):
@@ -179,3 +180,30 @@ def get_nested_partitions_from_state(state, sigla_dict):
                 feast_partitions[i][partition].append(graph.vp["name"][v])
 
     return partitions, sigla_partitions, feast_partitions
+
+def save_nested_partitions(sigla_partitions, path):
+    """
+    Save the nested partitions to a file.
+    """
+    sigla_rows = defaultdict(list)
+    i = 0
+    for level, sigla_partition in sigla_partitions.items():
+        if len(sigla_partition) == 1:
+            # one partition - all sigla
+            for partition, sigla in sigla_partition.items():
+                for siglum in sigla:
+                    sigla_rows[siglum].append(partition)
+            break
+        for partition, sigla in sigla_partition.items():
+            for siglum in sigla:
+                sigla_rows[siglum].append(partition)
+        i += 1
+    df = pd.DataFrame(columns=['siglum'] + [f'level_{i}' for i in range(i+1)])
+    df['siglum'] = list(sigla_rows.keys())
+    for level in range(i+1):
+        df[f'level_{level}'] = [sigla_rows[siglum][level] if level < len(sigla_rows[siglum]) else None for siglum in df['siglum']]
+
+    # TODO: add renamed partitions so they are like 0, 1, 2 ... in each level, instead of the original partition
+    #       and add them to the df
+    
+    df.to_csv(path, index=False)
