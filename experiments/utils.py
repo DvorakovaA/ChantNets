@@ -148,6 +148,7 @@ def get_nested_partitions_from_state(state, sigla_dict):
     partitions = {}
     sigla_partitions = {}
     feast_partitions = {}
+    """
     for level in state.get_levels():
         partitions[level] = defaultdict(list)
         sigla_partitions[level] = defaultdict(list)
@@ -160,5 +161,21 @@ def get_nested_partitions_from_state(state, sigla_dict):
                 sigla_partitions[level][partition].append(sigla_dict[graph.vp["name"][v]])
             else:
                 feast_partitions[level][partition].append(graph.vp["name"][v])
+
+    return partitions, sigla_partitions, feast_partitions
+    """
+    for i in range(len(state.get_levels())):
+        level = state.project_level(i)
+        partitions[i] = defaultdict(list)
+        sigla_partitions[i] = defaultdict(list)
+        feast_partitions[i] = defaultdict(list)
+        node_map = level.get_blocks()
+        for v in graph.vertices():
+            partition = node_map[v]
+            partitions[i][partition].append(int(v))
+            if graph.vp["type"][v] == 0: # only add sigla for source nodes
+                sigla_partitions[i][partition].append(sigla_dict[graph.vp["name"][v]])
+            else:
+                feast_partitions[i][partition].append(graph.vp["name"][v])
 
     return partitions, sigla_partitions, feast_partitions
