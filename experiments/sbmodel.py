@@ -10,7 +10,7 @@ class SBModel:
     """
     def __init__(self):
         self.graph = None
-        self.model = None
+        self.best_states = {}
         self.n_init = 10
         self.deg_corrected = True
         self.states = defaultdict(list)
@@ -44,7 +44,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['DC_SBM'], key=lambda s: s["model"])
-        self.model = best["model"]
+        self.best_states['DC_SBM'] = best["state"]
 
 
     def fit_nested_sbm(self, n_init=10):
@@ -62,7 +62,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['Nested_DC_SBM'], key=lambda s: s["model"])
-        self.model = best["model"]
+        self.best_states['Nested_DC_SBM'] = best["state"]
         #print(self.states)
 
     def fit_sbm_weighted(self, weight_label, n_init=10):
@@ -89,7 +89,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['Weighted_DC_SBM'], key = lambda s: s["model"])
-        self.model = best["model"]
+        self.best_states['Weighted_DC_SBM'] = best["state"]
 
     def fit_nested_sbm_weighted(self, weight_label="weight", n_init=10):
         """
@@ -115,17 +115,13 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['Weighted_Nested_DC_SBM'], key = lambda s: s["model"])
-        self.model = best["model"]
-
-    def load_states(self, path):
-        """
-        Load a previously fitted model.
-        """
-        self.states = pickle.load(open(path, 'rb'))
+        self.best_states['Weighted_Nested_DC_SBM'] = best['state']
     
+
     def save_states(self, path):
         """
-        Save the fitted model to a file.
+        Save the fitted best state to a file.
         """
         os.makedirs(os.path.dirname(path), exist_ok=True)
-        pickle.dump(self.states, open(path, 'wb'))
+        pickle.dump(self.best_states, open(path, 'wb'))
+    

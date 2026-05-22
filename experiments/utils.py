@@ -7,6 +7,9 @@ import graph_tool.all as gt
 from collections import defaultdict
 import numpy as np
 import os
+import networkx as nx
+import itertools
+
 
 def construct_bipart_source_feast_graph(corpus):
     """
@@ -71,3 +74,60 @@ def save_graph(g, path):
     """Save graph to file."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
     g.save(path)
+
+
+def build_feast_network(corpus, feast):
+    # Build the network
+    G = nx.Graph(name=feast)
+    for source in corpus.sources:
+        G.add_node(source.srclink, name=source.siglum)
+    source_chants = defaultdict(set)
+    for chant in corpus.chants:
+        source_chants[chant.srclink].add(chant.cantus_id)
+    for source1, source2 in itertools.combinations(corpus.sources, 2):
+        shared_chants = source_chants[source1.srclink] & source_chants[source2.srclink]
+        #print(f'{source1.siglum} and {source2.siglum} share {len(shared_chants)} chants')
+        if shared_chants:
+            jaccard = len(shared_chants) / len(source_chants[source1.srclink] | source_chants[source2.srclink])
+            G.add_edge(source1.srclink, source2.srclink, weight=jaccard)
+    return G
+
+
+def graph_info_nx(G, fast = False):
+    """
+    Print basic info about a NetworkX graph.
+    """
+    print("{:>12s} | '{:s}'".format('Graph', G.name))
+
+    n = G.number_of_nodes()
+    m = G.number_of_edges()
+    
+    print("{:>12s} | {:,d} ({:,d})".format('Nodes', n, nx.number_of_isolates(G)))
+    print("{:>12s} | {:,d} ({:,d})".format('Edges', m, nx.number_of_selfloops(G)))
+    print("{:>12s} | {:.2f} ({:,d})".format('Degree', 2 * m / n, max([k for _, k in G.degree()])))
+
+    if not fast:
+        C = sorted(nx.connected_components(nx.MultiGraph(G)), key = len, reverse = True)
+
+        print("{:>12s} | {:.1f}% ({:,d})".format('Components', 100 * len(C[0]) / n, len(C)))
+
+        print("{:>12s} | {:.4f}".format('Clustering', nx.average_clustering(G if type(G) == nx.Graph else nx.Graph(G))))
+        
+        C = nx.community.louvain_communities(G, weight = 'weight')
+        Q = nx.community.modularity(G, C, weight = 'weight')
+        
+        print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
+    print()
+
+
+def get_partitions_from_state(state):
+    """
+    Get the partition of nodes from a graph-tool state object.
+    """
+    node_map = state.get_blocks()
+    graph = node_map.get_graph()
+    partitions = defaultdict(list)
+    for v in graph.vertices():
+        partition = node_map[v]
+        partitions[partition].append(int(v))
+    return partitions
