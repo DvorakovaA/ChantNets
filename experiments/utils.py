@@ -56,7 +56,7 @@ def construct_bipart_source_feast_graph(corpus):
         edge = g.add_edge(source_map[source], feast_map[feast])
         count = len(cantus_ids)
         eprop_count[edge] = count
-        eprop_weight[edge] = 0.5 if count == 1 else np.log2(count)
+        eprop_weight[edge] = 0.5 if count == 1 else np.log2(count) # setting weight to 0.5 when only one chant
 
     g.vp["name"] = vprop_name
     g.vp["type"] = vprop_type
@@ -120,14 +120,45 @@ def graph_info_nx(G, fast = False):
     print()
 
 
-def get_partitions_from_state(state):
+def get_partitions_from_state(state, sigla_dict):
     """
     Get the partition of nodes from a graph-tool state object.
     """
     node_map = state.get_blocks()
     graph = node_map.get_graph()
     partitions = defaultdict(list)
+    sigla_partitions = defaultdict(list)
+    feast_partitions = defaultdict(list)
     for v in graph.vertices():
         partition = node_map[v]
         partitions[partition].append(int(v))
-    return partitions
+        if graph.vp["type"][v] == 0: # only add sigla for source nodes
+            sigla_partitions[partition].append(sigla_dict[graph.vp["name"][v]])
+        else:
+            feast_partitions[partition].append(graph.vp["name"][v])
+    return partitions, sigla_partitions, feast_partitions
+
+
+def get_nested_partitions_from_state(state, sigla_dict):
+    """
+    Get the nested partition of nodes from a graph-tool state object.
+    """
+    node_map = state.get_levels()[0].get_blocks() # get node map from first level of nested SBM
+    graph = node_map.get_graph()
+    partitions = {}
+    sigla_partitions = {}
+    feast_partitions = {}
+    for level in state.get_levels():
+        partitions[level] = defaultdict(list)
+        sigla_partitions[level] = defaultdict(list)
+        feast_partitions[level] = defaultdict(list)
+        node_map = level.get_blocks()
+        for v in graph.vertices():
+            partition = node_map[v]
+            partitions[level][partition].append(int(v))
+            if graph.vp["type"][v] == 0: # only add sigla for source nodes
+                sigla_partitions[level][partition].append(sigla_dict[graph.vp["name"][v]])
+            else:
+                feast_partitions[level][partition].append(graph.vp["name"][v])
+
+    return partitions, sigla_partitions, feast_partitions
