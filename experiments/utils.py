@@ -10,7 +10,10 @@ import os
 import networkx as nx
 import itertools
 import pandas as pd
+import json
+from pathlib import Path
 
+# ~ GRAPH CONSTRUCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def construct_bipart_source_feast_graph(corpus):
     """
@@ -94,32 +97,7 @@ def build_feast_network(corpus, feast):
     return G
 
 
-def graph_info_nx(G, fast = False):
-    """
-    Print basic info about a NetworkX graph.
-    """
-    print("{:>12s} | '{:s}'".format('Graph', G.name))
-
-    n = G.number_of_nodes()
-    m = G.number_of_edges()
-    
-    print("{:>12s} | {:,d} ({:,d})".format('Nodes', n, nx.number_of_isolates(G)))
-    print("{:>12s} | {:,d} ({:,d})".format('Edges', m, nx.number_of_selfloops(G)))
-    print("{:>12s} | {:.2f} ({:,d})".format('Degree', 2 * m / n, max([k for _, k in G.degree()])))
-
-    if not fast:
-        C = sorted(nx.connected_components(nx.MultiGraph(G)), key = len, reverse = True)
-
-        print("{:>12s} | {:.1f}% ({:,d})".format('Components', 100 * len(C[0]) / n, len(C)))
-
-        print("{:>12s} | {:.4f}".format('Clustering', nx.average_clustering(G if type(G) == nx.Graph else nx.Graph(G))))
-        
-        C = nx.community.louvain_communities(G, weight = 'weight')
-        Q = nx.community.modularity(G, C, weight = 'weight')
-        
-        print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
-    print()
-
+#~ SBM PARTITION EXTRACTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def get_partitions_from_state(state, sigla_dict):
     """
@@ -181,6 +159,7 @@ def get_nested_partitions_from_state(state, sigla_dict):
 
     return partitions, sigla_partitions, feast_partitions
 
+
 def save_nested_partitions(sigla_partitions, path):
     """
     Save the nested partitions to a file.
@@ -218,3 +197,74 @@ def save_nested_partitions(sigla_partitions, path):
 
     print(f"Saved nested partitions to {path}")
     return df
+
+#~ DENDROGRAMS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+def insert_child(node, levels, leaf_name):
+    """
+    Recursively insert node into hierarchy.
+    """
+    if not levels:
+        node.setdefault("children", []).append({"name": leaf_name})
+        return
+
+    level = str(levels[0])
+    children = node.setdefault("children", [])
+    for child in children:
+        if child["name"] == level:
+            insert_child(child, levels[1:], leaf_name)
+            return
+
+    new_child = {"name": level, "children": []}
+    children.append(new_child)
+    insert_child(new_child, levels[1:], leaf_name)
+
+
+def build_hierarchy(df):
+    """
+    Build nested dict from pandas Dataframe.
+    """
+    root = {"name": "root", "children": []}
+    for _, row in df.iterrows():
+        levels = [row["level2_new"], row["level1_new"], row["level0_new"]]
+        insert_child(root, levels, row["siglum"])
+    return root
+
+def get_dendro_json(input_csv, columns, output_path):
+    """
+    Get the dendrogram JSON from CSV file and save it to a file.
+    """
+    df = pd.read_csv(input_csv, usecols=columns)
+    tree = build_hierarchy(df)
+
+    with open(output_path, "w") as f:
+        json.dump(tree, f, indent=2)
+
+
+
+# ~ GRAPH INFO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+def graph_info_nx(G, fast = False):
+    """
+    Print basic info about a NetworkX graph.
+    """
+    print("{:>12s} | '{:s}'".format('Graph', G.name))
+
+    n = G.number_of_nodes()
+    m = G.number_of_edges()
+    
+    print("{:>12s} | {:,d} ({:,d})".format('Nodes', n, nx.number_of_isolates(G)))
+    print("{:>12s} | {:,d} ({:,d})".format('Edges', m, nx.number_of_selfloops(G)))
+    print("{:>12s} | {:.2f} ({:,d})".format('Degree', 2 * m / n, max([k for _, k in G.degree()])))
+
+    if not fast:
+        C = sorted(nx.connected_components(nx.MultiGraph(G)), key = len, reverse = True)
+
+        print("{:>12s} | {:.1f}% ({:,d})".format('Components', 100 * len(C[0]) / n, len(C)))
+
+        print("{:>12s} | {:.4f}".format('Clustering', nx.average_clustering(G if type(G) == nx.Graph else nx.Graph(G))))
+        
+        C = nx.community.louvain_communities(G, weight = 'weight')
+        Q = nx.community.modularity(G, C, weight = 'weight')
+        
+        print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
+    print()
