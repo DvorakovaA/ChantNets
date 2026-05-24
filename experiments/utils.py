@@ -185,25 +185,36 @@ def save_nested_partitions(sigla_partitions, path):
     """
     Save the nested partitions to a file.
     """
-    sigla_rows = defaultdict(list)
-    i = 0
-    for level, sigla_partition in sigla_partitions.items():
-        if len(sigla_partition) == 1:
-            # one partition - all sigla
-            for partition, sigla in sigla_partition.items():
-                for siglum in sigla:
-                    sigla_rows[siglum].append(partition)
-            break
-        for partition, sigla in sigla_partition.items():
-            for siglum in sigla:
-                sigla_rows[siglum].append(partition)
-        i += 1
-    df = pd.DataFrame(columns=['siglum'] + [f'level_{i}' for i in range(i+1)])
-    df['siglum'] = list(sigla_rows.keys())
-    for level in range(i+1):
-        df[f'level_{level}'] = [sigla_rows[siglum][level] if level < len(sigla_rows[siglum]) else None for siglum in df['siglum']]
+    sigla_rows = defaultdict(dict)
 
-    # TODO: add renamed partitions so they are like 0, 1, 2 ... in each level, instead of the original partition
-    #       and add them to the df
-    
-    df.to_csv(path, index=False)
+    for level, sigla_partition in sigla_partitions.items():
+        for partition, sigla_list in sigla_partition.items():
+            for siglum in sigla_list:
+                sigla_rows[siglum][level] = partition
+
+    max_level = max(
+        max(levels.keys())
+        for levels in sigla_rows.values()
+        if levels)
+
+    df = pd.DataFrame({"siglum": list(sigla_rows.keys())})
+
+    for level in range(max_level + 1):
+        df[f"level_{level}"] = [
+            sigla_rows[siglum].get(level, None)
+            for siglum in df["siglum"]]
+
+    for level in range(max_level + 1):
+        old_col = f"level_{level}"
+        new_col = f"level{level}_new"
+
+        values = sorted(df[old_col].dropna().unique())
+        mapping = {old_value: new_value for new_value, old_value in enumerate(values)}
+
+        df[new_col] = df[old_col].map(mapping)
+
+    os.makedirs(os.path.dirname(path), exist_ok = True)
+    df.to_csv(path, index = False)
+
+    print(f"Saved nested partitions to {path}")
+    return df
