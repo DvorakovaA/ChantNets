@@ -2,6 +2,7 @@ import pickle
 import graph_tool.all as gt
 from collections import defaultdict
 import os
+import networkx as nx
 
 class SBModel:
     """
@@ -20,6 +21,27 @@ class SBModel:
         Load a graph from a file.
         """
         self.graph = gt.load_graph(path)
+        print(f"Loaded graph with {self.graph.num_vertices()} vertices, {self.graph.num_edges()} edges")
+    
+    def load_states(self, path):
+        """
+        Load fitted states from a file.
+        """
+        self.best_states = pickle.load(open(path, 'rb'))
+    
+    def load_graph_nx(self, G):
+        """
+        Load a graph from a networkx graph.
+        """
+        g = gt.Graph(directed=G.is_directed())
+        vprop_name = g.new_vertex_property("string")
+        eprop_count = g.new_edge_property("int")
+        eprop_weight = g.new_edge_property("double")
+        for v in G.nodes():
+            
+
+        
+        self.graph = g
         print(f"Loaded graph with {self.graph.num_vertices()} vertices, {self.graph.num_edges()} edges")
 
     def get_states(self):

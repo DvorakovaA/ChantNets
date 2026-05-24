@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>Manuscript dendrogram – circular A4 (colored top branches)</title>
+<link rel="stylesheet" href="charterfont/charter.css"/>
+<style>
+    body {
+        margin: 0;
+        font: 10px/1.3 sans-serif;
+        font-family: "Charter", serif; /* ← change this */
+    }
+
+    #controls {
+        position: fixed;
+        top: 6px;
+        left: 6px;
+        z-index: 10;
+        background: #fff;
+        padding: 3px 6px;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .15)
+    }
+
+    #controls button {
+        margin-right: 4px;
+        font-size: 11px;
+        cursor: pointer
+    }
+
+    .link {
+        fill: none;
+        stroke-opacity: .35;
+        stroke-width: 1px
+    }
+
+    .leaf circle {
+        stroke: #333;
+        stroke-width: .4px
+    }
+</style>
+<body>
+<div id="controls">
+    <button id="save_svg">Save SVG</button>
+    <button id="save_pdf">Save PDF</button>
+</div>
+<svg id="dendro"></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- jsPDF + svg2pdf for client‑side PDF generation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/svg2pdf.js/1.4.0/svg2pdf.umd.min.js"></script>
+<script>
+    (async () => {
+        const BRANCH_COLORS = [
+            '#1f77b4',   // branch 1
+            '#ff7f0e',   // branch 2
+            '#2ca02c',   // branch 3
+            '#d62728'    // branch 4
+        ];
+
+        const PX_PER_MM = 96 / 25.4;
+        const W = 297 * PX_PER_MM;
+        const H = 210 * PX_PER_MM;
+        const R = Math.min(W, H) / 2 - 50;   // 50 px margin for labels
+
+        const data = await d3.json('nested_dc_sbm_dendro_20_min_100_cols4.json');
+        const root = d3.hierarchy(data, d => d.children);
+        d3.cluster().size([2 * Math.PI, R])(root);
+
+        function capitalizeFirstLetter(val) {
+            return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+        }
+
+        const levelRadii = Array.from(
+            new Set(
+                root.descendants()
+                    .filter(d => d.depth > 0 && d.children)   // skip the centre and leaves
+                    .map(d => d.y)
+            )
+        ).sort((a, b) => a - b);          // e.g.  [0.5 R, …]
+
+        const circleLevels = levelRadii.slice(0, 3);
+        const levelLabels = ['b\u00B2', 'b\u00B9', 'b\u2070']; // b⁰, b¹, b²
+
+
+        root.children.forEach((c, i) => c.branchIndex = i);
+        const branchIndex = n => (n.depth > 1 ? branchIndex(n.parent) : n.branchIndex);
+        const color = d3.scaleOrdinal().domain(d3.range(BRANCH_COLORS.length)).range(BRANCH_COLORS);
+
+        const toXY = (a, r) => [r * Math.cos(a - Math.PI / 2), r * Math.sin(a - Math.PI / 2)];
+
+        const svg = d3.select('#dendro')
+            .attr('viewBox', [-W / 2, -H / 2, W, H])
+            .attr('width', W)
+            .attr('height', H);
+        const g = svg.append('g');
+
+
+        const guides = g.append('g');
+
+// Filled concentric level circles (L0, L1, L2)
+        guides.selectAll('circle.level')
+            .data(circleLevels)
+            .join('circle')
+            .attr('class', 'level')
+            .attr('r', d => d)
+            .attr('fill', '#999')
+            .attr('fill-opacity', (d, i) => 0.1) // progressively darker
+            .attr('stroke', 'none');
+
+// Add labels to L0-L2 levels
+        const LABEL_NUDGE = 3;
+        guides.selectAll('text.level-label')
+            .data(circleLevels)
+            .join('text')
+            .attr('class', 'level-label')
+            .attr('font-size', 15)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'middle')
+            .attr('transform', (d, i) => {
+                const [x, y] = toXY(0, d - 52);  // slightly inside the circle
+                return `translate(${x},${y})`;
+            })
+
+            .each(function (d, i) {
+                d3.select(this)
+                    .html(null)
+                    .append('tspan')
+                    .text('b')
+                    .attr('font-weight', 'bold')
+                    .attr('font-size', '15px');
+
+                d3.select(this)
+                    .append('tspan')
+                    .text(levelLabels[i].slice(1))
+                    .attr('baseline-shift', 'super')
+                    .attr('font-weight', 'lighter')
+                    .attr('font-size', '15px')
+                    .attr('dx', '-2px')
+                    .attr('dy', '2px');
+            });
+
+
+// Outer Node-Level circle
+        const maxLeafRadius = d3.max(root.leaves(), d => d.y);
+        const nodeLevelRadius = maxLeafRadius + 10;
+
+        guides.append('circle')
+            .attr('r', nodeLevelRadius - 6)
+            .attr('fill', '#000')
+            .attr('fill-opacity', 0.1)
+
+// Optional label for Node-Level "N"
+        guides.append('text')
+            .attr('font-size', 15)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'baseline')
+            .attr('transform', () => {
+                const [x, y] = toXY(0, nodeLevelRadius - 60);
+                return `translate(${x},${y})`;
+            })
+            .attr('font-weight', "bold")
+            .text('M');
+
+        /* links */
+        g.append('g').selectAll('path').data(root.links()).join('path')
+            .attr('class', 'link')
+            .attr('fill', 'none')                // ensure Illustrator/LaTeX keep paths open
+            .attr('stroke', d => color(branchIndex(d.target)))
+            .attr('stroke-width', 0.9)
+            .attr('d', d3.linkRadial().angle(d => d.x).radius(d => d.y));
+
+
+        const leaves = root.leaves();
+        g.append('g').selectAll('circle').data(leaves).join('circle')
+            .attr('r', 2.4)
+            .attr('fill', d => color(branchIndex(d)))
+            .attr('transform', d => `translate(${toXY(d.x, d.y)})`);
+
+
+        const OFFSET = 6, FONT = 10;
+        const labels = g.append('g').selectAll('text').data(leaves).join('text')
+            .attr('font-size', FONT)
+            .attr('alignment-baseline', 'middle')
+            .attr('fill', d => color(branchIndex(d)))
+            .each(function (d) {
+                placeLabel(this, d, OFFSET);
+            })
+            .clone(true).lower().attr('stroke', 'white');
+
+        function placeLabel(node, d, extra) {
+            const ang = d.x, rad = d.y + extra;
+            const [x, y] = toXY(ang, rad);
+            let deg = ang * 180 / Math.PI - 90;
+            const flip = deg > 90 || deg < -90;
+            if (flip) deg += 180;
+            d3.select(node)
+                .attr('transform', `translate(${x},${y}) rotate(${deg})`)
+                .attr('text-anchor', flip ? 'end' : 'start')
+                .text(capitalizeFirstLetter(d.data.name));
+        }
+
+        await new Promise(r => requestAnimationFrame(r));
+        const items = labels.nodes().map((n, i) => ({node: n, leaf: leaves[i], r: OFFSET}));
+        const ITER = 4, STEP = 4;
+        const bbox = n => n.getBBox();
+        for (let k = 0; k < ITER; k++) {
+            let moved = false;
+            for (let i = 0; i < items.length; i++) {
+                for (let j = i + 1; j < items.length; j++) {
+                    const A = bbox(items[i].node), B = bbox(items[j].node);
+                    if (!(A.x2 < B.x1 || B.x2 < A.x1 || A.y2 < B.y1 || B.y2 < A.y1)) {
+                        items[i].r += STEP;
+                        items[j].r += STEP;
+                        moved = true;
+                        placeLabel(items[i].node, items[i].leaf, items[i].r);
+                        placeLabel(items[j].node, items[j].leaf, items[j].r);
+                    }
+                }
+            }
+            if (!moved) break;
+        }
+
+        // SVG
+        document.getElementById('save_svg').onclick = () => {
+            const blob = new Blob([new XMLSerializer().serializeToString(svg.node())], {type: 'image/svg+xml'});
+            downloadBlob(blob, 'nested_dc_sbm_dendro_20_min_100_cols4.svg');
+        };
+
+        // PDF (vector)
+        document.getElementById('save_pdf').onclick = () => {
+            const {jsPDF} = window.jspdf;
+            const pdf = new jsPDF({orientation: 'landscape', unit: 'mm', format: 'a4'});
+            window.svg2pdf(svg.node(), pdf, {x: 0, y: 0, width: 297, height: 210});
+            pdf.save('nested_dc_sbm_dendro_20_min_100_cols4.pdf');
+        };
+
+        function downloadBlob(blob, filename) {
+            const url = URL.createObjectURL(blob);
+            const a = Object.assign(document.createElement('a'), {href: url, download: filename});
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    })();
+</script>

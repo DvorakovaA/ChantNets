@@ -307,5 +307,5 @@ def compare_edge_overlap(G1, G2, threshold = 0.0):
         "edges_2": len(edges2),
         "shared_edges": len(shared_edges),
         "all_edges": len(all_edges),
-        "edge_overlap": overlap
+        f"edge_overlap_{threshold}": overlap
     }
