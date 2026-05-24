@@ -97,7 +97,7 @@ def build_feast_network(corpus, feast):
     return G
 
 
-#~ SBM PARTITION EXTRACTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~ SBM PARTITION EXTRACTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 def get_partitions_from_state(state, sigla_dict):
     """
@@ -198,7 +198,7 @@ def save_nested_partitions(sigla_partitions, path):
     print(f"Saved nested partitions to {path}")
     return df
 
-#~ DENDROGRAMS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~ DENDROGRAMS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def insert_child(node, levels, leaf_name):
     """
     Recursively insert node into hierarchy.
@@ -268,3 +268,44 @@ def graph_info_nx(G, fast = False):
         
         print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
     print()
+
+
+# ~ For comparing graphs using pairs of edges
+
+def thresholded_edges(G, threshold = 0.0):
+    """
+    Return edges whose weight is at least threshold
+    """
+    edges = set()
+
+    for u, v, data in G.edges(data = True):
+        weight = data.get("weight", 1)
+
+        if weight >= threshold:
+            edges.add(tuple(sorted((u, v))))
+
+    return edges
+
+
+def compare_edge_overlap(G1, G2, threshold = 0.0):
+    """
+    Compare two feast networks by edge overlap.
+    """
+    edges1 = thresholded_edges(G1, threshold)
+    edges2 = thresholded_edges(G2, threshold)
+
+    shared_edges = edges1 & edges2
+    all_edges = edges1|edges2
+
+    overlap = len(shared_edges)/len(all_edges) if len(all_edges) > 0 else 0
+
+    return {
+        "network_1": G1.name,
+        "network_2": G2.name,
+        "threshold": threshold,
+        "edges_1": len(edges1),
+        "edges_2": len(edges2),
+        "shared_edges": len(shared_edges),
+        "all_edges": len(all_edges),
+        "edge_overlap": overlap
+    }
