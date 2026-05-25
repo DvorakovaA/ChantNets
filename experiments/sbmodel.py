@@ -34,13 +34,28 @@ class SBModel:
         Load a graph from a networkx graph.
         """
         g = gt.Graph(directed=G.is_directed())
+        source_map = {}
         vprop_name = g.new_vertex_property("string")
+        vprop_type = g.new_vertex_property("int")
         eprop_count = g.new_edge_property("int")
         eprop_weight = g.new_edge_property("double")
-        for v in G.nodes():
-            
 
-        
+        for v in G.nodes():
+            source_vertex = g.add_vertex()
+            source_map[v] = source_vertex
+            vprop_name[source_vertex] = v
+            vprop_type[source_vertex] = 0 # for compatibility with infering functions
+
+        for u, v, data in G.edges(data=True):
+            e = g.add_edge(source_map[u], source_map[v])
+            eprop_count[e] = data.get("count", 1) # should not call default
+            eprop_weight[e] = data.get("weight", 0.0)
+            
+        g.vp["name"] = vprop_name
+        g.vp["type"] = vprop_type
+        g.ep["count"] = eprop_count
+        g.ep["weight"] = eprop_weight
+
         self.graph = g
         print(f"Loaded graph with {self.graph.num_vertices()} vertices, {self.graph.num_edges()} edges")
 
@@ -103,7 +118,7 @@ class SBModel:
                 deg_corr = self.deg_corrected,
                 clabel = self.graph.vp["type"],
                 recs = [weight_prop],
-                rec_types = ["real-normal"])
+                rec_types = ["real-exponential"])
 
             state = gt.minimize_blockmodel_dl(self.graph, state_args = args)
 
@@ -131,7 +146,7 @@ class SBModel:
                     deg_corr = self.deg_corrected,
                     clabel = self.graph.vp["type"],
                     recs = [weight_prop],
-                    rec_types = ["real-normal"]))
+                    rec_types = ["real-exponential"]))
 
             self.states['Weighted_Nested_DC_SBM'].append({"state": state, "model": state.entropy()})
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")

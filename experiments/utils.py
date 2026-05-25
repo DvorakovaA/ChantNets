@@ -309,3 +309,14 @@ def compare_edge_overlap(G1, G2, threshold = 0.0):
         "all_edges": len(all_edges),
         f"edge_overlap_{threshold}": overlap
     }
+
+# ~ Comparing SBM partitions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+def networks_reduction_on_shared_nodes(G1, G2):
+    """
+    Reduce two graphs to their shared nodes.
+    """
+    shared_nodes = set(G1.nodes()) & set(G2.nodes())
+    G1_reduced = G1.subgraph(shared_nodes).copy()
+    G2_reduced = G2.subgraph(shared_nodes).copy()
+    return G1_reduced, G2_reduced
