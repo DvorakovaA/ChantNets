@@ -53,6 +53,8 @@ https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123724 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123610 https://pemdatabase.eu/source/62867 {'weight': 0.125}
+https://cantusdatabase.org/source/123610 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123610 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123610 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -61,6 +63,7 @@ https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123610 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123610 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://cantusdatabase.org/source/123610 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123610 https://cantusbohemiae.cz/source/4478 {'weight': 0.5}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -114,6 +117,8 @@ https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123617 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123617 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123617 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123617 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -122,6 +127,7 @@ https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123617 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123617 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123617 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123617 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123617 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -174,6 +180,8 @@ https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123713 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123713 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123713 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123713 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -182,6 +190,7 @@ https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123713 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123713 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123713 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123713 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123713 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -233,6 +242,8 @@ https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123606 https://pemdatabase.eu/source/62867 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123606 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123606 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123606 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -241,6 +252,7 @@ https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123606 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123606 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123606 https://pemdatabase.eu/source/97935 {'weight': 0.5}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123606 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -297,6 +309,8 @@ https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123766 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123724 {'weight': 0.25}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123641 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123727 https://pemdatabase.eu/source/62867 {'weight': 0.1111111111111111}
+https://cantusdatabase.org/source/123727 https://pemdatabase.eu/source/47990 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123727 https://cantusplanus.pl/source/14397 {'weight': 0.25}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123708 {'weight': 0.2}
 https://cantusdatabase.org/source/123727 https://cantusplanus.pl/source/21018 {'weight': 0.16666666666666666}
@@ -305,6 +319,7 @@ https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123727 https://cantusplanus.pl/source/13720 {'weight': 0.2}
 https://cantusdatabase.org/source/123727 https://cantus.sk/source/2284 {'weight': 0.25}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123706 {'weight': 0.2}
+https://cantusdatabase.org/source/123727 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123645 {'weight': 0.25}
 https://cantusdatabase.org/source/123727 https://cantusbohemiae.cz/source/4478 {'weight': 0.4}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123594 {'weight': 0.25}
@@ -354,6 +369,8 @@ https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123730 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123730 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123730 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123730 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -362,6 +379,7 @@ https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123730 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123730 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123730 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123730 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123730 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -410,6 +428,8 @@ https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123724 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123612 https://pemdatabase.eu/source/62867 {'weight': 0.2857142857142857}
+https://cantusdatabase.org/source/123612 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123612 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123612 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -418,6 +438,7 @@ https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123612 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123612 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://cantusdatabase.org/source/123612 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123612 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
 https://cantusdatabase.org/source/123612 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -465,6 +486,8 @@ https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123637 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123637 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123637 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123637 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -473,6 +496,7 @@ https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123637 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123637 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123637 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123637 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123637 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -523,6 +547,8 @@ https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123654 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123654 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123654 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123654 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -531,6 +557,7 @@ https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123654 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123654 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123654 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123654 https://cantusbohemiae.cz/source/4478 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123654 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -576,6 +603,8 @@ https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123614 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123614 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123614 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123614 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -584,6 +613,7 @@ https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123614 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123614 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123614 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123614 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123614 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -632,6 +662,8 @@ https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123655 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123655 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123655 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123655 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -640,6 +672,7 @@ https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123655 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123655 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123655 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123655 https://cantusbohemiae.cz/source/4478 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123655 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -683,6 +716,8 @@ https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123660 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123660 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123660 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123660 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -691,6 +726,7 @@ https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123660 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123660 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123660 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123660 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123660 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -733,6 +769,8 @@ https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123649 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123649 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123649 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123649 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -741,6 +779,7 @@ https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123649 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123649 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123649 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123649 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -786,6 +825,8 @@ https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123667 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123667 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123667 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123667 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -794,6 +835,7 @@ https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123667 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123667 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123667 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123667 https://cantusbohemiae.cz/source/4478 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123667 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -853,6 +895,8 @@ https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123766 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123724 {'weight': 0.25}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123641 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123664 https://pemdatabase.eu/source/62867 {'weight': 0.25}
+https://cantusdatabase.org/source/123664 https://pemdatabase.eu/source/47990 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123664 https://cantusplanus.pl/source/14397 {'weight': 0.25}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123664 https://cantusplanus.pl/source/21018 {'weight': 0.16666666666666666}
@@ -863,6 +907,7 @@ https://cantusdatabase.org/source/123664 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123671 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123605 {'weight': 0.2}
+https://cantusdatabase.org/source/123664 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123645 {'weight': 0.25}
 https://cantusdatabase.org/source/123664 https://cantusbohemiae.cz/source/4478 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123594 {'weight': 0.25}
@@ -911,6 +956,8 @@ https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123766 {'weight': 0.2222222222222222}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123724 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123665 https://pemdatabase.eu/source/62867 {'weight': 0.2}
+https://cantusdatabase.org/source/123665 https://pemdatabase.eu/source/47990 {'weight': 0.125}
 https://cantusdatabase.org/source/123665 https://cantusplanus.pl/source/14397 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123665 https://cantusplanus.pl/source/21018 {'weight': 0.125}
@@ -921,6 +968,7 @@ https://cantusdatabase.org/source/123665 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123706 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123671 {'weight': 0.125}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123605 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123665 https://pemdatabase.eu/source/97935 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123645 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123665 https://cantusbohemiae.cz/source/4478 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123594 {'weight': 0.16666666666666666}
@@ -964,6 +1012,8 @@ https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123766 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123724 {'weight': 0.2}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123641 {'weight': 0.125}
+https://cantusdatabase.org/source/123723 https://pemdatabase.eu/source/62867 {'weight': 0.375}
+https://cantusdatabase.org/source/123723 https://pemdatabase.eu/source/47990 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123723 https://cantusplanus.pl/source/14397 {'weight': 0.2}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123708 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123723 https://cantusplanus.pl/source/21018 {'weight': 0.14285714285714285}
@@ -972,6 +1022,7 @@ https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123723 https://cantusplanus.pl/source/13720 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123723 https://cantus.sk/source/2284 {'weight': 0.2}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123723 https://pemdatabase.eu/source/97935 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123645 {'weight': 0.2}
 https://cantusdatabase.org/source/123723 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123594 {'weight': 0.2}
@@ -1034,6 +1085,8 @@ https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123724 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123750 https://pemdatabase.eu/source/62867 {'weight': 0.2857142857142857}
+https://cantusdatabase.org/source/123750 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123750 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123750 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -1042,6 +1095,7 @@ https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123750 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123750 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://cantusdatabase.org/source/123750 https://pemdatabase.eu/source/97935 {'weight': 0.4}
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123750 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
 https://cantusdatabase.org/source/123750 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -1078,6 +1132,8 @@ https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123717 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123717 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123717 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123717 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1086,6 +1142,7 @@ https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123717 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123717 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123717 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123717 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123717 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1124,6 +1181,8 @@ https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123626 
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusbohemiae.cz/source/28509 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusbohemiae.cz/source/28509 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusbohemiae.cz/source/28509 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusbohemiae.cz/source/28509 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1132,6 +1191,7 @@ https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123756 
 https://cantusbohemiae.cz/source/28509 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusbohemiae.cz/source/28509 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusbohemiae.cz/source/28509 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusbohemiae.cz/source/28509 https://cantusbohemiae.cz/source/4478 {'weight': 0.6666666666666666}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1166,6 +1226,8 @@ https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123626 
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusbohemiae.cz/source/28488 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusbohemiae.cz/source/28488 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusbohemiae.cz/source/28488 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusbohemiae.cz/source/28488 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1174,6 +1236,7 @@ https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123756 
 https://cantusbohemiae.cz/source/28488 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusbohemiae.cz/source/28488 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusbohemiae.cz/source/28488 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusbohemiae.cz/source/28488 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusbohemiae.cz/source/28488 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1220,6 +1283,8 @@ https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123674 {'
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123766 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123724 {'weight': 0.14285714285714285}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123641 {'weight': 0.1}
+https://cantusplanus.pl/source/22868 https://pemdatabase.eu/source/62867 {'weight': 0.18181818181818182}
+https://cantusplanus.pl/source/22868 https://pemdatabase.eu/source/47990 {'weight': 0.1111111111111111}
 https://cantusplanus.pl/source/22868 https://cantusplanus.pl/source/14397 {'weight': 0.14285714285714285}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123708 {'weight': 0.125}
 https://cantusplanus.pl/source/22868 https://cantusplanus.pl/source/21018 {'weight': 0.1111111111111111}
@@ -1228,6 +1293,7 @@ https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123756 {'
 https://cantusplanus.pl/source/22868 https://cantusplanus.pl/source/13720 {'weight': 0.125}
 https://cantusplanus.pl/source/22868 https://cantus.sk/source/2284 {'weight': 0.14285714285714285}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123706 {'weight': 0.125}
+https://cantusplanus.pl/source/22868 https://pemdatabase.eu/source/97935 {'weight': 0.1}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123645 {'weight': 0.14285714285714285}
 https://cantusplanus.pl/source/22868 https://cantusbohemiae.cz/source/4478 {'weight': 0.42857142857142855}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123594 {'weight': 0.14285714285714285}
@@ -1262,6 +1328,8 @@ https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123766 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123724 {'weight': 0.2}
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123641 {'weight': 0.125}
+https://cantusdatabase.org/source/601861 https://pemdatabase.eu/source/62867 {'weight': 0.375}
+https://cantusdatabase.org/source/601861 https://pemdatabase.eu/source/47990 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/601861 https://cantusplanus.pl/source/14397 {'weight': 0.2}
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123708 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/601861 https://cantusplanus.pl/source/21018 {'weight': 0.14285714285714285}
@@ -1270,6 +1338,7 @@ https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/601861 https://cantusplanus.pl/source/13720 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/601861 https://cantus.sk/source/2284 {'weight': 0.2}
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/601861 https://pemdatabase.eu/source/97935 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123645 {'weight': 0.2}
 https://cantusdatabase.org/source/601861 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/601861 https://cantusdatabase.org/source/123594 {'weight': 0.2}
@@ -1304,6 +1373,8 @@ https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123641 {'weight': 0.5}
+https://cantusdatabase.org/source/123620 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123620 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123620 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123708 {'weight': 1.0}
 https://cantusdatabase.org/source/123620 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1314,6 +1385,7 @@ https://cantusdatabase.org/source/123620 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123671 {'weight': 0.25}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123605 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123620 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123620 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1353,10 +1425,13 @@ https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/123634 {'weight': 0.5}
 https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123681 https://pemdatabase.eu/source/62867 {'weight': 0.125}
+https://cantusdatabase.org/source/123681 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123681 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/123671 {'weight': 0.5}
 https://cantusdatabase.org/source/123681 https://cantusdatabase.org/source/123605 {'weight': 0.6666666666666666}
+https://cantusdatabase.org/source/123681 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123684 https://musicahispanica.eu/source/20245 {'weight': 0.23076923076923078}
 https://cantusdatabase.org/source/123684 https://cantusdatabase.org/source/123602 {'weight': 0.4444444444444444}
 https://cantusdatabase.org/source/123684 https://cantusdatabase.org/source/123597 {'weight': 0.4}
@@ -1397,6 +1472,8 @@ https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123766 {'weight': 0.4}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123715 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123715 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123715 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123715 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1405,6 +1482,7 @@ https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123715 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123715 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123715 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123715 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1434,6 +1512,8 @@ https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123689 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123689 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123689 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123689 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1442,6 +1522,7 @@ https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123689 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123689 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123689 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123689 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1462,6 +1543,8 @@ https://musicahispanica.eu/source/20232 https://musicahispanica.eu/source/19722 
 https://musicahispanica.eu/source/20232 https://cantusdatabase.org/source/123593 {'weight': 0.1111111111111111}
 https://musicahispanica.eu/source/20232 https://cantusdatabase.org/source/123627 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/20232 https://cantusdatabase.org/source/123677 {'weight': 0.2}
+https://musicahispanica.eu/source/20232 https://pemdatabase.eu/source/62867 {'weight': 0.125}
+https://musicahispanica.eu/source/20232 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://musicahispanica.eu/source/20248 https://musicahispanica.eu/source/20245 {'weight': 0.09090909090909091}
 https://musicahispanica.eu/source/20248 https://musicahispanica.eu/source/19722 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123639 {'weight': 0.5}
@@ -1485,6 +1568,8 @@ https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123626
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://musicahispanica.eu/source/20248 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://musicahispanica.eu/source/20248 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/20248 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://musicahispanica.eu/source/20248 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1493,6 +1578,7 @@ https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/20248 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://musicahispanica.eu/source/20248 https://cantus.sk/source/2284 {'weight': 1.0}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://musicahispanica.eu/source/20248 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://musicahispanica.eu/source/20248 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/20248 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1523,6 +1609,8 @@ https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123674
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123724 {'weight': 0.09090909090909091}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123641 {'weight': 0.07142857142857142}
+https://musicahispanica.eu/source/20245 https://pemdatabase.eu/source/62867 {'weight': 0.0625}
+https://musicahispanica.eu/source/20245 https://pemdatabase.eu/source/47990 {'weight': 0.07692307692307693}
 https://musicahispanica.eu/source/20245 https://cantusplanus.pl/source/14397 {'weight': 0.09090909090909091}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123708 {'weight': 0.08333333333333333}
 https://musicahispanica.eu/source/20245 https://cantusplanus.pl/source/21018 {'weight': 0.16666666666666666}
@@ -1531,6 +1619,7 @@ https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/20245 https://cantusplanus.pl/source/13720 {'weight': 0.08333333333333333}
 https://musicahispanica.eu/source/20245 https://cantus.sk/source/2284 {'weight': 0.09090909090909091}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123706 {'weight': 0.08333333333333333}
+https://musicahispanica.eu/source/20245 https://pemdatabase.eu/source/97935 {'weight': 0.07142857142857142}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123645 {'weight': 0.09090909090909091}
 https://musicahispanica.eu/source/20245 https://cantusbohemiae.cz/source/4478 {'weight': 0.07692307692307693}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123594 {'weight': 0.09090909090909091}
@@ -1570,6 +1659,8 @@ https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123626
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123724 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://musicahispanica.eu/source/19722 https://pemdatabase.eu/source/62867 {'weight': 0.2857142857142857}
+https://musicahispanica.eu/source/19722 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://musicahispanica.eu/source/19722 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://musicahispanica.eu/source/19722 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -1578,6 +1669,7 @@ https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/19722 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://musicahispanica.eu/source/19722 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://musicahispanica.eu/source/19722 https://pemdatabase.eu/source/97935 {'weight': 0.4}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/19722 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -1603,6 +1695,8 @@ https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123639 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123639 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123639 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123639 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1611,6 +1705,7 @@ https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123639 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123639 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123639 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123639 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1635,6 +1730,8 @@ https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123626
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123766 {'weight': 0.1111111111111111}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123724 {'weight': 0.2}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123641 {'weight': 0.125}
+https://musicahispanica.eu/source/22951 https://pemdatabase.eu/source/62867 {'weight': 0.1}
+https://musicahispanica.eu/source/22951 https://pemdatabase.eu/source/47990 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/22951 https://cantusplanus.pl/source/14397 {'weight': 0.2}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123708 {'weight': 0.16666666666666666}
 https://musicahispanica.eu/source/22951 https://cantusplanus.pl/source/21018 {'weight': 0.14285714285714285}
@@ -1643,6 +1740,7 @@ https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/22951 https://cantusplanus.pl/source/13720 {'weight': 0.16666666666666666}
 https://musicahispanica.eu/source/22951 https://cantus.sk/source/2284 {'weight': 0.2}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
+https://musicahispanica.eu/source/22951 https://pemdatabase.eu/source/97935 {'weight': 0.125}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123645 {'weight': 0.2}
 https://musicahispanica.eu/source/22951 https://cantusbohemiae.cz/source/4478 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123594 {'weight': 0.2}
@@ -1674,6 +1772,8 @@ https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/12363
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123766 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123724 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123641 {'weight': 0.1}
+https://cantusdatabase.org/source/123593 https://pemdatabase.eu/source/62867 {'weight': 0.3}
+https://cantusdatabase.org/source/123593 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123593 https://cantusplanus.pl/source/14397 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123708 {'weight': 0.125}
 https://cantusdatabase.org/source/123593 https://cantusplanus.pl/source/21018 {'weight': 0.1111111111111111}
@@ -1682,6 +1782,7 @@ https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123593 https://cantusplanus.pl/source/13720 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123593 https://cantus.sk/source/2284 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123706 {'weight': 0.125}
+https://cantusdatabase.org/source/123593 https://pemdatabase.eu/source/97935 {'weight': 0.375}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123645 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123593 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123594 {'weight': 0.14285714285714285}
@@ -1704,6 +1805,8 @@ https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123601 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123601 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123601 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123601 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1712,6 +1815,7 @@ https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123601 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123601 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123601 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123601 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1736,6 +1840,8 @@ https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123766 {'weight': 0.18181818181818182}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123724 {'weight': 0.125}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123602 https://pemdatabase.eu/source/62867 {'weight': 0.07692307692307693}
+https://cantusdatabase.org/source/123602 https://pemdatabase.eu/source/47990 {'weight': 0.1}
 https://cantusdatabase.org/source/123602 https://cantusplanus.pl/source/14397 {'weight': 0.125}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123602 https://cantusplanus.pl/source/21018 {'weight': 0.1}
@@ -1746,6 +1852,7 @@ https://cantusdatabase.org/source/123602 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123706 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123671 {'weight': 0.1}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123605 {'weight': 0.1111111111111111}
+https://cantusdatabase.org/source/123602 https://pemdatabase.eu/source/97935 {'weight': 0.09090909090909091}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123645 {'weight': 0.125}
 https://cantusdatabase.org/source/123602 https://cantusbohemiae.cz/source/4478 {'weight': 0.2222222222222222}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123594 {'weight': 0.125}
@@ -1767,6 +1874,8 @@ http://musmed.eu/source/9475 https://cantusdatabase.org/source/123626 {'weight':
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+http://musmed.eu/source/9475 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+http://musmed.eu/source/9475 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 http://musmed.eu/source/9475 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 http://musmed.eu/source/9475 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1775,6 +1884,7 @@ http://musmed.eu/source/9475 https://cantusdatabase.org/source/123756 {'weight':
 http://musmed.eu/source/9475 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 http://musmed.eu/source/9475 https://cantus.sk/source/2284 {'weight': 1.0}
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+http://musmed.eu/source/9475 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 http://musmed.eu/source/9475 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1782,7 +1892,10 @@ http://musmed.eu/source/9475 https://musicahispanica.eu/source/116088 {'weight':
 http://musmed.eu/source/9475 https://cantusdatabase.org/source/123668 {'weight': 1.0}
 https://cantusdatabase.org/source/123663 https://cantusdatabase.org/source/123634 {'weight': 0.25}
 https://cantusdatabase.org/source/123663 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123663 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123663 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123663 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123663 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123631 http://musmed.eu/source/13535 {'weight': 0.5}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123677 {'weight': 0.25}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123633 {'weight': 0.3333333333333333}
@@ -1797,6 +1910,8 @@ https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123631 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123631 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123631 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123631 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1805,6 +1920,7 @@ https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123631 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123631 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123631 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123631 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123631 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1825,6 +1941,8 @@ http://musmed.eu/source/13535 https://cantusdatabase.org/source/123626 {'weight'
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+http://musmed.eu/source/13535 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+http://musmed.eu/source/13535 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 http://musmed.eu/source/13535 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 http://musmed.eu/source/13535 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1833,6 +1951,7 @@ http://musmed.eu/source/13535 https://cantusdatabase.org/source/123756 {'weight'
 http://musmed.eu/source/13535 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 http://musmed.eu/source/13535 https://cantus.sk/source/2284 {'weight': 1.0}
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+http://musmed.eu/source/13535 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 http://musmed.eu/source/13535 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 http://musmed.eu/source/13535 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1850,6 +1969,8 @@ https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123724 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123677 https://pemdatabase.eu/source/62867 {'weight': 0.5}
+https://cantusdatabase.org/source/123677 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123677 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123677 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -1858,6 +1979,7 @@ https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123677 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123677 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://cantusdatabase.org/source/123677 https://pemdatabase.eu/source/97935 {'weight': 0.4}
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123677 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
 https://cantusdatabase.org/source/123677 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -1874,6 +1996,8 @@ https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123633 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123633 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123633 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123633 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -1882,6 +2006,7 @@ https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123633 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123633 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123633 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123633 https://cantusbohemiae.cz/source/4478 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123633 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -1897,6 +2022,8 @@ https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123640 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123640 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123640 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123640 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1905,6 +2032,7 @@ https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123640 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123640 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123640 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123640 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123640 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1921,6 +2049,8 @@ https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123766 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123724 {'weight': 0.25}
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123641 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123642 https://pemdatabase.eu/source/62867 {'weight': 0.1111111111111111}
+https://cantusdatabase.org/source/123642 https://pemdatabase.eu/source/47990 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123642 https://cantusplanus.pl/source/14397 {'weight': 0.25}
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123708 {'weight': 0.2}
 https://cantusdatabase.org/source/123642 https://cantusplanus.pl/source/21018 {'weight': 0.16666666666666666}
@@ -1929,6 +2059,7 @@ https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123642 https://cantusplanus.pl/source/13720 {'weight': 0.2}
 https://cantusdatabase.org/source/123642 https://cantus.sk/source/2284 {'weight': 0.25}
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123706 {'weight': 0.2}
+https://cantusdatabase.org/source/123642 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123645 {'weight': 0.25}
 https://cantusdatabase.org/source/123642 https://cantusbohemiae.cz/source/4478 {'weight': 0.4}
 https://cantusdatabase.org/source/123642 https://cantusdatabase.org/source/123594 {'weight': 0.25}
@@ -1942,6 +2073,8 @@ https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123626
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://musicahispanica.eu/source/74655 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://musicahispanica.eu/source/74655 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/74655 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://musicahispanica.eu/source/74655 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -1950,6 +2083,7 @@ https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/74655 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://musicahispanica.eu/source/74655 https://cantus.sk/source/2284 {'weight': 1.0}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://musicahispanica.eu/source/74655 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://musicahispanica.eu/source/74655 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -1964,6 +2098,8 @@ https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123674
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123724 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123641 {'weight': 0.1}
+https://musicahispanica.eu/source/20199 https://pemdatabase.eu/source/62867 {'weight': 0.18181818181818182}
+https://musicahispanica.eu/source/20199 https://pemdatabase.eu/source/47990 {'weight': 0.1111111111111111}
 https://musicahispanica.eu/source/20199 https://cantusplanus.pl/source/14397 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123708 {'weight': 0.125}
 https://musicahispanica.eu/source/20199 https://cantusplanus.pl/source/21018 {'weight': 0.1111111111111111}
@@ -1972,6 +2108,7 @@ https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/20199 https://cantusplanus.pl/source/13720 {'weight': 0.125}
 https://musicahispanica.eu/source/20199 https://cantus.sk/source/2284 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123706 {'weight': 0.125}
+https://musicahispanica.eu/source/20199 https://pemdatabase.eu/source/97935 {'weight': 0.1}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123645 {'weight': 0.14285714285714285}
 https://musicahispanica.eu/source/20199 https://cantusbohemiae.cz/source/4478 {'weight': 0.1111111111111111}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123594 {'weight': 0.14285714285714285}
@@ -1983,6 +2120,8 @@ https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123766 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123724 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123641 {'weight': 0.4}
+https://cantusdatabase.org/source/123647 https://pemdatabase.eu/source/62867 {'weight': 0.125}
+https://cantusdatabase.org/source/123647 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123647 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123708 {'weight': 0.25}
 https://cantusdatabase.org/source/123647 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -1991,6 +2130,7 @@ https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123647 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123647 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://cantusdatabase.org/source/123647 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123647 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
 https://cantusdatabase.org/source/123647 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -2001,6 +2141,8 @@ https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123766 {'weight': 0.4}
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123641 {'weight': 0.5}
+https://cantusdatabase.org/source/123646 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123646 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123646 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123646 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -2009,6 +2151,7 @@ https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123646 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123646 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123646 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123646 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123646 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -2042,6 +2185,8 @@ https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/12362
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123724 {'weight': 0.5}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123641 {'weight': 0.2}
+https://cantusdatabase.org/source/123595 https://pemdatabase.eu/source/62867 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123595 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123595 https://cantusplanus.pl/source/14397 {'weight': 0.5}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123708 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123595 https://cantusplanus.pl/source/21018 {'weight': 0.25}
@@ -2050,6 +2195,7 @@ https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123595 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123595 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123595 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123595 https://cantusbohemiae.cz/source/4478 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -2063,6 +2209,8 @@ https://cantusdatabase.org/source/123680 https://cantusdatabase.org/source/12360
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123766 {'weight': 0.2}
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123724 {'weight': 1.0}
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123626 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123626 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123626 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123626 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -2071,6 +2219,7 @@ https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123626 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123626 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123626 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123626 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123626 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -2083,11 +2232,16 @@ https://cantusdatabase.org/source/123674 https://cantusdatabase.org/source/12360
 https://cantusdatabase.org/source/123674 https://musicahispanica.eu/source/116088 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123634 https://cantusdatabase.org/source/123766 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123634 https://cantusdatabase.org/source/123641 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123634 https://pemdatabase.eu/source/62867 {'weight': 0.125}
+https://cantusdatabase.org/source/123634 https://pemdatabase.eu/source/47990 {'weight': 0.5}
 https://cantusdatabase.org/source/123634 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123634 https://cantusdatabase.org/source/123671 {'weight': 0.5}
 https://cantusdatabase.org/source/123634 https://cantusdatabase.org/source/123605 {'weight': 0.25}
+https://cantusdatabase.org/source/123634 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123724 {'weight': 0.2}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123641 {'weight': 0.2857142857142857}
+https://cantusdatabase.org/source/123766 https://pemdatabase.eu/source/62867 {'weight': 0.2222222222222222}
+https://cantusdatabase.org/source/123766 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123766 https://cantusplanus.pl/source/14397 {'weight': 0.2}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123708 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123766 https://cantusplanus.pl/source/21018 {'weight': 0.14285714285714285}
@@ -2096,12 +2250,15 @@ https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123766 https://cantusplanus.pl/source/13720 {'weight': 0.4}
 https://cantusdatabase.org/source/123766 https://cantus.sk/source/2284 {'weight': 0.2}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123766 https://pemdatabase.eu/source/97935 {'weight': 0.2857142857142857}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123645 {'weight': 0.2}
 https://cantusdatabase.org/source/123766 https://cantusbohemiae.cz/source/4478 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123594 {'weight': 0.2}
 https://cantusdatabase.org/source/123766 https://musicahispanica.eu/source/116088 {'weight': 0.2222222222222222}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123668 {'weight': 0.2}
 https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/123641 {'weight': 0.25}
+https://cantusdatabase.org/source/123724 https://pemdatabase.eu/source/62867 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123724 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123724 https://cantusplanus.pl/source/14397 {'weight': 1.0}
 https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123724 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -2110,11 +2267,14 @@ https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123724 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123724 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123724 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123724 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/123594 {'weight': 1.0}
 https://cantusdatabase.org/source/123724 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123724 https://cantusdatabase.org/source/123668 {'weight': 1.0}
+https://cantusdatabase.org/source/123641 https://pemdatabase.eu/source/62867 {'weight': 0.1111111111111111}
+https://cantusdatabase.org/source/123641 https://pemdatabase.eu/source/47990 {'weight': 0.4}
 https://cantusdatabase.org/source/123641 https://cantusplanus.pl/source/14397 {'weight': 0.25}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusdatabase.org/source/123641 https://cantusplanus.pl/source/21018 {'weight': 0.16666666666666666}
@@ -2125,11 +2285,42 @@ https://cantusdatabase.org/source/123641 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123671 {'weight': 0.4}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123605 {'weight': 0.2}
+https://cantusdatabase.org/source/123641 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123645 {'weight': 0.25}
 https://cantusdatabase.org/source/123641 https://cantusbohemiae.cz/source/4478 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123594 {'weight': 0.25}
 https://cantusdatabase.org/source/123641 https://musicahispanica.eu/source/116088 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123668 {'weight': 0.25}
+https://pemdatabase.eu/source/62867 https://pemdatabase.eu/source/47990 {'weight': 0.2857142857142857}
+https://pemdatabase.eu/source/62867 https://cantusplanus.pl/source/14397 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123708 {'weight': 0.14285714285714285}
+https://pemdatabase.eu/source/62867 https://cantusplanus.pl/source/21018 {'weight': 0.125}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/589069 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123756 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/62867 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/62867 https://cantus.sk/source/2284 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/62867 https://pemdatabase.eu/source/97935 {'weight': 0.6666666666666666}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123645 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/62867 https://cantusbohemiae.cz/source/4478 {'weight': 0.125}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123594 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/62867 https://musicahispanica.eu/source/116088 {'weight': 0.2}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123668 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/47990 https://cantusplanus.pl/source/14397 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123708 {'weight': 0.25}
+https://pemdatabase.eu/source/47990 https://cantusplanus.pl/source/21018 {'weight': 0.2}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/589069 {'weight': 0.25}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123756 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/47990 https://cantusplanus.pl/source/13720 {'weight': 0.6666666666666666}
+https://pemdatabase.eu/source/47990 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123671 {'weight': 0.2}
+https://pemdatabase.eu/source/47990 https://pemdatabase.eu/source/97935 {'weight': 0.4}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/47990 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/47990 https://musicahispanica.eu/source/116088 {'weight': 0.125}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123668 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123708 {'weight': 0.5}
 https://cantusplanus.pl/source/14397 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/589069 {'weight': 0.5}
@@ -2137,6 +2328,7 @@ https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123756 {'
 https://cantusplanus.pl/source/14397 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusplanus.pl/source/14397 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusplanus.pl/source/14397 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusplanus.pl/source/14397 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -2150,6 +2342,7 @@ https://cantusdatabase.org/source/123708 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123708 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123708 https://cantusdatabase.org/source/123671 {'weight': 0.25}
 https://cantusdatabase.org/source/123708 https://cantusdatabase.org/source/123605 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123708 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123708 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123708 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123708 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -2160,6 +2353,7 @@ https://cantusplanus.pl/source/21018 https://cantusdatabase.org/source/123756 {'
 https://cantusplanus.pl/source/21018 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusplanus.pl/source/21018 https://cantus.sk/source/2284 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/21018 https://cantusdatabase.org/source/123706 {'weight': 0.25}
+https://cantusplanus.pl/source/21018 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusplanus.pl/source/21018 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/21018 https://cantusbohemiae.cz/source/4478 {'weight': 0.2}
 https://cantusplanus.pl/source/21018 https://cantusdatabase.org/source/123594 {'weight': 0.3333333333333333}
@@ -2169,6 +2363,7 @@ https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/589069 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/589069 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/589069 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/589069 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/123594 {'weight': 0.5}
@@ -2177,6 +2372,7 @@ https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123756 https://cantusplanus.pl/source/13720 {'weight': 0.5}
 https://cantusdatabase.org/source/123756 https://cantus.sk/source/2284 {'weight': 1.0}
 https://cantusdatabase.org/source/123756 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantusdatabase.org/source/123756 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123756 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantusdatabase.org/source/123756 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123756 https://cantusdatabase.org/source/123594 {'weight': 1.0}
@@ -2184,23 +2380,31 @@ https://cantusdatabase.org/source/123756 https://musicahispanica.eu/source/11608
 https://cantusdatabase.org/source/123756 https://cantusdatabase.org/source/123668 {'weight': 1.0}
 https://cantusplanus.pl/source/13720 https://cantus.sk/source/2284 {'weight': 0.5}
 https://cantusplanus.pl/source/13720 https://cantusdatabase.org/source/123706 {'weight': 0.3333333333333333}
+https://cantusplanus.pl/source/13720 https://pemdatabase.eu/source/97935 {'weight': 0.5}
 https://cantusplanus.pl/source/13720 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusplanus.pl/source/13720 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusplanus.pl/source/13720 https://cantusdatabase.org/source/123594 {'weight': 0.5}
 https://cantusplanus.pl/source/13720 https://musicahispanica.eu/source/116088 {'weight': 0.14285714285714285}
 https://cantusplanus.pl/source/13720 https://cantusdatabase.org/source/123668 {'weight': 0.5}
 https://cantus.sk/source/2284 https://cantusdatabase.org/source/123706 {'weight': 0.5}
+https://cantus.sk/source/2284 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantus.sk/source/2284 https://cantusdatabase.org/source/123645 {'weight': 1.0}
 https://cantus.sk/source/2284 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantus.sk/source/2284 https://cantusdatabase.org/source/123594 {'weight': 1.0}
 https://cantus.sk/source/2284 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
 https://cantus.sk/source/2284 https://cantusdatabase.org/source/123668 {'weight': 1.0}
+https://cantusdatabase.org/source/123706 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123706 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123706 https://cantusbohemiae.cz/source/4478 {'weight': 0.25}
 https://cantusdatabase.org/source/123706 https://cantusdatabase.org/source/123594 {'weight': 0.5}
 https://cantusdatabase.org/source/123706 https://musicahispanica.eu/source/116088 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123706 https://cantusdatabase.org/source/123668 {'weight': 0.5}
 https://cantusdatabase.org/source/123671 https://cantusdatabase.org/source/123605 {'weight': 0.6666666666666666}
+https://pemdatabase.eu/source/97935 https://cantusdatabase.org/source/123645 {'weight': 0.25}
+https://pemdatabase.eu/source/97935 https://cantusbohemiae.cz/source/4478 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/97935 https://cantusdatabase.org/source/123594 {'weight': 0.25}
+https://pemdatabase.eu/source/97935 https://musicahispanica.eu/source/116088 {'weight': 0.1111111111111111}
+https://pemdatabase.eu/source/97935 https://cantusdatabase.org/source/123668 {'weight': 0.25}
 https://cantusdatabase.org/source/123645 https://cantusbohemiae.cz/source/4478 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123645 https://cantusdatabase.org/source/123594 {'weight': 1.0}
 https://cantusdatabase.org/source/123645 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}

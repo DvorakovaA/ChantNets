@@ -45,6 +45,7 @@ https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123610 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123671 {'weight': 0.2}
+https://cantusdatabase.org/source/123610 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123610 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123610 https://musicahispanica.eu/source/72835 {'weight': 0.5}
 https://cantusdatabase.org/source/123610 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
@@ -123,6 +124,7 @@ https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123606 https://musicahispanica.eu/source/19722 {'weight': 0.2}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123639 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123628 {'weight': 0.25}
+https://cantusdatabase.org/source/123606 https://pemdatabase.eu/source/47990 {'weight': 0.5}
 https://cantusdatabase.org/source/123606 https://cantusdatabase.org/source/123736 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123667 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123727 https://cantusdatabase.org/source/123717 {'weight': 0.3333333333333333}
@@ -279,6 +281,7 @@ https://cantusdatabase.org/source/123658 https://cantusdatabase.org/source/12372
 https://cantusdatabase.org/source/123658 https://musicahispanica.eu/source/19722 {'weight': 0.2}
 https://cantusdatabase.org/source/123658 https://cantusdatabase.org/source/123639 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123658 https://cantusdatabase.org/source/123628 {'weight': 0.25}
+https://cantusdatabase.org/source/123658 https://pemdatabase.eu/source/47990 {'weight': 0.5}
 https://cantusdatabase.org/source/123658 https://cantusdatabase.org/source/123736 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123689 {'weight': 0.25}
 https://cantusdatabase.org/source/123649 https://cantusdatabase.org/source/123706 {'weight': 0.25}
@@ -312,11 +315,13 @@ https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123595 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123674 {'weight': 0.25}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123766 {'weight': 0.2}
+https://cantusdatabase.org/source/123664 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123736 {'weight': 0.2}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123711 {'weight': 0.125}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123756 {'weight': 0.25}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123706 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123664 https://cantusdatabase.org/source/123671 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123664 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123664 https://musicahispanica.eu/source/72835 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123664 https://musicahispanica.eu/source/116088 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123723 {'weight': 0.1111111111111111}
@@ -344,6 +349,7 @@ https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/12371
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123756 {'weight': 0.2}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123706 {'weight': 0.125}
 https://cantusdatabase.org/source/123665 https://cantusdatabase.org/source/123671 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123665 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123665 https://musicahispanica.eu/source/72835 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123665 https://musicahispanica.eu/source/116088 {'weight': 0.125}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123672 {'weight': 0.16666666666666666}
@@ -372,6 +378,8 @@ https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123595 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123607 {'weight': 0.2}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123608 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123723 https://pemdatabase.eu/source/62867 {'weight': 0.2}
+https://cantusdatabase.org/source/123723 https://pemdatabase.eu/source/47990 {'weight': 0.2}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123736 {'weight': 0.4}
 https://cantusdatabase.org/source/123723 https://cantusdatabase.org/source/123711 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/123723 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -414,6 +422,7 @@ https://cantusdatabase.org/source/123672 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123672 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123672 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123672 https://cantusdatabase.org/source/123671 {'weight': 0.25}
+https://cantusdatabase.org/source/123672 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123672 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123672 https://musicahispanica.eu/source/72835 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123672 https://musicahispanica.eu/source/116088 {'weight': 0.2}
@@ -472,6 +481,7 @@ https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123669 
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123595 {'weight': 0.2}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123607 {'weight': 0.3333333333333333}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123608 {'weight': 0.25}
+https://cantusbohemiae.cz/source/28509 https://pemdatabase.eu/source/62867 {'weight': 0.3333333333333333}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123736 {'weight': 0.25}
 https://cantusbohemiae.cz/source/28509 https://cantusdatabase.org/source/123711 {'weight': 0.14285714285714285}
 https://cantusbohemiae.cz/source/28509 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -516,6 +526,7 @@ https://cantusdatabase.org/source/123688 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123688 https://cantusplanus.pl/source/13720 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123688 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123688 https://cantusdatabase.org/source/123671 {'weight': 0.25}
+https://cantusdatabase.org/source/123688 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123688 https://cantusdatabase.org/source/123645 {'weight': 0.5}
 https://cantusdatabase.org/source/123688 https://musicahispanica.eu/source/72835 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123688 https://musicahispanica.eu/source/116088 {'weight': 0.2}
@@ -546,6 +557,7 @@ https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123607 {'
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123608 {'weight': 0.16666666666666666}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123674 {'weight': 0.2}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123766 {'weight': 0.16666666666666666}
+https://cantusplanus.pl/source/22868 https://pemdatabase.eu/source/62867 {'weight': 0.2}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123736 {'weight': 0.16666666666666666}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123711 {'weight': 0.25}
 https://cantusplanus.pl/source/22868 https://cantusplanus.pl/source/21018 {'weight': 0.2}
@@ -553,6 +565,7 @@ https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123756 {'
 https://cantusplanus.pl/source/22868 https://cantusplanus.pl/source/13720 {'weight': 0.16666666666666666}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123706 {'weight': 0.125}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
+https://cantusplanus.pl/source/22868 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusplanus.pl/source/22868 https://cantusdatabase.org/source/123645 {'weight': 0.2}
 https://cantusplanus.pl/source/22868 https://musicahispanica.eu/source/72835 {'weight': 0.3333333333333333}
 https://cantusplanus.pl/source/22868 https://musicahispanica.eu/source/116088 {'weight': 0.2857142857142857}
@@ -562,6 +575,7 @@ https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/12360
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123602 {'weight': 0.5}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123670 {'weight': 0.5}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123595 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123620 https://pemdatabase.eu/source/62867 {'weight': 1.0}
 https://cantusdatabase.org/source/123620 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123620 https://musicahispanica.eu/source/116088 {'weight': 0.25}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123681 {'weight': 0.3333333333333333}
@@ -594,6 +608,7 @@ https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/12368
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123674 {'weight': 0.25}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123634 {'weight': 0.25}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123766 {'weight': 0.2}
+https://cantusdatabase.org/source/123673 https://pemdatabase.eu/source/62867 {'weight': 0.25}
 https://cantusdatabase.org/source/123673 https://cantusplanus.pl/source/14397 {'weight': 0.2}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123736 {'weight': 0.2}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123711 {'weight': 0.5}
@@ -603,6 +618,7 @@ https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123673 https://cantusplanus.pl/source/13720 {'weight': 0.2}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123706 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123671 {'weight': 0.75}
+https://cantusdatabase.org/source/123673 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123645 {'weight': 0.25}
 https://cantusdatabase.org/source/123673 https://musicahispanica.eu/source/72835 {'weight': 0.4}
 https://cantusdatabase.org/source/123673 https://cantusdatabase.org/source/123661 {'weight': 0.16666666666666666}
@@ -660,6 +676,7 @@ https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/12371
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123756 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123715 https://cantusdatabase.org/source/123671 {'weight': 0.2}
+https://cantusdatabase.org/source/123715 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123715 https://musicahispanica.eu/source/72835 {'weight': 0.5}
 https://cantusdatabase.org/source/123715 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123689 https://cantusdatabase.org/source/123663 {'weight': 0.14285714285714285}
@@ -684,6 +701,7 @@ https://musicahispanica.eu/source/27599 https://cantusdatabase.org/source/123711
 https://musicahispanica.eu/source/27599 https://cantusdatabase.org/source/123756 {'weight': 1.0}
 https://musicahispanica.eu/source/27599 https://cantusdatabase.org/source/123706 {'weight': 0.25}
 https://musicahispanica.eu/source/27599 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
+https://musicahispanica.eu/source/27599 https://pemdatabase.eu/source/97935 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/27599 https://musicahispanica.eu/source/72835 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/27599 https://musicahispanica.eu/source/116088 {'weight': 0.25}
 https://musicahispanica.eu/source/20248 https://musicahispanica.eu/source/22495 {'weight': 0.3333333333333333}
@@ -720,6 +738,7 @@ https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123711
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123756 {'weight': 0.16666666666666666}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123706 {'weight': 0.1111111111111111}
 https://musicahispanica.eu/source/20245 https://cantusdatabase.org/source/123671 {'weight': 0.125}
+https://musicahispanica.eu/source/20245 https://pemdatabase.eu/source/97935 {'weight': 0.125}
 https://musicahispanica.eu/source/20245 https://musicahispanica.eu/source/72835 {'weight': 0.125}
 https://musicahispanica.eu/source/20245 https://musicahispanica.eu/source/116088 {'weight': 0.1111111111111111}
 https://musicahispanica.eu/source/22495 https://musicahispanica.eu/source/20425 {'weight': 0.1111111111111111}
@@ -763,6 +782,7 @@ https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123628
 https://musicahispanica.eu/source/19722 http://musmed.eu/source/13535 {'weight': 0.25}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123675 {'weight': 0.2}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123608 {'weight': 0.2}
+https://musicahispanica.eu/source/19722 https://pemdatabase.eu/source/47990 {'weight': 0.25}
 https://musicahispanica.eu/source/19722 https://cantusplanus.pl/source/14397 {'weight': 0.2}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/123736 {'weight': 0.2}
 https://musicahispanica.eu/source/19722 https://cantusdatabase.org/source/589069 {'weight': 0.16666666666666666}
@@ -786,6 +806,7 @@ https://cantusdatabase.org/source/123639 https://musicahispanica.eu/source/74655
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123669 {'weight': 0.25}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123607 {'weight': 0.5}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123608 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123639 https://pemdatabase.eu/source/47990 {'weight': 0.5}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123736 {'weight': 1.0}
 https://cantusdatabase.org/source/123639 https://cantusdatabase.org/source/123711 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123639 https://cantusplanus.pl/source/21018 {'weight': 0.5}
@@ -804,17 +825,20 @@ https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123711
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123756 {'weight': 0.5}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://musicahispanica.eu/source/22951 https://cantusdatabase.org/source/123671 {'weight': 0.25}
+https://musicahispanica.eu/source/22951 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://musicahispanica.eu/source/22951 https://musicahispanica.eu/source/72835 {'weight': 0.25}
 https://musicahispanica.eu/source/22951 https://musicahispanica.eu/source/116088 {'weight': 0.2}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123601 {'weight': 0.5}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123602 {'weight': 0.5}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123670 {'weight': 0.5}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123595 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123593 https://pemdatabase.eu/source/62867 {'weight': 1.0}
 https://cantusdatabase.org/source/123593 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123593 https://musicahispanica.eu/source/116088 {'weight': 0.25}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123602 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123670 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123595 {'weight': 0.25}
+https://cantusdatabase.org/source/123601 https://pemdatabase.eu/source/62867 {'weight': 0.5}
 https://cantusdatabase.org/source/123601 https://cantusdatabase.org/source/123671 {'weight': 0.25}
 https://cantusdatabase.org/source/123601 https://musicahispanica.eu/source/116088 {'weight': 0.2}
 https://cantusdatabase.org/source/123602 https://musicahispanica.eu/source/74655 {'weight': 0.25}
@@ -824,10 +848,12 @@ https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123595 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123674 {'weight': 0.5}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123766 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123602 https://pemdatabase.eu/source/62867 {'weight': 0.5}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123711 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123756 {'weight': 0.5}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123602 https://cantusdatabase.org/source/123671 {'weight': 0.6666666666666666}
+https://cantusdatabase.org/source/123602 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123602 https://musicahispanica.eu/source/72835 {'weight': 0.25}
 https://cantusdatabase.org/source/123602 https://musicahispanica.eu/source/116088 {'weight': 0.5}
 https://cantusdatabase.org/source/123663 https://cantusdatabase.org/source/123628 {'weight': 0.16666666666666666}
@@ -854,6 +880,7 @@ https://cantusdatabase.org/source/123628 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123628 https://cantusdatabase.org/source/123607 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123628 https://cantusdatabase.org/source/123608 {'weight': 0.25}
 https://cantusdatabase.org/source/123628 https://cantusdatabase.org/source/123680 {'weight': 0.2}
+https://cantusdatabase.org/source/123628 https://pemdatabase.eu/source/47990 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123628 https://cantusdatabase.org/source/123736 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123628 https://cantusdatabase.org/source/123711 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123628 https://cantusplanus.pl/source/21018 {'weight': 0.3333333333333333}
@@ -915,6 +942,7 @@ https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123756
 https://musicahispanica.eu/source/74655 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123671 {'weight': 0.2}
+https://musicahispanica.eu/source/74655 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://musicahispanica.eu/source/74655 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/74655 https://musicahispanica.eu/source/72835 {'weight': 1.0}
 https://musicahispanica.eu/source/74655 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
@@ -933,6 +961,7 @@ https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/589069
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123756 {'weight': 0.5}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123671 {'weight': 0.6666666666666666}
+https://musicahispanica.eu/source/20199 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://musicahispanica.eu/source/20199 https://musicahispanica.eu/source/72835 {'weight': 0.25}
 https://musicahispanica.eu/source/20199 https://cantusdatabase.org/source/123661 {'weight': 0.25}
 https://musicahispanica.eu/source/20199 https://musicahispanica.eu/source/116088 {'weight': 0.2}
@@ -953,10 +982,12 @@ https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123595 {'weight': 0.6666666666666666}
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123674 {'weight': 0.5}
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123766 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123670 https://pemdatabase.eu/source/62867 {'weight': 0.5}
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123711 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123756 {'weight': 0.5}
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123670 https://cantusdatabase.org/source/123671 {'weight': 0.6666666666666666}
+https://cantusdatabase.org/source/123670 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123670 https://musicahispanica.eu/source/72835 {'weight': 0.25}
 https://cantusdatabase.org/source/123670 https://musicahispanica.eu/source/116088 {'weight': 0.5}
 https://cantusdatabase.org/source/123669 https://cantusdatabase.org/source/123675 {'weight': 0.25}
@@ -976,6 +1007,7 @@ https://cantusdatabase.org/source/123669 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123669 https://cantusplanus.pl/source/13720 {'weight': 0.25}
 https://cantusdatabase.org/source/123669 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123669 https://cantusdatabase.org/source/123671 {'weight': 0.5}
+https://cantusdatabase.org/source/123669 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123669 https://cantusdatabase.org/source/123645 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123669 https://musicahispanica.eu/source/72835 {'weight': 0.5}
 https://cantusdatabase.org/source/123669 https://cantusdatabase.org/source/123661 {'weight': 0.2}
@@ -990,10 +1022,12 @@ https://cantusdatabase.org/source/123675 https://cantusdatabase.org/source/12366
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123674 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123766 {'weight': 0.25}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123641 {'weight': 0.125}
+https://cantusdatabase.org/source/123595 https://pemdatabase.eu/source/62867 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123711 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123756 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123706 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123595 https://cantusdatabase.org/source/123671 {'weight': 0.5}
+https://cantusdatabase.org/source/123595 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123595 https://musicahispanica.eu/source/72835 {'weight': 0.2}
 https://cantusdatabase.org/source/123595 https://musicahispanica.eu/source/116088 {'weight': 0.75}
 https://cantusdatabase.org/source/123607 https://cantusdatabase.org/source/123608 {'weight': 0.5}
@@ -1021,6 +1055,7 @@ https://cantusdatabase.org/source/123674 https://cantusdatabase.org/source/12371
 https://cantusdatabase.org/source/123674 https://cantusdatabase.org/source/123756 {'weight': 1.0}
 https://cantusdatabase.org/source/123674 https://cantusdatabase.org/source/123706 {'weight': 0.25}
 https://cantusdatabase.org/source/123674 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123674 https://pemdatabase.eu/source/97935 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123674 https://musicahispanica.eu/source/72835 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123674 https://musicahispanica.eu/source/116088 {'weight': 0.25}
 https://cantusdatabase.org/source/123634 https://cantusplanus.pl/source/14397 {'weight': 0.5}
@@ -1032,6 +1067,7 @@ https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/12371
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123756 {'weight': 0.5}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123706 {'weight': 0.2}
 https://cantusdatabase.org/source/123766 https://cantusdatabase.org/source/123671 {'weight': 0.25}
+https://cantusdatabase.org/source/123766 https://pemdatabase.eu/source/97935 {'weight': 0.25}
 https://cantusdatabase.org/source/123766 https://musicahispanica.eu/source/72835 {'weight': 0.25}
 https://cantusdatabase.org/source/123766 https://musicahispanica.eu/source/116088 {'weight': 0.2}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123618 {'weight': 0.16666666666666666}
@@ -1039,6 +1075,9 @@ https://cantusdatabase.org/source/123641 https://cantus.sk/source/2284 {'weight'
 https://cantusdatabase.org/source/123641 https://musicahispanica.eu/source/72835 {'weight': 0.125}
 https://cantusdatabase.org/source/123641 https://musicahispanica.eu/source/116088 {'weight': 0.1111111111111111}
 https://cantusdatabase.org/source/123641 https://cantusdatabase.org/source/123668 {'weight': 0.16666666666666666}
+https://pemdatabase.eu/source/62867 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
+https://pemdatabase.eu/source/62867 https://musicahispanica.eu/source/116088 {'weight': 0.25}
+https://pemdatabase.eu/source/47990 https://cantusdatabase.org/source/123736 {'weight': 0.5}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123711 {'weight': 0.16666666666666666}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/589069 {'weight': 0.25}
 https://cantusplanus.pl/source/14397 https://cantusdatabase.org/source/123671 {'weight': 0.25}
@@ -1054,6 +1093,7 @@ https://cantusdatabase.org/source/123711 https://cantusdatabase.org/source/12375
 https://cantusdatabase.org/source/123711 https://cantusplanus.pl/source/13720 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123711 https://cantusdatabase.org/source/123706 {'weight': 0.125}
 https://cantusdatabase.org/source/123711 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123711 https://pemdatabase.eu/source/97935 {'weight': 0.14285714285714285}
 https://cantusdatabase.org/source/123711 https://cantusdatabase.org/source/123645 {'weight': 0.2}
 https://cantusdatabase.org/source/123711 https://musicahispanica.eu/source/72835 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123711 https://cantusdatabase.org/source/123661 {'weight': 0.14285714285714285}
@@ -1065,6 +1105,7 @@ https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/12367
 https://cantusdatabase.org/source/589069 https://cantusdatabase.org/source/123661 {'weight': 0.2}
 https://cantusdatabase.org/source/123756 https://cantusdatabase.org/source/123706 {'weight': 0.25}
 https://cantusdatabase.org/source/123756 https://cantusdatabase.org/source/123671 {'weight': 0.3333333333333333}
+https://cantusdatabase.org/source/123756 https://pemdatabase.eu/source/97935 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123756 https://musicahispanica.eu/source/72835 {'weight': 0.3333333333333333}
 https://cantusdatabase.org/source/123756 https://musicahispanica.eu/source/116088 {'weight': 0.25}
 https://cantusplanus.pl/source/13720 https://cantusdatabase.org/source/123645 {'weight': 0.5}
@@ -1074,10 +1115,14 @@ https://cantusdatabase.org/source/123618 https://cantusdatabase.org/source/12366
 https://cantus.sk/source/2284 https://cantusdatabase.org/source/123706 {'weight': 0.14285714285714285}
 https://cantus.sk/source/2284 https://cantusdatabase.org/source/123668 {'weight': 0.25}
 https://cantusdatabase.org/source/123706 https://cantusdatabase.org/source/123671 {'weight': 0.16666666666666666}
+https://cantusdatabase.org/source/123706 https://pemdatabase.eu/source/97935 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123706 https://musicahispanica.eu/source/72835 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123706 https://musicahispanica.eu/source/116088 {'weight': 0.14285714285714285}
+https://cantusdatabase.org/source/123671 https://pemdatabase.eu/source/97935 {'weight': 0.2}
 https://cantusdatabase.org/source/123671 https://musicahispanica.eu/source/72835 {'weight': 0.2}
 https://cantusdatabase.org/source/123671 https://cantusdatabase.org/source/123661 {'weight': 0.2}
 https://cantusdatabase.org/source/123671 https://musicahispanica.eu/source/116088 {'weight': 0.4}
+https://pemdatabase.eu/source/97935 https://musicahispanica.eu/source/72835 {'weight': 0.2}
+https://pemdatabase.eu/source/97935 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
 https://cantusdatabase.org/source/123645 https://musicahispanica.eu/source/72835 {'weight': 0.3333333333333333}
 https://musicahispanica.eu/source/72835 https://musicahispanica.eu/source/116088 {'weight': 0.16666666666666666}
