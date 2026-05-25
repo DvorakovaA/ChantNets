@@ -74,6 +74,82 @@ def construct_bipart_source_feast_graph(corpus):
 
     return g
 
+
+def construct_bipart_source_feast_reducted_graph(corpus, min_cid_per_feast):
+    """
+    Construct a bipartite weighted graph where source nodes are connected to feast nodes
+    while we consider only feasts that have at least min_cid_per_feast unique cantus IDs 
+    across all sources
+    """
+    g = gt.Graph(directed=False)
+    source_map, feast_map = {}, {}
+
+    vprop_name = g.new_vertex_property("string")
+    vprop_type = g.new_vertex_property("int")
+    eprop_count = g.new_edge_property("int")
+    eprop_weight = g.new_edge_property("double")
+
+    # deetct bog enough feasts
+    feast_sizes = defaultdict(set)
+    for chant in corpus.chants:
+        feast = chant.feast
+        cantus_id = chant.cantus_id
+
+        if feast is None or cantus_id is None:
+            continue
+
+        feast_sizes[feast].add(cantus_id)
+
+    big_enough_feasts = {feast for feast, cantus_ids in feast_sizes.items() if len(cantus_ids) >= min_cid_per_feast}
+
+    # unique Cantus IDs for each source-feast pair
+    source_feast_cid = defaultdict(set)
+
+    for chant in corpus.chants:
+        source = chant.srclink
+        feast = chant.feast
+        cantus_id = chant.cantus_id
+
+        if source is None or feast is None or cantus_id is None:
+            continue
+        if feast not in big_enough_feasts:
+            continue
+
+        source_feast_cid[(source, feast)].add(cantus_id)
+
+    print("Constructing bipartite graph between sources and feasts...")
+
+    for (source, feast), cantus_ids in source_feast_cid.items():
+        if source not in source_map:
+            source_vertex = g.add_vertex()
+            source_map[source] = source_vertex
+            vprop_name[source_vertex] = source
+            vprop_type[source_vertex] = 0
+
+        if feast not in feast_map:
+            feast_vertex = g.add_vertex()
+            feast_map[feast] = feast_vertex
+            vprop_name[feast_vertex] = feast
+            vprop_type[feast_vertex] = 1
+
+        edge = g.add_edge(source_map[source], feast_map[feast])
+        count = len(cantus_ids)
+        eprop_count[edge] = count
+        eprop_weight[edge] = 0.5 if count == 1 else np.log2(count) # setting weight to 0.5 when only one chant
+
+    g.vp["name"] = vprop_name
+    g.vp["type"] = vprop_type
+
+    g.ep["count"] = eprop_count
+    g.ep["weight"] = eprop_weight
+
+    print(f"Number of source nodes: {len(source_map)}")
+    print(f"Number of feast nodes: {len(feast_map)}")
+    print(f"Number of source-feast edges: {g.num_edges()}")
+
+    return g
+
+
 def save_graph(g, path):
     """Save graph to file."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
