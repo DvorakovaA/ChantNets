@@ -15,7 +15,7 @@ from pathlib import Path
 
 # ~ GRAPH CONSTRUCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-def construct_bipart_source_feast_graph(corpus):
+def construct_bipart_source_feast_graph(corpus, threshold = 0):
     """
     Construct a bipartite weighted graph where source nodes are connected to feast nodes
     if at least one chant from that source belongs to that feast
@@ -57,6 +57,8 @@ def construct_bipart_source_feast_graph(corpus):
             vprop_name[feast_vertex] = feast
             vprop_type[feast_vertex] = 1
 
+        if len(cantus_ids) < threshold: # we are potentially not insterested in tiny feast mentions
+            continue
         edge = g.add_edge(source_map[source], feast_map[feast])
         count = len(cantus_ids)
         eprop_count[edge] = count
@@ -75,7 +77,7 @@ def construct_bipart_source_feast_graph(corpus):
     return g
 
 
-def construct_bipart_source_feast_reducted_graph(corpus, min_cid_per_feast):
+def construct_bipart_source_feast_reducted_graph(corpus, min_cid_per_feast, per_source_threshold = 0):
     """
     Construct a bipartite weighted graph where source nodes are connected to feast nodes
     while we consider only feasts that have at least min_cid_per_feast unique cantus IDs 
@@ -132,6 +134,8 @@ def construct_bipart_source_feast_reducted_graph(corpus, min_cid_per_feast):
             vprop_name[feast_vertex] = feast
             vprop_type[feast_vertex] = 1
 
+        if len(cantus_ids) < per_source_threshold: # we are potentially not insterested in sources with very few chants connected to given feast
+            continue
         edge = g.add_edge(source_map[source], feast_map[feast])
         count = len(cantus_ids)
         eprop_count[edge] = count
@@ -234,7 +238,7 @@ def get_nested_partitions_from_state(state, sigla_dict):
                 feast_partitions[i][partition].append(graph.vp["name"][v])
 
     return partitions, sigla_partitions, feast_partitions
-
+    
 
 def save_nested_partitions(sigla_partitions, path):
     """
@@ -273,6 +277,35 @@ def save_nested_partitions(sigla_partitions, path):
 
     print(f"Saved nested partitions to {path}")
     return df
+
+
+def get_sigla_vs_feast_partitions(corpus, sigla_partitions, feast_partitions):
+    """
+    Construct a DataFrame comparing source and feast partitions.
+    Rows: are source groups
+    For each source partition and feast partition, we compute 
+    for each feast in given partition portion of sources in given source partition 
+    that have data connected to that feast
+    """
+    columns = ["source_partition", "n_of_sources"] + [f"f_p_{feast_partition}" for feast_partition in feast_partitions.keys()]
+    rows = []
+    for source_partition, sigla_list in sigla_partitions.items():
+        source_part_line = {"source_partition": source_partition, "n_of_sources": len(sigla_list)}
+        for feast_partition, feast_list in feast_partitions.items():
+            portions = []
+            for feast in feast_list:
+                sources_with_data = set()
+                for chant in corpus.chants:
+                    if chant.feast == feast and chant.siglum in sigla_list:
+                        sources_with_data.add(chant.siglum)
+                portion = len(sources_with_data) / len(sigla_list) if sigla_list else 0
+                portions.append(portion)
+            avg_portion = round(np.mean(portions),3) if portions else 0
+            source_part_line[f"f_p_{feast_partition}"] = avg_portion
+        rows.append(source_part_line)
+    df = pd.DataFrame(rows)
+    return df
+
 
 # ~ DENDROGRAMS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def insert_child(node, levels, leaf_name):
@@ -396,3 +429,21 @@ def networks_reduction_on_shared_nodes(G1, G2):
     G1_reduced = G1.subgraph(shared_nodes).copy()
     G2_reduced = G2.subgraph(shared_nodes).copy()
     return G1_reduced, G2_reduced
+
+
+def detect_sanctorale_in_partitions(feast_partitions):
+    """
+    For individual partitions return number of sanctorale feasts 
+    with counts of months
+    """
+    sanct_list = pd.read_csv('extra_data/ci_feast_sanctorale.csv')
+
+    for partition, feasts in feast_partitions.items():
+        sanct_month_counts = defaultdict(int)
+        sanct_count = 0
+        for feast in feasts:
+            if feast in sanct_list['feast'].values:
+                sanct_count += 1
+                month = sanct_list[sanct_list['feast'] == feast]['feast_date'].values[0][0:3] # get month from date
+                sanct_month_counts[month] += 1
+        print(f"Partition {partition}: {sanct_count}/{len(feasts)} : {dict(sanct_month_counts)}")
