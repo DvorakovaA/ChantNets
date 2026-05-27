@@ -16,15 +16,17 @@ import pickle
 from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 import argparse
 
-N_INIT = 1
+N_INIT = 20
 MIN_CHANTS_PER_SOURCE = 600
 THRESHOLDS = [0.0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
 
 FEAST_NAMES = [[f'Dom. {i} Quadragesimae', f"Quadragesima, dom. {i}", f"Quadragesimae, dom. {i}"] for i in range(1, 5)] \
              + [['Dom. in Palmis'], ['Dom. Resurrectionis']]
 
+WHOLE_DAY_LABEL = "whole_day"
+
 OFFICE_LABELS = {
-    "whole_day": "Whole day",
+    WHOLE_DAY_LABEL: "Whole day",
     "L": "Lauds",
     "V": "Vespers",
     "V2": "Second Vespers",
@@ -59,7 +61,7 @@ def load_dataset():
     return corpus, sigla_dict
 
 
-def build_lent_corpora(corpus, feast_names):
+def build_corpora(corpus, feast_names):
 
     corpora = {
         office_code: {}
@@ -76,11 +78,11 @@ def build_lent_corpora(corpus, feast_names):
         whole_day_corpus.apply_filter(feast_filter)
         whole_day_corpus.drop_empty_sources()
 
-        corpora["whole_day"][feast_name] = whole_day_corpus
+        corpora[WHOLE_DAY_LABEL][feast_name] = whole_day_corpus
 
         for office_code, office_label in OFFICE_LABELS.items():
 
-            if office_code == "whole_day":
+            if office_code == WHOLE_DAY_LABEL:
                 continue
 
             feast_corpus = copy.deepcopy(whole_day_corpus)
@@ -104,7 +106,7 @@ def create_graphs(corpora):
 
             graph = utils.build_feast_network(feast_corpus, feast_name)
             office_networks[feast_name] = graph
-            # clean the feast name, every character not a letter, digid or underscores hyphens are replaced by underscores
+            # clean the feast name, every character not a letter, digit, underscore or hyphen is replaced by underscore
             filename = f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_{OFFICE_LABELS[office_code].lower()}_network.edgelist"
 
             output_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", filename)
@@ -116,8 +118,8 @@ def create_graphs(corpora):
 
 def print_nets_info(nets):
 
-    sizes_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", "lent_net_sizes.txt")
-    info_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", "lent_net_info.txt")
+    sizes_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", "feast_office_net_sizes.txt")
+    info_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", "feast_office_net_info.txt")
 
     with open(sizes_fpath, 'w') as f_sizes:
         with open(info_fpath, 'w') as f_info:
@@ -154,7 +156,7 @@ def compare_edgewise_networks(nets):
         overlap_dfs[office_code] = pd.DataFrame(rows)
     return overlap_dfs
 
-def perform_weighted_sbm_analysis(network):
+def perform_weighted_sbm_analysis(network, sigla_dict):
     model = sbmodel.SBModel()
     model.load_graph_nx(network)
     model.fit_sbm_weighted(weight_label='weight', n_init=N_INIT)
@@ -162,15 +164,15 @@ def perform_weighted_sbm_analysis(network):
     partitions = utils.get_partitions_from_state(best_state, sigla_dict=sigla_dict)
     return partitions
 
-def prepare_sbm_by_pairs(networks):
+def prepare_sbm_by_pairs(networks, sigla_dict):
     sbm_results_by_pairs = {}
     for feast1, feast2 in itertools.combinations(networks.keys(), 2):
         network1, network2 = utils.networks_reduction_on_shared_nodes(networks[feast1], networks[feast2])
-        partition1 = perform_weighted_sbm_analysis(network1)[1]
-        partition2 = perform_weighted_sbm_analysis(network2)[1]
+        partition1 = perform_weighted_sbm_analysis(network1, sigla_dict)[1]
+        partition2 = perform_weighted_sbm_analysis(network2, sigla_dict)[1]
         sbm_results_by_pairs[(feast1, feast2)] = (partition1, partition2)
     
-    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), f'visual/sbm_results.pkl')
+    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual", "sbm_results.pkl")
     with open(fpath, 'wb') as f:
         pickle.dump(sbm_results_by_pairs, f)
 
@@ -205,13 +207,13 @@ def compare_weighted_sbm_partitions(sbm_on_nets):
     comparison_df = pd.DataFrame(rows)
     return comparison_df
 
-def summary_accross_sundays(nets, overlap_dfs):
-    edge_comparison_df = overlap_dfs["whole_day"]
-    sbm_results_by_pairs = prepare_sbm_by_pairs(nets["whole_day"])
+def summary_accross_sundays(nets, overlap_dfs, sigla_dict):
+    edge_comparison_df = overlap_dfs[WHOLE_DAY_LABEL]
+    sbm_results_by_pairs = prepare_sbm_by_pairs(nets[WHOLE_DAY_LABEL], sigla_dict)
     sbm_comparison_df = compare_weighted_sbm_partitions(sbm_results_by_pairs)
     comparison_df = edge_comparison_df.merge(sbm_comparison_df, on=["network_1", "network_2"])
 
-    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), f'visual/comparison.csv')
+    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual", "comparison.csv")
     comparison_df.to_csv(csv_fpath, index=False)
 
 def summary_accross_office(overlap_dfs):
@@ -229,11 +231,12 @@ def summary_accross_office(overlap_dfs):
         else:
             office_comparison_df = office_comparison_df.merge(df, on=["network_1", "network_2"], how="outer")
 
-    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual/office_edge_overlap_comparison.csv")
+    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual", "office_edge_overlap_comparison.csv")
     office_comparison_df.to_csv(csv_fpath, index = False)
 
 if __name__ == '__main__':
 
+    # The file accepts single (optional) argument --feast-names-fpath with a name of the feast in each line
     parser = argparse.ArgumentParser()
     parser.add_argument("--feast-names-fpath", help="File path of feast names.", type=str, default="")
     args = parser.parse_args()
@@ -244,13 +247,16 @@ if __name__ == '__main__':
         with open(args.feast_names_fpath, 'r') as f_feast_names:
             feast_names = [line.strip() for line in f_feast_names if line.strip()]
     
+    # Load data
     corpus, sigla_dict = load_dataset()
-    corpora = build_lent_corpora(corpus, feast_names)
+
+    # Data manipulation
+    corpora = build_corpora(corpus, feast_names)
     nets = create_graphs(corpora)
     print_nets_info(nets)
     overlap_dfs = compare_edgewise_networks(nets)
 
     # Comparisons
-    summary_accross_sundays(nets, overlap_dfs)
+    summary_accross_sundays(nets, overlap_dfs, sigla_dict)
     summary_accross_office(overlap_dfs)
     
