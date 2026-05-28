@@ -464,3 +464,51 @@ def detect_sanctorale_in_partitions(feast_partitions):
         print(f'Sanctorale feasts: {[feast for feast in feasts if feast in sanct_list["feast"].values]}')
         print(f'Temporal feasts: {[feast for feast in feasts if feast not in sanct_list["feast"].values]}')
         print()
+
+
+def plot_sanctorale_partition_histogram(feast_partitions, sanctorale_csv = "extra_data/ci_feast_sanctorale.csv", output_fig = None):
+    """
+    plot sanctorale vs non-sanctorale counts for each feast partition.
+    """
+    import matplotlib.pyplot as plt
+
+    sanct_list = pd.read_csv(sanctorale_csv)
+    sanctorale_feasts = set(sanct_list["feast"].values)
+
+    rows = []
+
+    for partition, feasts in feast_partitions.items():
+        sanctorale_count = 0
+        temp_count = 0
+
+        for feast in feasts:
+            if feast in sanctorale_feasts:
+                sanctorale_count += 1
+            else:
+                temp_count += 1
+
+        total = sanctorale_count + temp_count
+        rows.append({
+            "partition": partition,
+            "sanctorale": sanctorale_count,
+            "temporale": temp_count,
+            "total": total,
+            "sanctorale_share": sanctorale_count/total if total > 0 else 0})
+
+    df = pd.DataFrame(rows)
+    df = df.sort_values("total", ascending = False)
+    plot_df = df.copy()
+    plot_df["partition"] = plot_df["partition"].astype(str)
+    plot_df = plot_df.set_index("partition")[["sanctorale", "temporale"]]
+    
+    ax = plot_df.plot(kind="bar", stacked=False, figsize = (12, 6))
+    ax.set_xlabel("SBM feast partition")
+    ax.set_ylabel("Number of feasts")
+    ax.set_title("Sanctorale vs temporale feasts in SBM partitions")
+
+    if output_fig is not None:
+        os.makedirs(os.path.dirname(output_fig), exist_ok = True)
+        plt.savefig(output_fig, dpi = 300, bbox_inches = "tight")
+    plt.show()
+
+    return df
