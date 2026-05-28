@@ -1,0 +1,300 @@
+      Office | 'Whole day'
+       Graph | 'Dom. 1 Quadragesimae'
+       Nodes | 267 (3)
+       Edges | 17,421 (0)
+      Degree | 130.49 (256)
+  Components | 98.1% (5)
+  Clustering | 0.9389
+Modularity from Louvain | 0.4374 (6)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. 2 Quadragesimae'
+       Nodes | 265 (1)
+       Edges | 14,789 (0)
+      Degree | 111.62 (213)
+  Components | 97.0% (4)
+  Clustering | 0.9081
+Modularity from Louvain | 0.4914 (6)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. 3 Quadragesimae'
+       Nodes | 275 (2)
+       Edges | 18,089 (0)
+      Degree | 131.56 (261)
+  Components | 97.8% (4)
+  Clustering | 0.9521
+Modularity from Louvain | 0.4094 (6)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. 4 Quadragesimae'
+       Nodes | 277 (2)
+       Edges | 18,398 (0)
+      Degree | 132.84 (264)
+  Components | 97.5% (5)
+  Clustering | 0.9450
+Modularity from Louvain | 0.4151 (6)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. in Palmis'
+       Nodes | 280 (0)
+       Edges | 27,515 (0)
+      Degree | 196.54 (270)
+  Components | 100.0% (1)
+  Clustering | 0.8897
+Modularity from Louvain | 0.3935 (3)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. Resurrectionis'
+       Nodes | 298 (2)
+       Edges | 27,963 (0)
+      Degree | 187.67 (276)
+  Components | 97.0% (4)
+  Clustering | 0.8724
+Modularity from Louvain | 0.3767 (6)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 1 Quadragesimae'
+       Nodes | 111 (0)
+       Edges | 5,713 (0)
+      Degree | 102.94 (109)
+  Components | 100.0% (1)
+  Clustering | 0.9911
+Modularity from Louvain | 0.0235 (4)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 2 Quadragesimae'
+       Nodes | 113 (0)
+       Edges | 6,185 (0)
+      Degree | 109.47 (112)
+  Components | 100.0% (1)
+  Clustering | 0.9953
+Modularity from Louvain | 0.0369 (2)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 3 Quadragesimae'
+       Nodes | 113 (2)
+       Edges | 5,812 (0)
+      Degree | 102.87 (109)
+  Components | 98.2% (3)
+  Clustering | 0.9774
+Modularity from Louvain | 0.0441 (5)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 4 Quadragesimae'
+       Nodes | 115 (2)
+       Edges | 5,970 (0)
+      Degree | 103.83 (110)
+  Components | 98.3% (3)
+  Clustering | 0.9747
+Modularity from Louvain | 0.0443 (4)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. in Palmis'
+       Nodes | 114 (1)
+       Edges | 5,979 (0)
+      Degree | 104.89 (111)
+  Components | 99.1% (2)
+  Clustering | 0.9778
+Modularity from Louvain | 0.0230 (5)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. Resurrectionis'
+       Nodes | 116 (3)
+       Edges | 5,570 (0)
+      Degree | 96.03 (109)
+  Components | 97.4% (4)
+  Clustering | 0.9481
+Modularity from Louvain | 0.0430 (6)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 1 Quadragesimae'
+       Nodes | 117 (5)
+       Edges | 3,372 (0)
+      Degree | 57.64 (100)
+  Components | 95.7% (6)
+  Clustering | 0.8252
+Modularity from Louvain | 0.2091 (10)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 2 Quadragesimae'
+       Nodes | 111 (8)
+       Edges | 2,027 (0)
+      Degree | 36.52 (87)
+  Components | 92.8% (9)
+  Clustering | 0.7694
+Modularity from Louvain | 0.3583 (13)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 3 Quadragesimae'
+       Nodes | 114 (6)
+       Edges | 1,893 (0)
+      Degree | 33.21 (62)
+  Components | 94.7% (7)
+  Clustering | 0.7335
+Modularity from Louvain | 0.4323 (10)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 4 Quadragesimae'
+       Nodes | 106 (2)
+       Edges | 3,371 (0)
+      Degree | 63.60 (91)
+  Components | 94.3% (5)
+  Clustering | 0.8795
+Modularity from Louvain | 0.1688 (7)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. in Palmis'
+       Nodes | 112 (10)
+       Edges | 2,368 (0)
+      Degree | 42.29 (74)
+  Components | 87.5% (13)
+  Clustering | 0.7337
+Modularity from Louvain | 0.2438 (15)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. Resurrectionis'
+       Nodes | 119 (13)
+       Edges | 3,535 (0)
+      Degree | 59.41 (88)
+  Components | 84.9% (16)
+  Clustering | 0.8170
+Modularity from Louvain | 0.1189 (21)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 1 Quadragesimae'
+       Nodes | 112 (3)
+       Edges | 2,984 (0)
+      Degree | 53.29 (98)
+  Components | 97.3% (4)
+  Clustering | 0.7608
+Modularity from Louvain | 0.2755 (8)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 2 Quadragesimae'
+       Nodes | 110 (5)
+       Edges | 2,246 (0)
+      Degree | 40.84 (75)
+  Components | 95.5% (6)
+  Clustering | 0.8507
+Modularity from Louvain | 0.2401 (10)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 3 Quadragesimae'
+       Nodes | 109 (5)
+       Edges | 4,499 (0)
+      Degree | 82.55 (99)
+  Components | 95.4% (6)
+  Clustering | 0.9222
+Modularity from Louvain | 0.1038 (9)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 4 Quadragesimae'
+       Nodes | 108 (6)
+       Edges | 1,075 (0)
+      Degree | 19.91 (50)
+  Components | 92.6% (8)
+  Clustering | 0.7167
+Modularity from Louvain | 0.5203 (14)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. in Palmis'
+       Nodes | 118 (3)
+       Edges | 2,956 (0)
+      Degree | 50.10 (105)
+  Components | 97.5% (4)
+  Clustering | 0.8104
+Modularity from Louvain | 0.2779 (8)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. Resurrectionis'
+       Nodes | 127 (6)
+       Edges | 2,603 (0)
+      Degree | 40.99 (83)
+  Components | 89.8% (10)
+  Clustering | 0.7453
+Modularity from Louvain | 0.2726 (14)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 1 Quadragesimae'
+       Nodes | 130 (2)
+       Edges | 7,107 (0)
+      Degree | 109.34 (124)
+  Components | 98.5% (3)
+  Clustering | 0.9418
+Modularity from Louvain | 0.0689 (7)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 2 Quadragesimae'
+       Nodes | 134 (3)
+       Edges | 6,998 (0)
+      Degree | 104.45 (128)
+  Components | 97.8% (4)
+  Clustering | 0.9322
+Modularity from Louvain | 0.0740 (9)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 3 Quadragesimae'
+       Nodes | 128 (1)
+       Edges | 6,587 (0)
+      Degree | 102.92 (125)
+  Components | 99.2% (2)
+  Clustering | 0.9531
+Modularity from Louvain | 0.0642 (5)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 4 Quadragesimae'
+       Nodes | 128 (3)
+       Edges | 6,612 (0)
+      Degree | 103.31 (121)
+  Components | 97.7% (4)
+  Clustering | 0.9470
+Modularity from Louvain | 0.0803 (7)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. in Palmis'
+       Nodes | 173 (5)
+       Edges | 10,050 (0)
+      Degree | 116.18 (158)
+  Components | 97.1% (6)
+  Clustering | 0.8865
+Modularity from Louvain | 0.2096 (8)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. Resurrectionis'
+       Nodes | 153 (9)
+       Edges | 7,260 (0)
+      Degree | 94.90 (127)
+  Components | 88.9% (13)
+  Clustering | 0.8862
+Modularity from Louvain | 0.0911 (17)
+
+--------------------------------

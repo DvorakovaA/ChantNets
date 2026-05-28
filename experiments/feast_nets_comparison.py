@@ -118,10 +118,10 @@ def create_graphs(corpora, path):
 
     return nets
 
-def print_nets_info(nets):
+def print_nets_info(nets, path):
 
-    sizes_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", "feast_office_net_sizes.txt")
-    info_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", "feast_office_net_info.txt")
+    sizes_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "net_sizes.txt")
+    info_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "net_info.txt")
 
     with open(sizes_fpath, 'w') as f_sizes:
         with open(info_fpath, 'w') as f_info:
@@ -269,7 +269,7 @@ if __name__ == '__main__':
     # Data manipulation
     corpora = build_corpora(corpus, feast_names)
     nets = create_graphs(corpora, nets_path)
-    print_nets_info(nets)
+    print_nets_info(nets, results_path)
     overlap_dfs = compare_edgewise_networks(nets)
 
     # Comparisons

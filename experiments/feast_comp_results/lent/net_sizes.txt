@@ -1,0 +1,30 @@
+Dom. 1 Quadragesimae Whole day: 267 nodes, 17421 edges
+Dom. 2 Quadragesimae Whole day: 265 nodes, 14789 edges
+Dom. 3 Quadragesimae Whole day: 275 nodes, 18089 edges
+Dom. 4 Quadragesimae Whole day: 277 nodes, 18398 edges
+Dom. in Palmis Whole day: 280 nodes, 27515 edges
+Dom. Resurrectionis Whole day: 298 nodes, 27963 edges
+Dom. 1 Quadragesimae Lauds: 111 nodes, 5713 edges
+Dom. 2 Quadragesimae Lauds: 113 nodes, 6185 edges
+Dom. 3 Quadragesimae Lauds: 113 nodes, 5812 edges
+Dom. 4 Quadragesimae Lauds: 115 nodes, 5970 edges
+Dom. in Palmis Lauds: 114 nodes, 5979 edges
+Dom. Resurrectionis Lauds: 116 nodes, 5570 edges
+Dom. 1 Quadragesimae Vespers: 117 nodes, 3372 edges
+Dom. 2 Quadragesimae Vespers: 111 nodes, 2027 edges
+Dom. 3 Quadragesimae Vespers: 114 nodes, 1893 edges
+Dom. 4 Quadragesimae Vespers: 106 nodes, 3371 edges
+Dom. in Palmis Vespers: 112 nodes, 2368 edges
+Dom. Resurrectionis Vespers: 119 nodes, 3535 edges
+Dom. 1 Quadragesimae Second Vespers: 112 nodes, 2984 edges
+Dom. 2 Quadragesimae Second Vespers: 110 nodes, 2246 edges
+Dom. 3 Quadragesimae Second Vespers: 109 nodes, 4499 edges
+Dom. 4 Quadragesimae Second Vespers: 108 nodes, 1075 edges
+Dom. in Palmis Second Vespers: 118 nodes, 2956 edges
+Dom. Resurrectionis Second Vespers: 127 nodes, 2603 edges
+Dom. 1 Quadragesimae Matins: 130 nodes, 7107 edges
+Dom. 2 Quadragesimae Matins: 134 nodes, 6998 edges
+Dom. 3 Quadragesimae Matins: 128 nodes, 6587 edges
+Dom. 4 Quadragesimae Matins: 128 nodes, 6612 edges
+Dom. in Palmis Matins: 173 nodes, 10050 edges
+Dom. Resurrectionis Matins: 153 nodes, 7260 edges
