@@ -19,7 +19,7 @@ from sklearn.metrics import adjusted_rand_score, normalized_mutual_info_score
 import argparse
 
 N_INIT = 20
-MIN_CHANTS_PER_SOURCE = 600
+MIN_CHANTS_PER_SOURCE = 200
 THRESHOLDS = [0.0, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8]
 
 FEAST_NAMES = [[f'Dom. {i} Quadragesimae', f"Quadragesima, dom. {i}", f"Quadragesimae, dom. {i}"] for i in range(1, 5)] \
@@ -264,7 +264,7 @@ if __name__ == '__main__':
     
     # Load data
     print("Loading and cleaning the dataset... with minimum chants per source:", args.min_chant_per_source)
-    corpus, sigla_dict = load_dataset(minimum_chants_per_source=args.min_chant_per_source)
+    corpus, sigla_dict = load_dataset(min_chants_per_source=args.min_chant_per_source)
 
     # Data manipulation
     corpora = build_corpora(corpus, feast_names)
