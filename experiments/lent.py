@@ -1,4 +1,6 @@
+"""
 
+"""
 import pycantus
 import pycantus.data as data
 from pycantus.filtration import Filter
@@ -207,16 +209,17 @@ def compare_weighted_sbm_partitions(sbm_on_nets):
     comparison_df = pd.DataFrame(rows)
     return comparison_df
 
-def summary_accross_sundays(nets, overlap_dfs, sigla_dict):
+def summary_accross_feasts(nets, overlap_dfs, sigla_dict, path):
     edge_comparison_df = overlap_dfs[WHOLE_DAY_LABEL]
     sbm_results_by_pairs = prepare_sbm_by_pairs(nets[WHOLE_DAY_LABEL], sigla_dict)
     sbm_comparison_df = compare_weighted_sbm_partitions(sbm_results_by_pairs)
     comparison_df = edge_comparison_df.merge(sbm_comparison_df, on=["network_1", "network_2"])
 
-    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual", "comparison.csv")
+    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "comparison.csv")
     comparison_df.to_csv(csv_fpath, index=False)
+    print(f"Feast comparison saved to {csv_fpath}")
 
-def summary_accross_office(overlap_dfs):
+def summary_accross_office(overlap_dfs, path="visual"):
     office_comparison_df = None
 
     for office_code, df in overlap_dfs.items():
@@ -231,21 +234,28 @@ def summary_accross_office(overlap_dfs):
         else:
             office_comparison_df = office_comparison_df.merge(df, on=["network_1", "network_2"], how="outer")
 
-    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual", "office_edge_overlap_comparison.csv")
+    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "office_edge_overlap_comparison.csv")
     office_comparison_df.to_csv(csv_fpath, index = False)
+    print(f"Office comparison saved to {csv_fpath}")
+
+
 
 if __name__ == '__main__':
 
     # The file accepts single (optional) argument --feast-names-fpath with a name of the feast in each line
     parser = argparse.ArgumentParser()
-    parser.add_argument("--feast-names-fpath", help="File path of feast names.", type=str, default="")
+    parser.add_argument("--feast-names-fpath", help="File path of feast names, variants on one line separated by ';'.", type=str, default="")
     args = parser.parse_args()
 
     if args.feast_names_fpath == "":
         feast_names = FEAST_NAMES
+        path = "visual"
     else:
         with open(args.feast_names_fpath, 'r') as f_feast_names:
-            feast_names = [line.strip() for line in f_feast_names if line.strip()]
+            feast_lines = [line.strip() for line in f_feast_names if line.strip()]
+            feast_names = [line.split(';') for line in feast_lines]
+        # save results beside the file with feast names
+        path = os.path.dirname(os.path.abspath(args.feast_names_fpath))
     
     # Load data
     corpus, sigla_dict = load_dataset()
@@ -257,6 +267,6 @@ if __name__ == '__main__':
     overlap_dfs = compare_edgewise_networks(nets)
 
     # Comparisons
-    summary_accross_sundays(nets, overlap_dfs, sigla_dict)
-    summary_accross_office(overlap_dfs)
+    summary_accross_feasts(nets, overlap_dfs, sigla_dict, path)
+    summary_accross_office(overlap_dfs, path)
     
