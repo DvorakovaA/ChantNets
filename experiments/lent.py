@@ -35,7 +35,7 @@ OFFICE_LABELS = {
     "M": "Matins",
 }
 
-def load_dataset():
+def load_dataset(min_chants_per_source):
 
     corpus = data.load_dataset('cantuscorpus_v1.0')
 
@@ -51,7 +51,7 @@ def load_dataset():
     corpus.apply_filter(doxo_filter)
 
     # Drop fragments => sources with less than MIN_CHANTS_PER_SOURCE chants
-    corpus.drop_small_sources_data(min_chants=MIN_CHANTS_PER_SOURCE)
+    corpus.drop_small_sources_data(min_chants=min_chants_per_source)
 
     n_chants = len(corpus.chants)
     print(f'Number of chants in CantusCorpus v1.0 after cleaning: {n_chants}')
@@ -245,13 +245,16 @@ if __name__ == '__main__':
     # The file accepts single (optional) argument --feast-names-fpath with a name of the feast in each line
     parser = argparse.ArgumentParser()
     parser.add_argument("--feast-names-fpath", help="File path of feast names, variants on one line separated by ';'.", type=str, default="")
+    parser.add_argument('--min_chant_per_source', default=MIN_CHANTS_PER_SOURCE, type=int, help="Minimum number of chants a source have to be included in the analysis")
     args = parser.parse_args()
 
     if args.feast_names_fpath == "":
+        print("No feast names file provided, using default feast names.")
         feast_names = FEAST_NAMES
         results_path = "visual"
         nets_path = ""
     else:
+        print(f"Loading feast names from {args.feast_names_fpath}")
         with open(args.feast_names_fpath, 'r') as f_feast_names:
             feast_lines = [line.strip() for line in f_feast_names if line.strip()]
             feast_names = [line.split(';') for line in feast_lines]
@@ -260,7 +263,8 @@ if __name__ == '__main__':
         nets_path = os.path.dirname(os.path.abspath(args.feast_names_fpath))
     
     # Load data
-    corpus, sigla_dict = load_dataset()
+    print("Loading and cleaning the dataset... with minimum chants per source:", args.min_chant_per_source)
+    corpus, sigla_dict = load_dataset(minimum_chants_per_source=args.min_chant_per_source)
 
     # Data manipulation
     corpora = build_corpora(corpus, feast_names)
