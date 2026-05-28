@@ -1,0 +1,30 @@
+Dom. 1 Adventus Whole day: 248 nodes, 14437 edges
+Dom. 2 Adventus Whole day: 243 nodes, 13984 edges
+Dom. 3 Adventus Whole day: 254 nodes, 14627 edges
+Dom. 4 Adventus Whole day: 254 nodes, 14610 edges
+Nativitas Domini Whole day: 305 nodes, 22975 edges
+Vigilia Nat. Domini Whole day: 253 nodes, 15256 edges
+Dom. 1 Adventus Lauds: 105 nodes, 5020 edges
+Dom. 2 Adventus Lauds: 100 nodes, 4698 edges
+Dom. 3 Adventus Lauds: 109 nodes, 5260 edges
+Dom. 4 Adventus Lauds: 115 nodes, 5829 edges
+Nativitas Domini Lauds: 125 nodes, 7162 edges
+Vigilia Nat. Domini Lauds: 113 nodes, 5926 edges
+Dom. 1 Adventus Vespers: 112 nodes, 4236 edges
+Dom. 2 Adventus Vespers: 93 nodes, 1154 edges
+Dom. 3 Adventus Vespers: 102 nodes, 2421 edges
+Dom. 4 Adventus Vespers: 102 nodes, 1128 edges
+Nativitas Domini Vespers: 120 nodes, 1986 edges
+Vigilia Nat. Domini Vespers: 87 nodes, 1092 edges
+Dom. 1 Adventus Second Vespers: 99 nodes, 3349 edges
+Dom. 2 Adventus Second Vespers: 94 nodes, 2417 edges
+Dom. 3 Adventus Second Vespers: 96 nodes, 1770 edges
+Dom. 4 Adventus Second Vespers: 82 nodes, 453 edges
+Nativitas Domini Second Vespers: 139 nodes, 6391 edges
+Vigilia Nat. Domini Second Vespers: 66 nodes, 1222 edges
+Dom. 1 Adventus Matins: 119 nodes, 5617 edges
+Dom. 2 Adventus Matins: 110 nodes, 5062 edges
+Dom. 3 Adventus Matins: 119 nodes, 5683 edges
+Dom. 4 Adventus Matins: 123 nodes, 6480 edges
+Nativitas Domini Matins: 164 nodes, 8709 edges
+Vigilia Nat. Domini Matins: 122 nodes, 6506 edges

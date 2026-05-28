@@ -1,0 +1,300 @@
+      Office | 'Whole day'
+       Graph | 'Dom. 1 Adventus'
+       Nodes | 248 (2)
+       Edges | 14,437 (0)
+      Degree | 116.43 (234)
+  Components | 98.0% (4)
+  Clustering | 0.9525
+Modularity from Louvain | 0.4269 (5)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. 2 Adventus'
+       Nodes | 243 (0)
+       Edges | 13,984 (0)
+      Degree | 115.09 (236)
+  Components | 98.8% (2)
+  Clustering | 0.9778
+Modularity from Louvain | 0.4102 (4)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. 3 Adventus'
+       Nodes | 254 (1)
+       Edges | 14,627 (0)
+      Degree | 115.17 (239)
+  Components | 97.2% (4)
+  Clustering | 0.9628
+Modularity from Louvain | 0.4385 (7)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Dom. 4 Adventus'
+       Nodes | 254 (0)
+       Edges | 14,610 (0)
+      Degree | 115.04 (242)
+  Components | 98.4% (2)
+  Clustering | 0.9702
+Modularity from Louvain | 0.4952 (4)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Nativitas Domini'
+       Nodes | 305 (1)
+       Edges | 22,975 (0)
+      Degree | 150.66 (278)
+  Components | 99.7% (2)
+  Clustering | 0.9048
+Modularity from Louvain | 0.4530 (6)
+
+--------------------------------
+      Office | 'Whole day'
+       Graph | 'Vigilia Nat. Domini'
+       Nodes | 253 (2)
+       Edges | 15,256 (0)
+      Degree | 120.60 (244)
+  Components | 98.4% (4)
+  Clustering | 0.9589
+Modularity from Louvain | 0.4293 (5)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 1 Adventus'
+       Nodes | 105 (0)
+       Edges | 5,020 (0)
+      Degree | 95.62 (103)
+  Components | 100.0% (1)
+  Clustering | 0.9665
+Modularity from Louvain | 0.0323 (3)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 2 Adventus'
+       Nodes | 100 (0)
+       Edges | 4,698 (0)
+      Degree | 93.96 (99)
+  Components | 100.0% (1)
+  Clustering | 0.9665
+Modularity from Louvain | 0.0407 (3)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 3 Adventus'
+       Nodes | 109 (1)
+       Edges | 5,260 (0)
+      Degree | 96.51 (106)
+  Components | 99.1% (2)
+  Clustering | 0.9568
+Modularity from Louvain | 0.0451 (4)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Dom. 4 Adventus'
+       Nodes | 115 (0)
+       Edges | 5,829 (0)
+      Degree | 101.37 (112)
+  Components | 100.0% (1)
+  Clustering | 0.9611
+Modularity from Louvain | 0.0447 (2)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Nativitas Domini'
+       Nodes | 125 (1)
+       Edges | 7,162 (0)
+      Degree | 114.59 (121)
+  Components | 99.2% (2)
+  Clustering | 0.9871
+Modularity from Louvain | 0.0280 (6)
+
+--------------------------------
+      Office | 'Lauds'
+       Graph | 'Vigilia Nat. Domini'
+       Nodes | 113 (0)
+       Edges | 5,926 (0)
+      Degree | 104.88 (110)
+  Components | 100.0% (1)
+  Clustering | 0.9766
+Modularity from Louvain | 0.0697 (3)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 1 Adventus'
+       Nodes | 112 (1)
+       Edges | 4,236 (0)
+      Degree | 75.64 (102)
+  Components | 97.3% (3)
+  Clustering | 0.8876
+Modularity from Louvain | 0.1417 (8)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 2 Adventus'
+       Nodes | 93 (5)
+       Edges | 1,154 (0)
+      Degree | 24.82 (53)
+  Components | 94.6% (6)
+  Clustering | 0.7115
+Modularity from Louvain | 0.3481 (8)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 3 Adventus'
+       Nodes | 102 (3)
+       Edges | 2,421 (0)
+      Degree | 47.47 (81)
+  Components | 95.1% (5)
+  Clustering | 0.8410
+Modularity from Louvain | 0.2086 (8)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Dom. 4 Adventus'
+       Nodes | 102 (10)
+       Edges | 1,128 (0)
+      Degree | 22.12 (62)
+  Components | 90.2% (11)
+  Clustering | 0.7186
+Modularity from Louvain | 0.3195 (16)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Nativitas Domini'
+       Nodes | 120 (10)
+       Edges | 1,986 (0)
+      Degree | 33.10 (76)
+  Components | 91.7% (11)
+  Clustering | 0.7199
+Modularity from Louvain | 0.3017 (16)
+
+--------------------------------
+      Office | 'Vespers'
+       Graph | 'Vigilia Nat. Domini'
+       Nodes | 87 (4)
+       Edges | 1,092 (0)
+      Degree | 25.10 (61)
+  Components | 93.1% (6)
+  Clustering | 0.7215
+Modularity from Louvain | 0.4011 (10)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 1 Adventus'
+       Nodes | 99 (2)
+       Edges | 3,349 (0)
+      Degree | 67.66 (88)
+  Components | 96.0% (4)
+  Clustering | 0.8859
+Modularity from Louvain | 0.1284 (8)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 2 Adventus'
+       Nodes | 94 (4)
+       Edges | 2,417 (0)
+      Degree | 51.43 (77)
+  Components | 95.7% (5)
+  Clustering | 0.8729
+Modularity from Louvain | 0.1476 (9)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 3 Adventus'
+       Nodes | 96 (3)
+       Edges | 1,770 (0)
+      Degree | 36.88 (71)
+  Components | 94.8% (5)
+  Clustering | 0.8145
+Modularity from Louvain | 0.3256 (9)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Dom. 4 Adventus'
+       Nodes | 82 (6)
+       Edges | 453 (0)
+      Degree | 11.05 (31)
+  Components | 92.7% (7)
+  Clustering | 0.7563
+Modularity from Louvain | 0.5859 (14)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Nativitas Domini'
+       Nodes | 139 (7)
+       Edges | 6,391 (0)
+      Degree | 91.96 (121)
+  Components | 90.6% (10)
+  Clustering | 0.8797
+Modularity from Louvain | 0.0437 (13)
+
+--------------------------------
+      Office | 'Second Vespers'
+       Graph | 'Vigilia Nat. Domini'
+       Nodes | 66 (5)
+       Edges | 1,222 (0)
+      Degree | 37.03 (56)
+  Components | 92.4% (6)
+  Clustering | 0.8492
+Modularity from Louvain | 0.2320 (10)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 1 Adventus'
+       Nodes | 119 (3)
+       Edges | 5,617 (0)
+      Degree | 94.40 (112)
+  Components | 95.8% (5)
+  Clustering | 0.9070
+Modularity from Louvain | 0.1009 (8)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 2 Adventus'
+       Nodes | 110 (1)
+       Edges | 5,062 (0)
+      Degree | 92.04 (105)
+  Components | 99.1% (2)
+  Clustering | 0.9601
+Modularity from Louvain | 0.1081 (5)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 3 Adventus'
+       Nodes | 119 (0)
+       Edges | 5,683 (0)
+      Degree | 95.51 (111)
+  Components | 98.3% (2)
+  Clustering | 0.9445
+Modularity from Louvain | 0.1031 (6)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Dom. 4 Adventus'
+       Nodes | 123 (0)
+       Edges | 6,480 (0)
+      Degree | 105.37 (118)
+  Components | 100.0% (1)
+  Clustering | 0.9741
+Modularity from Louvain | 0.0885 (3)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Nativitas Domini'
+       Nodes | 164 (9)
+       Edges | 8,709 (0)
+      Degree | 106.21 (138)
+  Components | 89.0% (12)
+  Clustering | 0.8789
+Modularity from Louvain | 0.0445 (16)
+
+--------------------------------
+      Office | 'Matins'
+       Graph | 'Vigilia Nat. Domini'
+       Nodes | 122 (2)
+       Edges | 6,506 (0)
+      Degree | 106.66 (118)
+  Components | 98.4% (3)
+  Clustering | 0.9390
+Modularity from Louvain | 0.0670 (6)
+
+--------------------------------
