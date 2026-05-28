@@ -102,7 +102,7 @@ class SBModel:
         self.best_states['Nested_DC_SBM'] = best["state"]
         #print(self.states)
 
-    def fit_sbm_weighted(self, weight_label, n_init=10):
+    def fit_sbm_weighted(self, weight_label='weight', n_init=10):
         """
         weighted SBM to the graph using graph-tool's built-in functions
         """
