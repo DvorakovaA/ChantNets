@@ -30,7 +30,6 @@ def construct_bipart_source_feast_graph(corpus, threshold = 0):
 
     # unique Cantus IDs for each sourse-feast pair
     source_feast_chant_ids = defaultdict(set)
-
     for chant in corpus.chants:
         source = chant.srclink
         feast = chant.feast
@@ -240,7 +239,7 @@ def get_nested_partitions_from_state(state, sigla_dict):
     return partitions, sigla_partitions, feast_partitions
     
 
-def save_nested_partitions(sigla_partitions, path):
+def save_nested_partitions_csv(sigla_partitions, path):
     """
     Save the nested partitions to a file.
     """
@@ -277,6 +276,17 @@ def save_nested_partitions(sigla_partitions, path):
 
     print(f"Saved nested partitions to {path}")
     return df
+
+def save_partitions_txt(sigla_partitions, feast_partitions, output_dir, prefix):
+    with open(os.path.join(output_dir, f"{prefix}_sigla_partitions.txt"), "w") as f:
+        for partition, sigla_list in sigla_partitions.items():
+            f.write(f"Partition {partition}:\n")
+            f.write(", ".join(sorted(sigla_list)) + "\n\n")
+
+    with open(os.path.join(output_dir, f"{prefix}_feast_partitions.txt"), "w") as f:
+        for partition, feast_list in feast_partitions.items():
+            f.write(f"Partition {partition}:\n")
+            f.write(", ".join(sorted(feast_list)) + "\n\n")
 
 
 def get_sigla_vs_feast_partitions(corpus, sigla_partitions, feast_partitions):
@@ -444,6 +454,13 @@ def detect_sanctorale_in_partitions(feast_partitions):
         for feast in feasts:
             if feast in sanct_list['feast'].values:
                 sanct_count += 1
-                month = sanct_list[sanct_list['feast'] == feast]['feast_date'].values[0][0:3] # get month from date
-                sanct_month_counts[month] += 1
+                try:
+                    month = sanct_list[sanct_list['feast'] == feast]['feast_date'].values[0][0:3] # get month from date
+                    sanct_month_counts[month] += 1
+                except:
+                    month = "undetermined"
+                    sanct_month_counts[month] += 1
         print(f"Partition {partition}: {sanct_count}/{len(feasts)} : {dict(sanct_month_counts)}")
+        print(f'Sanctorale feasts: {[feast for feast in feasts if feast in sanct_list["feast"].values]}')
+        print(f'Temporal feasts: {[feast for feast in feasts if feast not in sanct_list["feast"].values]}')
+        print()

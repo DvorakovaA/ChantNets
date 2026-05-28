@@ -81,7 +81,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['DC_SBM'], key=lambda s: s["model"])
-        self.best_states['DC_SBM'] = best["state"]
+        self.best_states['DC_SBM'] = {'best_state' : best["state"], 'entropies': [s["model"] for s in self.states['DC_SBM']]}
 
 
     def fit_nested_sbm(self, n_init=10):
@@ -99,7 +99,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['Nested_DC_SBM'], key=lambda s: s["model"])
-        self.best_states['Nested_DC_SBM'] = best["state"]
+        self.best_states['Nested_DC_SBM'] = {'best_state' : best["state"], 'entropies': [s["model"] for s in self.states['Nested_DC_SBM']]}
         #print(self.states)
 
     def fit_sbm_weighted(self, weight_label='weight', n_init=10):
@@ -126,7 +126,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['Weighted_DC_SBM'], key = lambda s: s["model"])
-        self.best_states['Weighted_DC_SBM'] = best["state"]
+        self.best_states['Weighted_DC_SBM'] = {'best_state' : best["state"], 'entropies': [s["model"] for s in self.states['Weighted_DC_SBM']]}
 
     def fit_nested_sbm_weighted(self, weight_label="weight", n_init=10):
         """
@@ -152,7 +152,7 @@ class SBModel:
             print(f"[{i+1}/{n_init}] entropy = {state.entropy():.2f}")
 
         best = min(self.states['Weighted_Nested_DC_SBM'], key = lambda s: s["model"])
-        self.best_states['Weighted_Nested_DC_SBM'] = best['state']
+        self.best_states['Weighted_Nested_DC_SBM'] = {'best_state': best['state'], 'entropies': [s["model"] for s in self.states['Weighted_Nested_DC_SBM']]}
     
 
     def save_states(self, path):

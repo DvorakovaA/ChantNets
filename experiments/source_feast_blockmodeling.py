@@ -48,6 +48,7 @@ def build_arg_parser():
     parser.add_argument('--min_cid_per_source_feast', default=0, type=int, help="Minimum number of CIDs a source-feast pair must be associated with to be included in the analysis")
     parser.add_argument('--number_of_iterations', default=20, type=int, help="Number of iterations for the blockmodeling algorithm")
     parser.add_argument('--output_dir', default='results', type=str, help="Directory to save the results")
+    parser.add_argument('--do_vs_partitions', action='store_true', default=False, help="Whether to compute source vs feast partitions dataframe")
     return parser.parse_args()
 
 
@@ -74,18 +75,23 @@ def main(args):
     model = sbmodel.SBModel()
     model.graph = g
     print()
-
+    
+    entropies = {}
     # DC
     model.fit_sbm(n_init=args.number_of_iterations)
+    entropies['DC_SBM'] = [s["model"] for s in model.states['DC_SBM']]
 
     # DC-nested
     model.fit_nested_sbm(n_init=args.number_of_iterations)
+    entropies['Nested_DC_SBM'] = [s["model"] for s in model.states['Nested_DC_SBM']]
 
     # DC-weighted
-    #model.fit_sbm_weighted(n_init=args.number_of_iterations)
+    model.fit_sbm_weighted(n_init=args.number_of_iterations)
+    entropies['Weighted_DC_SBM'] = [s["model"] for s in model.states['Weighted_DC_SBM']]
 
     # DC-nested-weighted
-    #model.fit_nested_sbm_weighted(n_init=args.number_of_iterations)
+    model.fit_nested_sbm_weighted(n_init=args.number_of_iterations)
+    entropies['Weighted_Nested_DC_SBM'] = [s["model"] for s in model.states['Weighted_Nested_DC_SBM']]
 
     # Print best states entropies
     print("Best DC_SBM entropy:", model.best_states['DC_SBM'].entropy())
@@ -101,7 +107,8 @@ def main(args):
 
 
     print('Starting infering...')
-    best_state = model.best_states['DC_SBM']
+    # DC_SBM
+    best_state = model.best_states['DC_SBM']['best_state']
     index_partitions, sigla_partitions, feasts_partitions = utils.get_partitions_from_state(best_state, sigla_dict)
     print('DC_SBM partitions:')
     print('  Number of partitions:', len(index_partitions))
@@ -109,17 +116,70 @@ def main(args):
     print('  Number of feast partitions:', len(feasts_partitions))
     print()
     print('Saving DC_SBM partitions...')
-    utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir)
-    source_vs_feast_df = utils.get_sigla_vs_feast_partitions()
-    source_vs_feast_df.to_csv(os.path.join(args.output_dir, "dc_source_vs_feast_partitions.csv"), index=False)
+    utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir, prefix="dc_sbm")
+    if args.do_vs_partitions:
+        print('Computing source vs feast partition dataframe...')
+        source_vs_feast_df = utils.get_sigla_vs_feast_partitions(corpus, sigla_partitions, feasts_partitions)
+        source_vs_feast_df.to_csv(os.path.join(args.output_dir, "dc_sbm_source_vs_feast_partitions.csv"), index=False)
     
-    best_state = model.best_states['Nested_DC_SBM']
+    # Nested_DC_SBM
+    best_state = model.best_states['Nested_DC_SBM']['best_state']
     index_partitions, sigla_partitions, feasts_partitions = utils.get_nested_partitions_from_state(best_state, sigla_dict)
-    print('Saving Nested_DC_SBM partitions...')
-    utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir)
+    print('Nested_DC_SBM partitions:')
+    print('  Number of partitions:', len(index_partitions))
+    print('  Number of sigla partitions:', len(sigla_partitions))
+    print('  Number of feast partitions:', len(feasts_partitions))
+    print()
+    #print('Saving Nested_DC_SBM partitions...')
+    #utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir, prefix="nested_dc_sbm")
+
     print('Preparing dendrogram data...')
-    utils.save_nested_partitions(sigla_partitions, os.path.join(output_dir, "nested_dc_sigla_partitions.json"))
-    utils.get_dendro_json()
+    nested_csv_path = os.path.join(output_dir, "nested_dc_sigla_partitions.csv")
+    df = utils.save_nested_partitions_csv(sigla_partitions, nested_csv_path)
+    columns = ["siglum"]
+    for col in df.columns:
+        if col.startswith("level") and col.endswith("_new"):
+            if df[col].nunique() > 1:
+                columns.append(col)
+    utils.get_dendro_json(nested_csv_path, columns, os.path.join(output_dir, "nested_dc_sigla_dendro.json"))
+    
+
+    # DC_SBM_weighted
+    best_state = model.best_states['Weighted_DC_SBM']['best_state']
+    index_partitions, sigla_partitions, feasts_partitions = utils.get_partitions_from_state(best_state, sigla_dict)
+    print('DC_SBM_weighted partitions:')
+    print('  Number of partitions:', len(index_partitions))
+    print('  Number of sigla partitions:', len(sigla_partitions))
+    print('  Number of feast partitions:', len(feasts_partitions))
+    print()
+    print('Saving DC_SBM_weighted partitions...')
+    utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir, prefix="dc_sbm_weighted")
+
+    if args.do_vs_partitions:
+        print('Computing source vs feast partition dataframe...')
+        source_vs_feast_df = utils.get_sigla_vs_feast_partitions(corpus, sigla_partitions, feasts_partitions)
+        source_vs_feast_df.to_csv(os.path.join(args.output_dir, "dc_sbm_weighted_source_vs_feast_partitions.csv"), index=False)
+
+    # Nested_DC_SBM_weighted
+    best_state = model.best_states['Weighted_Nested_DC_SBM']['best_state']
+    index_partitions, sigla_partitions, feasts_partitions = utils.get_nested_partitions_from_state(best_state, sigla_dict)
+    print('Nested_DC_SBM_weighted partitions:')
+    print('  Number of partitions:', len(index_partitions))
+    print('  Number of sigla partitions:', len(sigla_partitions))
+    print('  Number of feast partitions:', len(feasts_partitions))
+    print()
+    #print('Saving Nested_DC_SBM_weighted partitions...')
+    #utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir, prefix="nested_dc_sbm_weighted")
+    
+    print('Preparing dendrogram data...')
+    nested_csv_path = os.path.join(output_dir, "nested_dc_weighted_sigla_partitions.csv")
+    df = utils.save_nested_partitions_csv(sigla_partitions, nested_csv_path)
+    columns = ["siglum"]
+    for col in df.columns:
+        if col.startswith("level") and col.endswith("_new"):
+            if df[col].nunique() > 1:
+                columns.append(col)
+    utils.get_dendro_json(nested_csv_path, columns, os.path.join(output_dir, "nested_dc_weighted_sigla_dendro.json"))
 
 
 
