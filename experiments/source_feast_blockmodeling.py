@@ -94,10 +94,10 @@ def main(args):
     entropies['Weighted_Nested_DC_SBM'] = [s["model"] for s in model.states['Weighted_Nested_DC_SBM']]
 
     # Print best states entropies
-    print("Best DC_SBM entropy:", model.best_states['DC_SBM'].entropy())
-    print("Best Nested_DC_SBM entropy:", model.best_states['Nested_DC_SBM'].entropy())
-    #print("Best DC_SBM_weighted entropy:", model.best_states['Weighted_DC_SBM'].entropy())
-    #print("Best Nested_DC_SBM_weighted entropy:", model.best_states['Weighted_Nested_DC_SBM'].entropy())
+    print("Best DC_SBM entropy:", model.best_states['DC_SBM']['best_state'].entropy())
+    print("Best Nested_DC_SBM entropy:", model.best_states['Nested_DC_SBM']['best_state'].entropy())
+    print("Best DC_SBM_weighted entropy:", model.best_states['Weighted_DC_SBM']['best_state'].entropy())
+    print("Best Nested_DC_SBM_weighted entropy:", model.best_states['Weighted_Nested_DC_SBM']['best_state'].entropy())
     print()
 
     # Save best states

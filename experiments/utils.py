@@ -12,6 +12,7 @@ import itertools
 import pandas as pd
 import json
 from pathlib import Path
+import sbmodel
 
 # ~ GRAPH CONSTRUCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -464,3 +465,29 @@ def detect_sanctorale_in_partitions(feast_partitions):
         print(f'Sanctorale feasts: {[feast for feast in feasts if feast in sanct_list["feast"].values]}')
         print(f'Temporal feasts: {[feast for feast in feasts if feast not in sanct_list["feast"].values]}')
         print()
+
+# ~ Entropy comparison plot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+def load_models_entropies(path, models):
+    """
+    Load models and return entropy traces.
+    """
+    out = {}
+    m = sbmodel.SBModel()
+    m.load_states(path)
+    for name in models:
+        print(m.best_states[name]['entropies'])
+        out[name] = m.best_states[name]['entropies']
+    print(f"Loaded models: {list(out.keys())}")
+    return out
+
+def compute_log_odds(entropies):
+    """
+    Convert entropies to log-likelihood odds.
+    """
+    sigma_min = min(v for runs in entropies.values() for v in runs)
+    return {
+        m: [(val - sigma_min) * -np.log10(2.0) for val in vals]
+        # m: [2.0**-(val - sigma_min) for val in vals] # the values are too small
+        for m, vals in entropies.items()
+    }
