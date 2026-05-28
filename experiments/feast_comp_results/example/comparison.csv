@@ -1,0 +1,2 @@
+network_1,network_2,edges_1,edges_2,shared_edges,edge_overlap_0.0,edge_overlap_0.2,edge_overlap_0.3,edge_overlap_0.4,edge_overlap_0.5,edge_overlap_0.6,edge_overlap_0.7,edge_overlap_0.8,num_partitions_1,num_partitions_2,n_shared_nodes,adjusted_rand_index,normalized_mutual_info
+Dom. 1 Quadragesimae,Dom. 2 Quadragesimae,2447,291,136,0.7046087225487163,0.622185154295246,0.5060935441370223,0.3510794177981831,0.23303424744092,0.11865835159278611,0.07857309396129634,0.05226748654880861,7,13,227,0.3321206204402263,0.5352114134190954

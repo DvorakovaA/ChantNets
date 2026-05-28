@@ -97,7 +97,7 @@ def build_corpora(corpus, feast_names):
 
     return corpora
     
-def create_graphs(corpora):
+def create_graphs(corpora, path):
 
     nets = {}
 
@@ -111,7 +111,7 @@ def create_graphs(corpora):
             # clean the feast name, every character not a letter, digit, underscore or hyphen is replaced by underscore
             filename = f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_{OFFICE_LABELS[office_code].lower()}_network.edgelist"
 
-            output_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "nets", filename)
+            output_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "nets", filename)
             nx.write_edgelist(graph, output_fpath)
 
         nets[office_code] = office_networks
@@ -249,24 +249,26 @@ if __name__ == '__main__':
 
     if args.feast_names_fpath == "":
         feast_names = FEAST_NAMES
-        path = "visual"
+        results_path = "visual"
+        nets_path = ""
     else:
         with open(args.feast_names_fpath, 'r') as f_feast_names:
             feast_lines = [line.strip() for line in f_feast_names if line.strip()]
             feast_names = [line.split(';') for line in feast_lines]
         # save results beside the file with feast names
-        path = os.path.dirname(os.path.abspath(args.feast_names_fpath))
+        results_path = os.path.dirname(os.path.abspath(args.feast_names_fpath))
+        nets_path = os.path.dirname(os.path.abspath(args.feast_names_fpath))
     
     # Load data
     corpus, sigla_dict = load_dataset()
 
     # Data manipulation
     corpora = build_corpora(corpus, feast_names)
-    nets = create_graphs(corpora)
+    nets = create_graphs(corpora, nets_path)
     print_nets_info(nets)
     overlap_dfs = compare_edgewise_networks(nets)
 
     # Comparisons
-    summary_accross_feasts(nets, overlap_dfs, sigla_dict, path)
-    summary_accross_office(overlap_dfs, path)
+    summary_accross_feasts(nets, overlap_dfs, sigla_dict, results_path)
+    summary_accross_office(overlap_dfs, results_path)
     

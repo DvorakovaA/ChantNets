@@ -1,0 +1,6 @@
+Dom. 1 Adventus;Adventus, dom. 1
+Dom. 2 Adventus;Adventus, dom. 2
+Dom. 3 Adventus;Adventus, dom. 3
+Dom. 4 Adventus;Adventus, dom. 4
+Nativitas Domini
+Vigilia Nat. Domini;Nativitas Domini, vig.
