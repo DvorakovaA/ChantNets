@@ -560,6 +560,50 @@ def plot_sanctorale_partition_histogram(feast_partitions, output_dir, prefix, sa
     plt.tight_layout()
     plt.savefig(os.path.join(output_dir, f"{prefix}_sanctorale_temporale_partition_histogram.png"))
 
+def plot_sanctorale_partition_histogram_vertical(feast_partitions, output_dir, prefix, sanctorale_csv = "extra_data/ci_feast_sanctorale.csv"):
+    """
+    plot sanctorale vs non-sanctorale counts for each feast partition.
+    """
+    import matplotlib.pyplot as plt
+
+    sanct_list = pd.read_csv(sanctorale_csv)
+    sanctorale_feasts = set(sanct_list["feast"].values)
+
+    rows = []
+
+    for partition, feasts in feast_partitions.items():
+        sanctorale_count = 0
+        temp_count = 0
+
+        for feast in feasts:
+            if feast in sanctorale_feasts:
+                sanctorale_count += 1
+            else:
+                temp_count += 1
+
+        total = sanctorale_count + temp_count
+        rows.append({
+            "partition": partition,
+            "Sanctorale": sanctorale_count,
+            "Temporale": temp_count,
+            "total": total,
+            "sanctorale_share": sanctorale_count/total if total > 0 else 0})
+
+    df = pd.DataFrame(rows)
+    df = df.sort_values("total", ascending = False)
+    plot_df = df.copy()
+    plot_df["partition"] = plot_df["partition"].astype(str)
+    plot_df = plot_df.set_index("partition")[["Sanctorale", "Temporale"]]
+    
+    ax = plot_df.plot(kind = "barh", stacked = False, figsize=(12, 6))
+    ax.set_xlabel("Number of feasts")
+    ax.set_ylabel("SBM feast partition")
+    ax.set_title("Sanctorale vs Temporale feasts in SBM partitions")
+
+    plt.legend(title="Feast type")
+    plt.tight_layout()
+    plt.savefig(os.path.join(output_dir, f"{prefix}_sanctorale_temporale_partition_histogram.png"))
+
 
 # ~ Entropy comparison plot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
