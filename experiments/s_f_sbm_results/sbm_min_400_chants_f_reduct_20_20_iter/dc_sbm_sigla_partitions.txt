@@ -1,0 +1,66 @@
+Partition 23:
+A-Gu 29 (olim 38/8 f.), A-KN CCl 1010, A-KN CCl 1017, A-Wda C-11, B-TOb 63 (olim V), B-TOb 64 (olim IV), CDN-Hsmu M2149.L4 1554, CH-SGs 390, CZ-Pu VI.E.4c, CZ-Pu XIV.B.13, D-KNd 1161, D-Mbs Clm 4303, E-H Ms. 7 (ant. 5), E-VI Mss. 113-114, H-Bu lat. 118, I-BV V 19, I-VCd CLXX, PL-Kkar Ms.2 (rkp. Perg. 14), PL-Kkar Ms.5 (rkp. Perg. 13)
+
+Partition 45:
+A-Gu 30 (olim 38/9 f.), CZ-Bu R 387, CZ-Pu VI E 13, CZ-R R 17
+
+Partition 121:
+A-LIb 290 (olim 183; olim Gamma p 19), A-Wn Cod. 1890, CZ-Pu VI G 11, E-SI MS 9, F-AS 465 (CGM 893), F-CA Impr. XVI C 4, GB-AB 20541 E, GB-WO F. 160 (olim 1247) (facsimile), GB-WO F. 160 (olim 1247) (with hymnal), V-CVbav San Pietro B.79
+
+Partition 46:
+CH-E 611, CH-Fco Ms. 2, CH-SGs 388, D-AAm G 20, D-B Mus. 40047, D-BAs Msc.Lit.25 (olim Ed.IV.11), D-KA Aug. LX, D-KNd 215, D-Ma 12o Cmm 1, D-Mbs Clm 4306, D-Sl HB.I.55, E-Bbc M 888, E-Bbc Ms. 619, E-Gs ms. 45 (olim Sant Feliu, 20), E-Tc 44.1, F-AI 44, F-Pn Lat. 17296, F-Pn Latin 1085, F-Pn Latin 1090, F-Pn Latin 12044, F-Pn Latin 1240, F-Pn NAL 1535, GB-Lbl Add MS 30848, GB-Lbl Add MS 30849, GB-Lbl Add MS 30850, GB-Ob MS. Canon. Liturg. 202, GB-Ob MS. Laud Misc. 284, I-Ac 693, I-Ac 694, I-Ad 5, I-Far s.c., I-Fl Conv. sopp. 560, I-Lc 601, I-MZ 15/79, I-Nn vi. E. 20, I-Rv C.5, PL-WRu I F 401, US-Cn 24, V-CVbav lat. 8737
+
+Partition 137:
+A-KN CCl 1012, CZ-Pu XII C 3, CZ-Pu XIII C 4, CZ-Pu XIV C 20, D-MZb D, D-W Cod. Guelf. 28 Helmst. (Heinemann-Nr. 31), E-SI MS 6, F-Pn Lat. 1030, F-Pn Latin 12601, F-Pn Latin 15182, SI-Lna 19 (olim 18), SK-Bra BAI ECLad.3, SK-Sk 2
+
+Partition 302:
+B-Br Ms II 3823, CH-Cobodmer C 0074, CH-SGs Cod 338, CH-SGs Cod 340, CH-SGv VadSlg Ms 0295, CZ-R R 396, D-B Ms mus 40078, D-BAa Msc Lit 6, D-BAa Msc Lit 7, D-BAa Msc Lit 8, D-Ful Aa 0006, D-KA Lichtenthal 002, D-KNd Ms 1001b, D-Mbs Clm 03005, D-Mbs Clm 14965b, E-Bbc M 648, E-Bbc Ms. 1805, E-Mh Cód. 51, F-AI Ms 0044, F-AN Ms 0091, F-AS Ms 0437 (cat. 1011), F-AUT Ms S 0010 (8*), F-AUT Ms S 0012 (11), F-CA Ms 0061 (62), F-CA Ms 0075 (76), F-CHRm Ms 0047 (40), F-Collection privée Mont-Renaud, F-LA Ms 118, F-LA Ms 236, F-LA Ms 239, F-NS Ms 0004, F-Pm Ms 0384, F-Pn Lat. 1087, F-Pn Lat. 1134, F-Pn Lat. 12050, F-Pn Lat. 12584, F-Pn Lat. 17436, F-Pn Lat. 2291, F-Pn Lat. 9439, F-Pn NAL 1414, F-Pn NAL 1669, GB-Lbl Egerton 857, GB-Lbl Harley 4951, I-BGc MA 150 (Psi III.8), I-BGc MA 239 (Gamma III.18), I-BV 34, I-Bc Q 09, I-Tn G.V.20, Reconstitution Sacramentaire de Tours (TU1), V-CVbav Archivio di San Pietro F.22, V-CVbav Ross.0076, V-CVbav Vat. lat. 4770, V-CVbav Vat. lat. 5319
+
+Partition 79:
+A-KN CCl 1011, A-KN CCl 1015, CZ-Pn XII A 24, D-MZb A, DK-Kk Gl. Kgl. S. 3449 8o [01] I, DK-Kk Gl. Kgl. S. 3449 8o [02] II, E-BAR, s.s., E-Bbc Ms. 2545, E-TZ, Ms. 18, HR-Hf Cod. C Nr. 4, P-Cua Cofre 27, PL-GD Mar. F 408, PL-STAb ms. 1, V-CVbav Cappella Sistina 27
+
+Partition 8:
+A-KN CCl 1013, AUS-Sfl Add. Ms. 413 (olim Add. Ms. Fol.1), CZ-Pn XV A 10, CZ-Pu Pu XIV A 19, Cantus GOTTSCHALK, D-B Theol. Lat. Qu. 149, D-MZb B, D-W Cod. Guelf. 29 Helmst. (Heinemann-Nr. 32), E-Bbc M 705, E-Bbc M 706, E-H Ms. 2, E-Tc 35.5, F-Pn Latin 15181, F-Pn NAL 1236, F-TOm 149, I-CHV s.c., SI-Lna 18 (olim 17), SK-BRsa SNA 2, SK-BRsa SNA 4
+
+Partition 96:
+A-KR Schachtel VI/258, A-SF XI 480, A-VOR 287 (olim XXIX), A-Wda D-4, A-Wn Cod. 1799**, Cantus MA Impr. 1537, E-Tc 44.2, F-CA 38 (olim 40), F-VAL 114, GB-Cu Mm.ii.9, I-AO 6, I-PCd cod. 65, NL-Uu Ms. 406 (shelfmark 3 J 7), PL-KIk Ms. 1, PL-Kkar Ms.4 (rkp. Perg. 20), PL-Klk 1, PL-WRu Ms. R 503, TR-Itks Deissmann 42
+
+Partition 87:
+CDN-Ttfl MSS 09700, CZ-Pst DE I 7, E-Bbc M 663, F-Pn NAL 1411, PL-PŁsem MsEPl 12, PL-Wn  rps 12720 V, SK-Bra BAIII ECLad.6
+
+Partition 118:
+Antifonario s.s., CZ-Pn (Praha) XII A 21, CZ-Pu VI G 3a, CZ-Pu XII E 15b, CZ-Pu XII E 15c, D-MZb E, D-Mbs Clm 4304, D-Mbs Clm 4305, DK-Kk Gl. Kgl. S. 3449 8o [03] III, DK-Kk Gl. Kgl. S. 3449 8o [09] IX, DK-Kk Gl. Kgl. S. 3449 8o [10] X, DK-Kk Gl. Kgl. S. 3449 8o [12] XII, DK-Kk Gl. Kgl. S. 3449 8o [13] XIII, E-Bbc Ms. 2322, E-E L. III. 3., E-H Ms. 9 (ant. 25), F-Pn NAL 1412, F-R 248 (olim  A. 339), H-Bu lat. 121, H-Bu lat. 122, HR-Hf Cod. E Nr. 3, P-AR Res. Ms. 025, P-BRs Ms. 028, PL-Kkar Ms.1 (rkp. Perg. 12), PL-PŁsem MsEPl 12, US-NYcub Plimpton MS 041, US-NYcubl MS 1
+
+Partition 110:
+E-SAu Ms 2637, P-AR Res. Ms. 016, P-AR Res. Ms. 021, P-BRs Ms. 032, P-BRs Ms. 034, P-EVpc 000, P-G C 1508, P-Gmas LC 003, P-Ln Iluminado 084, P-Ln RES. 253 P.
+
+Partition 125:
+CDN-Mrb MS Medieval 0234, CH-SGs Cod 378, CH-SGs Cod 380, CH-SGs Cod 484, DK-Kk Gl. Kgl. S. 3449 8o [14] XIV, E-Bbc M 662, E-MO Ms. 72, E-SA 6, E-Tc Ms. 33.4, F-LA Ms 263, F-Pa Ms 1169, F-Pn Lat. 10510, F-Pn Lat. 1118, F-Pn Lat. 1135, F-Pn Lat. 13252, F-Pn Lat. 9448, F-SO 596, GB-Lbl printed book IB.6753 (Augsburg Antiphoner 1495, olim AA Impr. 1495), GB-Ob Ms Canon. Liturg. 0342, GB-Ob Selden Supra 0027, SK-BRsa SNA 17, SK-BRsa SNA 67
+
+Partition 129:
+CZ-Pak P VII, D-Dl Mscr.Dresd.A.0122, D-Kl Theol. quart 0015, DK-Kk Gl. Kgl. S. 3449 8o [04] IV, DK-Kk Gl. Kgl. S. 3449 8o [05] V, E-Mn MSS/10110, E-SA 5, F-LA Ms 240, F-Pn Lat. 9449, GB-Lbl Add MS 30847, GB-Lbl Additional 18031, HR-Hf Cod. D Nr. 5, I-MC 542, NL-Uu Hs. 0062, PL-STAb ms. 2
+
+Partition 322:
+A-Wn Cod. 1812, H-Bn Clmae 172a, 172b, H-Efkö MS I. 1 a-b, H-Efkö MS I. 3. a, H-Efkö MS I. 3. c, RO-Sb Ms. 759, SK-BRa EC Lad. 3, EL 18, TR-Itks 2429, TR-Itks 42
+
+Partition 126:
+A-KN CCl 1018, A-KN CCl 589, A-Wda C-10, B-Gu Hs BKT.006, CH-SGs 391, D-FUl Aa 55, D-MZb C, DK-Kk Gl. Kgl. S. 3449 8o [06] VI, E-H Ms. 8 (ant. 6), H-Bu lat. 119, HR-Hf Cod. F Nr. 6, I-BV V 20, NL-ZUa 6, NZ-Wt MSR-03, PL-Kkar Ms.3 (rkp. Perg. 15), PL-STAb ms. 4, PL-WRzno Rkp. 12025/IV, SK-Bra BAIIa EC Lad.4, US-Cai 1911.142b
+
+Partition 142:
+D-Mbs Clm 02542, D-Sl HB I 246, E-Bbc M 785, E-E L. III. 4., E-LUc s.s., F-CH Ms 0050
+
+Partition 166:
+B-Br Ms 10127-44, CH-SGs Cod 339, CH-SGs Cod 375, D-BAa Msc Lit 5, D-DS Hs 0545, D-LEu Ms Thomas 391, D-W Cod Guelf Helmst 1008, F-Pa Ms 0135, F-Pn Lat. 1132, F-Pn Lat. 1136, F-Pn Lat. 780, F-Pn Lat. 903, F-Pn Lat. 9441, F-SOM Ms 0252, F-VN Ms 0759, GB-Dru Cosin V.V.6, US-Baw W.11, US-PHf Lewis E 158
+
+Partition 294:
+A-Gu Ms 0807, A-KN Cod 588, A-KN Cod 73, CH-E Codex 121, CH-P 18, CH-ROM Ms. liturg. FiD 5, CH-SGs Cod 342, CH-SGs Cod 343, CH-SGs Cod 374, CH-SGs Cod 376, CH-SGs Cod 381, CZ-Bm A 7115, CZ-Pn XIV D 12, CZ-R R 418, D-HEu Cod. Sal. X,007, D-KWsr Drachenfels-Missale, D-TRp Hs 187, E-Bbc M 1147, E-Mh Cód. 18, E-Mn Mss/1361, F-CA Ms 0060 (61), F-CO Ms 0444 (217), F-LG Ms 0002 (17), F-PR Ms 0012, F-Pa Ms 0197, F-Pn Lat. 17307, F-Pn Lat. 833, F-Pn Lat. 904, F-Pn NAL 1235, F-Pn NAL 1890, F-RS Ms 0264, NL-Uu Hs. 0415, PL-Kl RL 1, PL-SAk 40, PL-WRu I F 411, PL-WRu I F 413, PL-WRu I F 414, PL-WRu I F 416, PL-Wn Rps 12496 IV, PL-Wn rps 12722 V, SK-BRl Rkp. 387, SK-Bra BMI EC Lad.3 EL18, SK-Sk Graduale Scepusiense Nr.1, US-NYcub Western MS 097
+
+Partition 218:
+CZ-OLu M III 6, CZ-Pn XIII B 2, CZ-Pu XIII A 5c, D-Mbs Clm 02541, E-Bbc M 784, E-Bbc M 889, E-Bbc Ms. 3180, E-Mh Cód. 45, F-CA Ms 0078 (79), F-G Ms 84 (Ms. 395 Rés.), F-Pn Lat. 1121, F-Pn Lat. 18010, F-Pn Lat. 909, F-Pn Lat. 9436, F-SEm Ms 018, F-Togs Ms 001, GB-Ccc Ms 473, SK-BRnm MUS I 78
+
+Partition 211:
+E-L Ms 8, E-Mh Cod. 30, E-Mn MSS/10001, E-SI MS 3, E-SI MS 4, E-SI MS 7, E-Tc 35.4, E-Tc 35.6, GB-Lbl Add MS 30844, GB-Lbl Add MS 30845, GB-Lbl Add MS 30846, GB-Lbl Add MS 30851, GB-Lbl Add MS 30852, I-VEcap Codex Veronensis LXXXIX
+
+Partition 392:
+A-A Cod. 786, F-RS Ms 0221, F-VAL Ms 0121, GB-Lbl Additional 18032
+

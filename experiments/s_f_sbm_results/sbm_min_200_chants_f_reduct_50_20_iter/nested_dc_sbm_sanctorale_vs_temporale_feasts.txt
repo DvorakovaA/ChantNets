@@ -1,0 +1,324 @@
+Partition 1108:
+Total feasts: 21
+Sanctorale feasts: 20
+By month: defaultdict(<class 'int'>, {'Dec': 5, 'Jun': 1, 'Feb': 3, 'undetermined': 8, 'May': 1, 'Jan': 2}) 
+['Andreae,8', 'Antonii Patavini', 'Barbarae', 'Blasii', 'Comm. unius Abbatis', 'Comm. unius Martyris Pontificis', 'Comm. unius Virginis non Martyris', 'Conceptio Mariae', 'De BMV Nat.', 'De BMV TP', 'De BMV post Purif.', 'De Sanctis', 'Joannis Port. Lat.', 'Mauri', 'Nicolai', 'Octava Agnetis', 'Scholasticae', 'Thomae Apost.', 'Thomae Cant.', 'Vedasti']
+
+Temporal feasts:
+ ['In tempore Adventus']
+----------------------
+Partition 761:
+Total feasts: 24
+Sanctorale feasts: 2
+By month: defaultdict(<class 'int'>, {'Dec': 1, 'Jan': 1}) 
+['Vigilia Epiphaniae', 'Vigilia Nat. Domini']
+
+Temporal feasts:
+ ['Dom. 1 Adventus', 'Dom. 1 Quadragesimae', 'Dom. 1 p. Epiphaniam', 'Dom. 2 Adventus', 'Dom. 2 Quadragesimae', 'Dom. 2 p. Epiph.', 'Dom. 3 Adventus', 'Dom. 3 Quadragesimae', 'Dom. 3 p. Epiph.', 'Dom. 4 Adventus', 'Dom. 4 Quadragesimae', 'Dom. Quinquagesimae', 'Dom. Septuagesimae', 'Dom. Sexagesimae', 'Dom. de Passione', 'Dom. in Palmis', 'Dom. p. Nat. Dom.', 'Fer. 4 Cinerum', 'Fer. 5 in Cena Dom.', 'Fer. 6 in Parasceve', 'Sabb. Q.T. Adventus', 'Sabbato Sancto']
+----------------------
+Partition 18:
+Total feasts: 30
+Sanctorale feasts: 6
+By month: defaultdict(<class 'int'>, {'undetermined': 1, 'Dec': 3, 'May': 1, 'Jul': 1}) 
+['Dedic. S. Salvatoris', 'Die 5 p. Nat. Domini', 'Hilarii Arelatensis', 'Octava Martialis', 'Sabae', 'Syri']
+
+Temporal feasts:
+ ['Fer. 2 Hebd. 1 Adv.', 'Fer. 2 Hebd. 2 Adv.', 'Fer. 2 Hebd. 3 Adv.', 'Fer. 2 Hebd. 4 Adv.', 'Fer. 3 Hebd. 1 Adv.', 'Fer. 3 Hebd. 3 Adv.', 'Fer. 3 Hebd. 4 Adv.', 'Fer. 4 Hebd. 1 Adv.', 'Fer. 4 Hebd. 4 Adv.', 'Fer. 5 Hebd. 1 Adv.', 'Fer. 5 Hebd. 3 Adv.', 'Fer. 5 Hebd. 4 Adv.', 'Fer. 6 Hebd. 1 Adv.', 'Fer. 6 Hebd. 4 Adv.', 'Hebd. 1 Adventus', 'Hebd. 3 Adventus', 'Hebd. 4 Adventus', 'Hebd. Nat. Dom.', 'Hebd. Septuagesimae', 'In tempore Epiphaniae', 'Octava Nat. Domini,8', 'Sabb. p. Epiphaniam', 'Sabbato Hebd. 1 Adv.', 'Sabbato Hebd. 4 Adv.']
+----------------------
+Partition 428:
+Total feasts: 11
+Sanctorale feasts: 4
+By month: defaultdict(<class 'int'>, {'undetermined': 2, 'Jan': 2}) 
+['Epiphania,8', 'Hilarii', 'Octava Nat. Domini', 'Stephani,8']
+
+Temporal feasts:
+ ['Dom. 4 p. Epiph.', 'Dom. 5 p. Epiph.', 'Dom. p. Oct. Nat.', 'Fer. 4 Hebd. 3 Adv.', 'Fer. 6 Hebd. 3 Adv.', 'Nat. Innocentium,8', 'Sabbato Hebd. 3 Adv.']
+----------------------
+Partition 433:
+Total feasts: 22
+Sanctorale feasts: 21
+By month: defaultdict(<class 'int'>, {'Jul': 2, 'Aug': 4, 'May': 2, 'Sep': 2, 'Jun': 1, 'Oct': 3, 'Feb': 1, 'undetermined': 4, 'Dec': 1, 'Jan': 1}) 
+['Antonii', 'Augustini', 'Barnabae', 'Bartholomaei', 'Callisti', 'Dionysii,8', 'Eligii', 'Germani Parisien.', 'Helenae', 'Hermagorae,Fortunati', 'Hieronimi', 'Jacobi', 'Lucae', 'Materni', 'Matthiae', 'Monicae', 'Oct. Apostolorum,8', 'Octava Laurentii', 'Pancratii et Soc.', 'Remigii', 'Victoris et Soc.']
+
+Temporal feasts:
+ ['Ad Missam']
+----------------------
+Partition 1107:
+Total feasts: 12
+Sanctorale feasts: 6
+By month: defaultdict(<class 'int'>, {'Dec': 4, 'Jan': 2}) 
+['Circumcisio Domini', 'Epiphania', 'Joannis Evang.', 'Nat. Innocentium', 'Nativitas Domini', 'Stephani']
+
+Temporal feasts:
+ ['Ad Mandatum', 'Dom. Quadragesimae', 'Dom. p. Epiphaniam', 'In tempore Quad.', 'Nativitas Domini,8', 'Sabb. Septuagesimae']
+----------------------
+Partition 485:
+Total feasts: 22
+Sanctorale feasts: 10
+By month: defaultdict(<class 'int'>, {'Jan': 5, 'Apr': 1, 'undetermined': 2, 'Dec': 2}) 
+['Die 2 p. Epiphaniam', 'Die 6 p. Nat. Domini', 'In tempore Nat.', 'Joannis Evang.,8', 'Mariae Aegyptiacae', 'Oct. Joannis Evang.', 'Oct. Nat. Innocent.', 'Octava Andreae', 'Octava Epiphaniae', 'Octava Stephani']
+
+Temporal feasts:
+ ['Ad Completorium', 'Ad Suffragium', 'Feria 2 per annum', 'Feria 3 per annum', 'Feria 4 per annum', 'Feria 5 per annum', 'Feria 6 per annum', 'Hebd. 1 Quad.', 'Hebd. 2 Adventus', 'Hebd. Quinquagesimae', 'Suff. Mariae Adv.', 'Suff. Mariae Nat.']
+----------------------
+Partition 673:
+Total feasts: 24
+Sanctorale feasts: 23
+By month: defaultdict(<class 'int'>, {'Nov': 4, 'Jun': 6, 'Aug': 5, 'undetermined': 1, 'Apr': 1, 'Jul': 1, 'Sep': 3, 'May': 2}) 
+['Assumptio Mariae', 'Caeciliae', 'Clementis', 'Decoll. Jo. Bapt.', 'Exaltatio Crucis', 'Hippolyti', 'Inventio Crucis', 'Joannis Baptistae', 'Joannis, Pauli', 'Laurentii', 'Marci', 'Mariae Magdalenae', 'Martialis, Epi.', 'Martini', 'Michaelis', 'Nativitas Mariae', 'Omnium Sanctorum', 'Pauli', 'Petri', 'Petri, Pauli', 'Petri, Pauli,8', 'Philippi, Jacobi', 'Vincula Petri']
+
+Temporal feasts:
+ ['Octava Apostolorum']
+----------------------
+Partition 633:
+Total feasts: 47
+Sanctorale feasts: 24
+By month: defaultdict(<class 'int'>, {'undetermined': 6, 'Jul': 2, 'Aug': 4, 'Dec': 6, 'Nov': 1, 'Feb': 1, 'May': 2, 'Apr': 1, 'Jan': 1}) 
+['Aciscli', 'Aemiliani Cucullati', 'Columbae', 'Commune Virginum', 'Commune unius Virginis', 'Cucuphatis', 'Engratiae', 'Eugeniae', 'Eulaliae Barcinonensis', 'Eulaliae Emeritensis', 'Exspectationis BMV', 'Felicis Gerundae', 'Fructuosi, Augurii et Eulogii', 'Genesii', 'Jacobi fratris Domini', 'Juliani', 'Justae, Rufinae', 'Justi, Pastoris', 'Lazari', 'Leocadiae', 'Marinae', 'Torquati et sociorum', 'Transl. Francisci', 'Transl. Indalaetii']
+
+Temporal feasts:
+ ['Allisionis Infantum', 'Assumptio Mariae (Hispanic rite)', 'Carnes Tollendas', 'De Sacratione Baselice', 'De defunctorum Aepiscoporum', 'De uno defuncto', 'De uno justi', 'Dom. Quotidiano', 'Fer. 5 de Letanias Apostolicas', 'Fer. 6 de Letanias Apostolicas', 'Fest. per annum', 'Initio anni', 'Letanias', 'Letanias Apostolicas', 'Letanias Canonicas', 'Letanias de Clade', 'Missa quam Sacerdos pro se dicere debeat', 'Missa votiva omnimoda', 'Ordo in finem hominis diei', 'Primitis', 'Pro defunctis Sacerdotibus', 'Pro uno infirmo', 'Suff. Adventus']
+----------------------
+Partition 321:
+Total feasts: 33
+Sanctorale feasts: 0
+By month: defaultdict(<class 'int'>, {}) 
+[]
+
+Temporal feasts:
+ ['Ascensio Domini', 'De Trinitate', 'Dom. 1 p. Pent.', 'Dom. 2 p. Pascha', 'Dom. 2 p. Pascha,8', 'Dom. 3 p. Pascha', 'Dom. 3 p. Pascha,8', 'Dom. 4 p. Pascha', 'Dom. 4 p. Pascha,8', 'Dom. 5 p. Pascha', 'Dom. Pentecostes', 'Dom. Pentecostes,8', 'Dom. Resurrect.,8', 'Dom. Resurrectionis', 'Fer. 2 Pent.', 'Fer. 2 in Letaniis', 'Fer. 2 p. Pascha', 'Fer. 3 Pent.', 'Fer. 3 in Letaniis', 'Fer. 3 p. Pascha', 'Fer. 4 Pent.', 'Fer. 4 in Letaniis', 'Fer. 4 p. Pascha', 'Fer. 5 Pent.', 'Fer. 5 p. Pascha', 'Fer. 6 Pent.', 'Fer. 6 p. Pascha', 'In Letaniis', 'Octava Paschae', 'Octava Pentecostes', 'Sabbato Pent.', 'Sabbato in Albis', 'Vigilia Pentecostes']
+----------------------
+Partition 570:
+Total feasts: 38
+Sanctorale feasts: 12
+By month: defaultdict(<class 'int'>, {'undetermined': 2, 'Jun': 2, 'Sep': 1, 'Jan': 1, 'Apr': 1, 'Feb': 1, 'Jul': 2, 'Oct': 1, 'Dec': 1}) 
+['Acacii et sociorum', 'Baboleni', 'Caroli Magni', 'Commune unius Confessoris Epi.', 'Octava Amandi', 'Recollectio Mariae', 'Relatio Vedasti', 'Tiburtii, Valeriani, Maximi', 'Transl. Baboleni', 'Transl. Stanislai Episcopi', 'Transl. Trium Regum', 'Transl. Wolfgangi']
+
+Temporal feasts:
+ ['Ascensio Domini,8', 'De Trinitate,8', 'Fer. 2 Hebd. 3 Pasc.', 'Fer. 2 Hebd. 4 Pasc.', 'Fer. 2 Hebd. 5 Pasc.', 'Fer. 2 p. Ascensio.', 'Fer. 2 p. Oct.Pasch.', 'Fer. 3 Hebd. 3 Pasc.', 'Fer. 3 Hebd. 4 Pasc.', 'Fer. 3 p. Oct.Pasch.', 'Fer. 4 Hebd. 3 Pasc.', 'Fer. 4 Hebd. 4 Pasc.', 'Fer. 4 Hebd. 5 Pasc.', 'Fer. 4 p. Oct.Pasch.', 'Fer. 5 p. Oct.Pasch.', 'Fer. 6 p. Ascensio.', 'Fer. 6 p. Oct. Asc.', 'Fer. 6 p. Oct.Pasch.', 'Hebd. 2 p. Pascha', 'Hebd. 3 p. Pascha', 'Hebd. TP', 'Oct. Ascens. Domini', 'Sabb. p. Ascensionem', 'Sabb. p. Oct. Asc.', 'Sabb. p. Oct. Pasch.', 'Suff. Om. Sanctorum']
+----------------------
+Partition 667:
+Total feasts: 17
+Sanctorale feasts: 15
+By month: defaultdict(<class 'int'>, {'Aug': 3, 'Nov': 3, 'Jul': 3, 'undetermined': 2, 'Oct': 1, 'Feb': 1, 'Jun': 1, 'May': 1}) 
+['Annae', 'Catharinae', 'Compassio Mariae TP', 'De Corona Spinea', 'De Sancta Lancea', 'Dorotheae', 'Elisabeth Hung.', 'Ladislai', 'Mariae ad Nives', 'Marthae', 'Praesentatio Mariae', 'Servatii', 'Transfiguratio Dom.', 'Visitatio Mariae', 'XI milium Virginum']
+
+Temporal feasts:
+ ['Corporis Christi', 'Corporis Christi,8']
+----------------------
+Partition 167:
+Total feasts: 31
+Sanctorale feasts: 30
+By month: defaultdict(<class 'int'>, {'Jun': 3, 'Jul': 3, 'undetermined': 13, 'Oct': 3, 'Sep': 2, 'Aug': 1, 'Nov': 2, 'Apr': 2, 'May': 1}) 
+['Adalberti', 'Comm. Virginum', 'Comm. plur. Conf.', 'Comm. plur. Mart.', 'Comm. un. Conf.Pont.', 'Comm. unius Conf.', 'Comm. unius Mart.', 'Comm. unius Virg.', 'Commune Apostolorum', 'Commune apostolorum', 'Commune plurimorum Martyrum', 'Commune unius Confessoris', 'Commune unius Martyris', 'Conradi', 'Decem Millium Martyrum', 'Divisio Apostolorum', 'Floriani', 'Georgii, Adalberti', 'Hedwigis', 'Ludmilae', 'Ludmillae', 'Margaritae', 'Patriarcharum', 'Procopii Sázaviensis', 'Stephani, Reg.', 'Transl. Adalberti', 'Transl. Lamberti', 'Ursulae', 'Viti et sociorum', 'Wenceslai']
+
+Temporal feasts:
+ ['In Dedicat. Eccl. TP']
+----------------------
+Partition 237:
+Total feasts: 29
+Sanctorale feasts: 29
+By month: defaultdict(<class 'int'>, {'Feb': 3, 'Jun': 1, 'Sep': 4, 'Jul': 4, 'undetermined': 2, 'Aug': 3, 'Nov': 6, 'Oct': 5, 'Jan': 1}) 
+['Amandi', 'Bonifacii', 'Chrysanthi, Dariae', 'Columbani', 'Constantii', 'Crispini,Crispiniani', 'Eustachii', 'Felicitatis', 'Fidis', 'Gereonis et soc.', 'Januarii et Soc.', 'Julianae', 'Kiliani et Soc.', 'Lamberti', 'Leodegarii', 'Leonardi', 'Magni', 'Octava Apostolorum Petri et Pauli', 'Oswaldi, Reg.', 'Pantaleonis', 'Pelagii', 'Philiberti', 'Pirmini', 'Quintini', 'Remacli', 'Udalrici', 'Vigilia Jacobi', 'Walburgae', 'Willibrordi']
+
+Temporal feasts:
+ []
+----------------------
+Partition 226:
+Total feasts: 13
+Sanctorale feasts: 12
+By month: defaultdict(<class 'int'>, {'Sep': 1, 'Aug': 3, 'undetermined': 4, 'Apr': 2, 'Oct': 2}) 
+['Aegidii', 'Ambrosii', 'Angeli Custodis', 'Bernardi', 'Clarae', 'Comm. unius Confessoris non Pontificis', 'Comm. unius Martyris non Pontificis', 'De BMV post Pent.', 'Dominici', 'Francisci', 'Petri, Mart.', 'Transl. Stanislai']
+
+Temporal feasts:
+ ['De BMV Adv.']
+----------------------
+Partition 1158:
+Total feasts: 10
+Sanctorale feasts: 10
+By month: defaultdict(<class 'int'>, {'Jul': 4, 'Aug': 2, 'Jun': 1, 'undetermined': 1, 'Sep': 1, 'Nov': 1}) 
+['Antonini', 'Christophori', 'Comm. unius Apostoli', 'Cyrici', 'Germani', 'Inventio Stephani', 'Romani', 'Saturnini', 'Transl. Benedicti', 'Transl. Martini']
+
+Temporal feasts:
+ []
+----------------------
+Partition 97:
+Total feasts: 12
+Sanctorale feasts: 2
+By month: defaultdict(<class 'int'>, {'Mar': 1, 'Dec': 1}) 
+['Gertrudis Nivellensis', 'Judoci']
+
+Temporal feasts:
+ ['Dom. per annum', 'Fer. 2 per annum', 'Fer. 3 per annum', 'Fer. 4 per annum', 'Fer. 5 per annum', 'Fer. 6 per annum', 'Hebd. Adventus', 'Hebd. de Passione', 'Sabb. Quadragesimae', 'Sabbato per annum']
+----------------------
+Partition 871:
+Total feasts: 42
+Sanctorale feasts: 3
+By month: defaultdict(<class 'int'>, {'Dec': 2, 'Oct': 1}) 
+['Dedic. S.Salv., Mar.', 'Suscept. Reliquiarum', 'Valeriae']
+
+Temporal feasts:
+ ['Dom. 1 p. Epiph.,8', 'Dom. 5 Quadragesimae', 'Fer. 2 Hebd. 1 Quad.', 'Fer. 2 Hebd. 2 Quad.', 'Fer. 2 Hebd. 3 Quad.', 'Fer. 2 Hebd. 4 Quad.', 'Fer. 2 Maj. Hebd.', 'Fer. 2 de Passione', 'Fer. 3 Hebd. 1 Quad.', 'Fer. 3 Hebd. 2 Quad.', 'Fer. 3 Hebd. 3 Quad.', 'Fer. 3 Hebd. 4 Quad.', 'Fer. 3 Maj. Hebd.', 'Fer. 3 de Passione', 'Fer. 4 Hebd. 1 Quad.', 'Fer. 4 Hebd. 2 Quad.', 'Fer. 4 Hebd. 3 Quad.', 'Fer. 4 Hebd. 4 Quad.', 'Fer. 4 Maj. Hebd.', 'Fer. 4 de Passione', 'Fer. 5 Hebd. 1 Quad.', 'Fer. 5 Hebd. 2 Quad.', 'Fer. 5 Hebd. 3 Quad.', 'Fer. 5 Hebd. 4 Quad.', 'Fer. 5 de Passione', 'Fer. 5 post Cineres', 'Fer. 6 Hebd. 1 Quad.', 'Fer. 6 Hebd. 2 Quad.', 'Fer. 6 Hebd. 3 Quad.', 'Fer. 6 Hebd. 4 Quad.', 'Fer. 6 Hebd. 5 Quad.', 'Fer. 6 de Passione', 'Fer. 6 post Cineres', 'Sabb. Hebd. 1 Quad.', 'Sabb. Hebd. 2 Quad.', 'Sabb. Hebd. 3 Quad.', 'Sabb. Hebd. 4 Quad.', 'Sabb. de Passione', 'Sabbato post Cineres']
+----------------------
+Partition 330:
+Total feasts: 13
+Sanctorale feasts: 12
+By month: defaultdict(<class 'int'>, {'Jan': 4, 'Feb': 3, 'Mar': 3, 'Nov': 1, 'Dec': 1}) 
+['Agathae', 'Agnetis', 'Andreae', 'Annuntiatio Mariae', 'Benedicti', 'Cathedra Petri', 'Conversio Pauli', 'Fabiani, Sebastiani', 'Gregorii', 'Luciae', 'Purificatio Mariae', 'Vincentii']
+
+Temporal feasts:
+ ['Pro defunctis']
+----------------------
+Partition 773:
+Total feasts: 9
+Sanctorale feasts: 9
+By month: defaultdict(<class 'int'>, {'undetermined': 9}) 
+['Comm. Apostolorum', 'Comm. Evangelistarum', 'Comm. plurimorum Confessorum', 'Comm. plurimorum Martyrum', 'Comm. plurimorum Virginum', 'Comm. unius Confessoris', 'Comm. unius Confessoris Pontificis', 'Comm. unius Martyris', 'Comm. unius Virginis']
+
+Temporal feasts:
+ []
+----------------------
+Partition 1093:
+Total feasts: 52
+Sanctorale feasts: 46
+By month: defaultdict(<class 'int'>, {'Jun': 7, 'Aug': 8, 'Oct': 3, 'Jan': 1, 'undetermined': 12, 'Jul': 6, 'Sep': 4, 'May': 2, 'Nov': 3}) 
+['Abdonis, Sennis', 'Agapiti', 'Alexandri et Soc.', 'Apollinaris', 'Basilidis et Soc.', 'Chrysogoni', 'Comm. unius Apostolus', 'Cyriaci et Soc.', 'Ded.Mont.S.Michaelis', 'Dionysii et socii', 'Donati', 'Euphemiae', 'Felicis', 'Felicis, Adaucti', 'Felicissimi, Agapiti', 'Gervasii, Protasii', 'Gordiani, Epimachi', 'Gorgonii', 'Hermetis', 'Laurentii,8', 'Luciae, Germiniani', 'Marcellini, Petri', 'Marci, Marcellini', 'Marci, Pont.', 'Medardi', 'Odilonis', 'Praxedis', 'Primi, Feliciani', 'Pro ordinatione Episcopi', 'Processi, Martiniani', 'Proti, Hiacinthi', 'Quat. Coronatorum', 'Sabinae', 'Septem Fratrum', 'Simplicii et Soc.', 'Stephani, Pont.', 'Theodori Tiro', 'Tiburtii, Valeriani', 'Timothei', 'Urbani', 'Vig. Assump. Mariae', 'Vig. Joannis Bapt.', 'Vig. Om. Sanctorum', 'Vigilia Andreae', 'Vigilia Petri', 'Vitalis']
+
+Temporal feasts:
+ ['Fer. 6 Q.T. Quad.', 'In tempore belli', 'Pro Sacerdote', 'Pro iter agentibus', 'Sixti', 'Tiburtii']
+----------------------
+Partition 241:
+Total feasts: 22
+Sanctorale feasts: 0
+By month: defaultdict(<class 'int'>, {}) 
+[]
+
+Temporal feasts:
+ ['1D', '2D', '3D', '6f5', 'Corp', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D70', 'Ded.Eccl.', 'H1/f2', 'H6/S', 'H6/f5', 'H6/f6', 'Joh.ap.', 'Mort', 'Nat', 'Purif.BMV', 'Trin']
+----------------------
+Partition 204:
+Total feasts: 34
+Sanctorale feasts: 14
+By month: defaultdict(<class 'int'>, {'undetermined': 12, 'Mar': 1, 'Dec': 1}) 
+['Assumptio Mariae, infra oct.', 'De BMV post Epiph.', 'Fabiani et Sebastiani', 'Geraldi Archiepiscopi Bracharensis', 'Joannis Baptistae., vig.', 'Jonnis Baptistae, decol.', 'Pauli, conversio', 'Petri et Pauli', 'Petri, Pauli, vig.', 'Philippi et Jacobi', 'Purificatio Mariae [Presentationis Domini]', 'Stephani, inventio', 'Thomae', 'Thomae de Aquino']
+
+Temporal feasts:
+ ['Adventus, dom. 1', 'Adventus, dom. 2', 'Adventus, dom. 3', 'Adventus, dom. 4', 'Dom. mensis Octobris', 'Dom. mensis Septembris', 'Dominica in Albis (Octava Paschae)', 'Nativitas Domini, vig.', 'Pentecostes', 'Quadrag., hebd. 1, fer. 2', 'Quadragesimae, dom. 1', 'Quadragesimae, dom. 2', 'Quadragesimae, dom. 3', 'Quadragesimae, dom. 4', 'Quinquagesimae, dom.', 'Sanctissimae Trinitatis', 'Septuagesimae, dom.', 'Sexagesimae, dom.', 'Transfiguratio Domini', 'undetermined']
+----------------------
+Partition 1130:
+Total feasts: 19
+Sanctorale feasts: 10
+By month: defaultdict(<class 'int'>, {'Apr': 1, 'Dec': 1, 'Feb': 1, 'undetermined': 2, 'Jan': 3, 'Jul': 1, 'Sep': 1}) 
+['Agnetis,8', 'Felicis Nolani', 'In Letaniis maj.', 'Marcelli', 'Marcelli, Pont.', 'Martialis, Apost.', 'Priscae', 'Sebastiani', 'Silvestri', 'Valentini']
+
+Temporal feasts:
+ ['Ad Processionem', 'Dom. post Ascensionem', 'Fer. 4 Q.T. Adventus', 'Fer. 4 Q.T. Pent.', 'Fer. 6 Q.T. Adventus', 'Sabbato Q.T. Adventus', 'Sabbato Q.T. Pent.', 'Sabbato Q.T. Sept.', 'Vig. Ascensio Domini']
+----------------------
+Partition 257:
+Total feasts: 37
+Sanctorale feasts: 33
+By month: defaultdict(<class 'int'>, {'Jan': 2, 'undetermined': 9, 'Jul': 3, 'Sep': 6, 'Feb': 1, 'Dec': 2, 'Aug': 2, 'Nov': 3, 'May': 3, 'Mar': 1, 'Oct': 1}) 
+['Aichardi', 'Arnulfi Metensis', 'Audoeni', 'Comm. unius Confessoris Abbatis', 'Commune unius Martyris TP', 'Cuthberti', 'Dom. p. Assumptionem', 'Dominici Silensis', 'Dunstani', 'Edmundi', 'Firmini', 'Gaugerici', 'Genulfi', 'Geraldi', 'Justi', 'Justinae, Cypriani', 'Martini,8', 'Meginrati', 'Nativitas Mariae,8', 'Nicasii', 'Oct. Om. Sanctorum', 'Octava Nat. Mariae', 'Octava Tr. Benedicti', 'Omnium Sanctorum,8', 'Oswaldi, Epi.', 'Purificatio Mariae,8', 'Reliquiarum', 'Rictrudis', 'Swithuni', 'Tr. Kunegundis', 'Transl. Benedicti,8', 'Tres Mariae', 'Wulstani']
+
+Temporal feasts:
+ ['Dom. p. Cor. Christi', 'Jacobi,8', 'Octava de Trinitate', 'Transl. Thomae']
+----------------------
+Partition 652:
+Total feasts: 9
+Sanctorale feasts: 9
+By month: defaultdict(<class 'int'>, {'Aug': 3, 'undetermined': 3, 'Oct': 1, 'Nov': 2}) 
+['Assumptio Mariae,8', 'Briccii', 'Dionysii', 'Joannis Baptistae,8', 'Mauritii', 'Octava Assumptionis', 'Octava Martini', 'Symphoriani', 'Tiburtii, Susannae']
+
+Temporal feasts:
+ []
+----------------------
+Partition 695:
+Total feasts: 11
+Sanctorale feasts: 0
+By month: defaultdict(<class 'int'>, {}) 
+[]
+
+Temporal feasts:
+ ['Fer. 2 Hebd. 2 p.Ep.', 'Fer. 2 p. Epiphaniam', 'Fer. 3 Hebd. 2 p.Ep.', 'Fer. 3 p. Epiphaniam', 'Fer. 4 Hebd. 2 p.Ep.', 'Fer. 4 p. Epiphaniam', 'Fer. 5 Hebd. 2 p.Ep.', 'Fer. 5 p. Epiphaniam', 'Fer. 6 Hebd. 2 p.Ep.', 'Fer. 6 p. Epiphaniam', 'Sabb. Hebd. 2 p. Ep.']
+----------------------
+Partition 432:
+Total feasts: 6
+Sanctorale feasts: 6
+By month: defaultdict(<class 'int'>, {'Oct': 1, 'Sep': 4, 'Nov': 1}) 
+['Adriani', 'Cornelii, Cypriani', 'Cosmae, Damiani', 'Mennae', 'Nicomedis', 'Simonis, Judae']
+
+Temporal feasts:
+ []
+----------------------
+Partition 755:
+Total feasts: 4
+Sanctorale feasts: 4
+By month: defaultdict(<class 'int'>, {'Sep': 1, 'Jul': 1, 'Apr': 1, 'undetermined': 1}) 
+['De BMV', 'Georgii', 'Matthaei', 'Nazarii, Celsi']
+
+Temporal feasts:
+ []
+----------------------
+Partition 353:
+Total feasts: 30
+Sanctorale feasts: 17
+By month: defaultdict(<class 'int'>, {'undetermined': 14, 'Jul': 1, 'May': 2}) 
+['Alexandri et sociorum', 'Appar. Michaelis', 'Comm. Conjungium', 'Comm. plurimorum Confessorum Pontificum', 'Comm. plurimorum Confessorum non Pontificum', 'Comm. plurimorum Martyrum TP', 'Comm. unius Confessoris TP', 'Comm. unius Confessoris et Episcopi', 'Comm. unius Confessoris non Episcopus', 'Comm. unius Martyris TP', 'Commune Apostolorum TP', 'Commune BMV', 'Commune plurimorum Martyrum TP', 'De Sanctis TP', 'Octava Joannis Bapt.', 'Suff. Crucis', 'Suff. Mariae']
+
+Temporal feasts:
+ ['Additamenta', 'Annuntiatio Mariae,8', 'Comm. Apostolorum TP', 'Dom. Adventus', 'Dominica TP', 'Dominica in estate', 'Feria 2 TP', 'Hebd. Sancta', 'Hebd. per annum', 'Hymni', 'In Dedicatione Eccl.', 'Invitatoria', 'Sabbato TP']
+----------------------
+Partition 41:
+Total feasts: 13
+Sanctorale feasts: 0
+By month: defaultdict(<class 'int'>, {}) 
+[]
+
+Temporal feasts:
+ ['Ad Benedicite', 'Ad Magnificat', 'De Esther', 'De Job', 'De Judith', 'De Machabaeis', 'De Prophetis', 'De Regum', 'De Sapientia', 'De Tobia', 'Dom. 25 p. Pent.', 'Dom. mensis Nov.', 'Dom. p. Pent.']
+----------------------
+Partition 1173:
+Total feasts: 2
+Sanctorale feasts: 1
+By month: defaultdict(<class 'int'>, {'Sep': 1}) 
+['Mauritii et sociorum']
+
+Temporal feasts:
+ ['In Dedicatione Ecclesiae']
+----------------------
+Partition 490:
+Total feasts: 7
+Sanctorale feasts: 3
+By month: defaultdict(<class 'int'>, {'undetermined': 3}) 
+['Apostolorum et Evangelistarum', 'Comm. unius Virginis Martyris', 'De Sancta Cruce']
+
+Temporal feasts:
+ ['Pro infirmis', 'Pro paenitente', 'Pro pluvia', 'Pro tribulatione']
+----------------------
+Partition 651:
+Total feasts: 23
+Sanctorale feasts: 0
+By month: defaultdict(<class 'int'>, {}) 
+[]
+
+Temporal feasts:
+ ['Dom. 10 p. Pent.', 'Dom. 11 p. Pent.', 'Dom. 12 p. Pent.', 'Dom. 13 p. Pent.', 'Dom. 14 p. Pent.', 'Dom. 15 p. Pent.', 'Dom. 16 p. Pent.', 'Dom. 17 p. Pent.', 'Dom. 18 p. Pent.', 'Dom. 19 p. Pent.', 'Dom. 2 p. Pent.', 'Dom. 20 p. Pent.', 'Dom. 21 p. Pent.', 'Dom. 22 p. Pent.', 'Dom. 23 p. Pent.', 'Dom. 24 p. Pent.', 'Dom. 3 p. Pent.', 'Dom. 4 p. Pent.', 'Dom. 5 p. Pent.', 'Dom. 6 p. Pent.', 'Dom. 7 p. Pent.', 'Dom. 8 p. Pent.', 'Dom. 9 p. Pent.']
+----------------------
+Partition 48:
+Total feasts: 4
+Sanctorale feasts: 4
+By month: defaultdict(<class 'int'>, {'Aug': 1, 'Nov': 1, 'Sep': 1, 'Oct': 1}) 
+['Afrae', 'Emmerami', 'Galli', 'Othmari']
+
+Temporal feasts:
+ []
+----------------------
+Partition 274:
+Total feasts: 3
+Sanctorale feasts: 0
+By month: defaultdict(<class 'int'>, {}) 
+[]
+
+Temporal feasts:
+ ['Dom. p. Ascensionem', 'In tempore Paschae', 'Octava Paschae,8']
+----------------------
