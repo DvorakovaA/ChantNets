@@ -580,3 +580,45 @@ def compute_log_odds(entropies):
         # m: [2.0**-(val - sigma_min) for val in vals] # the values are too small
         for m, vals in entropies.items()
     }
+
+# ~ threshold -> LCCs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+def largest_component_after_threshold(G, threshold):
+    """
+    keep only edges with weight >= threshold and return nodes from the LCC
+    """
+    H = G.copy()
+
+    weak_edges = [
+        (u, v)
+        for u, v, data in H.edges(data = True)
+        if data.get("weight", 1) < threshold]
+
+    H.remove_edges_from(weak_edges)
+    if H.number_of_edges() == 0:
+        return set()
+
+    largest = max(nx.connected_components(H), key = len)
+
+    return set(largest)
+
+
+def compare_largest_cores(G1, G2, threshold):
+    """
+    compare the LCCs of two thresholded networks.
+    """
+    core1 = largest_component_after_threshold(G1, threshold)
+    core2 = largest_component_after_threshold(G2, threshold)
+
+    shared = core1 & core2
+    union = core1 | core2
+
+    return {
+        "network_1": G1.name,
+        "network_2": G2.name,
+        "threshold": threshold,
+        "core_size_1": len(core1),
+        "core_size_2": len(core2),
+        "shared_core_sources": len(shared),
+        "core_overlap": len(shared)/len(union) if union else 0
+    }
