@@ -10,6 +10,7 @@ import numpy as np
 import argparse
 import pickle
 import graph_tool as gt
+from pathlib import Path
 
 MODELS = [
     "DC_SBM",
@@ -73,6 +74,23 @@ def create_entropy_plot(models, blockmodeling_fpath="feast_blockmodeling_results
     plot_model_comparison(log_odds, plot_fpath)
     print(f"Created plot at: {plot_fpath}")
 
+def create_html_dendrogram(json_fpath, html_template_fpath="dendrogram_template.html", html_out_fpath="dentogram.html"):
+    """
+    Creates html dendrogram based on existing template.
+    """
+
+    placeholders = {
+        "{{JSON_FPATH}}": json_fpath,
+        "{{SVG_FPATH}}": json_fpath.replace(".json", ".svg"),
+        "{{PDF_FPATH}}": json_fpath.replace(".json", ".pdf")
+    }
+
+    html = Path(html_template_fpath).read_text()
+
+    for placeholder, value in placeholders.items():
+        html = html.replace(placeholder, value)
+
+    Path(html_out_fpath).write_text(html)
 
 
 def main(args):
@@ -99,6 +117,12 @@ def main(args):
             # Temporale vs Sanctorale comparison
             utils.get_sanctorale_feasts_in_partitions(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
             utils.plot_sanctorale_partition_histogram(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
+
+    create_html_dendrogram(
+        os.path.join(base_dir, args.input_dir, "nested_dc_sigla_dendro.json"), 
+        os.path.join(base_dir, "dendrogram_template.html"), 
+        os.path.join(base_dir, args.input_dir, "nested_dc_sigla_dendro.html")
+    )
 
 
 
