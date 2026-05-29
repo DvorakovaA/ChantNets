@@ -595,13 +595,14 @@ def plot_sanctorale_partition_histogram_vertical(feast_partitions, output_dir, p
     plot_df["partition"] = plot_df["partition"].astype(str)
     plot_df = plot_df.set_index("partition")[["Sanctorale", "Temporale"]]
     
-    ax = plot_df.plot(kind = "barh", stacked = False, figsize=(12, 6))
+    ax = plot_df.plot(kind = "barh", stacked = False, figsize=(6, 7))
     ax.set_xlabel("Number of feasts")
     ax.set_ylabel("SBM feast partition")
     ax.set_title("Sanctorale vs Temporale feasts in SBM partitions")
 
     plt.legend(title="Feast type")
     plt.tight_layout()
+    plt.grid(axis = "x", linestyle = "--", alpha = 0.7)
     plt.savefig(os.path.join(output_dir, f"{prefix}_sanctorale_temporale_partition_histogram_vert.png"))
 
 

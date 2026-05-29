@@ -116,11 +116,13 @@ def main(args):
             # Temporale vs Sanctorale comparison
             utils.get_sanctorale_feasts_in_partitions(feast_partitions[0], os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
             utils.plot_sanctorale_partition_histogram(feast_partitions[0], os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
+            utils.plot_sanctorale_partition_histogram_vertical(feast_partitions[0], os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
         else:
             index_partitions, sigla_partitions, feast_partitions = utils.get_partitions_from_state(state['best_state'], sigla_dict)
             # Temporale vs Sanctorale comparison
             utils.get_sanctorale_feasts_in_partitions(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
             utils.plot_sanctorale_partition_histogram(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
+            utils.plot_sanctorale_partition_histogram_vertical(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
 
     create_html_dendrogram(
         os.path.join(base_dir, args.input_dir, "nested_dc_sigla_dendro.json"), 
