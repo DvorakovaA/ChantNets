@@ -74,7 +74,7 @@ def construct_bipart_source_feast_graph(corpus, threshold = 0):
     print(f"Number of feast nodes: {len(feast_map)}")
     print(f"Number of source-feast edges: {g.num_edges()}")
 
-    return g
+    return g, source_map, feast_map
 
 
 def construct_bipart_source_feast_reducted_graph(corpus, min_cid_per_feast, per_source_threshold = 0):
@@ -151,7 +151,7 @@ def construct_bipart_source_feast_reducted_graph(corpus, min_cid_per_feast, per_
     print(f"Number of feast nodes: {len(feast_map)}")
     print(f"Number of source-feast edges: {g.num_edges()}")
 
-    return g
+    return g, source_map, feast_map
 
 
 def save_graph(g, path):
@@ -289,6 +289,47 @@ def save_partitions_txt(sigla_partitions, feast_partitions, output_dir, prefix):
             f.write(f"Partition {partition}:\n")
             f.write(", ".join(sorted(feast_list)) + "\n\n")
 
+
+def between_partitions_edges(graph, source_map, feast_map, sigla_partitions, feast_partitions, srclink_dict):
+    """
+    Get the number of edges between partitions in a bipartite graph.
+    Get also the number of edges coming from source partitions.
+    """
+    between_edges = {}
+    source_edges = {}
+    feast_edges = {} # the number of edges coming to feast partitions
+    for s_part, sigla_partition in sigla_partitions.items():
+        for f_part, feast_partition in feast_partitions.items():
+            count = 0
+            for siglum in sigla_partition:
+                srclink = srclink_dict[siglum]
+                src_index = source_map[srclink]
+                for feast in feast_partition:
+                    feast_index = feast_map[feast]
+                    if graph.edge(graph.vertex(src_index), graph.vertex(feast_index)) is not None:
+                        count += 1
+            between_edges[(s_part, f_part)] = count
+            feast_edges[f_part] = feast_edges.get(f_part, 0) + count
+        source_edges[s_part] = sum(between_edges[(s_part, f_part)] for f_part in feast_partitions.keys())
+    return between_edges, source_edges, feast_edges
+
+def save_between_edges_csv(sigla_partitions, feasts_partitions, between_edges, source_edges, feast_edges, output_dir, prefix):
+    columns = ['s_part', 'n_source_edges']
+    for f_part in feasts_partitions.keys():
+        col = f"f_part_{f_part}"
+        columns.append(col)
+    data = []
+    for s_part in sigla_partitions.keys():
+        row = [s_part, source_edges[s_part]]
+        for f_part in feasts_partitions.keys():
+            row.append(between_edges[(s_part, f_part)]/source_edges[s_part] if source_edges[s_part] > 0 else 0) # we can also store the proportion of edges between source partition and feast partition
+        data.append(row)
+    # Last line save feast partitions counts to third and following columns
+    row = ['', ''] + [feast_edges[f_part] for f_part in feasts_partitions.keys()]
+    data.append(row)
+    between_edges_df = pd.DataFrame(data, columns=columns)
+    between_edges_df.to_csv(os.path.join(output_dir, f"{prefix}_between_edges.csv"), index=False)
+    print(f"Saved between edges to {os.path.join(output_dir, f'{prefix}_between_edges.csv')}")
 
 def get_sigla_vs_feast_partitions(corpus, sigla_partitions, feast_partitions):
     """

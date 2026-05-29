@@ -46,6 +46,7 @@ def main(args):
     print("Loading and cleaning the dataset... with minimum chants per source:", args.min_chant_per_source)
     corpus = load_dataset(args.min_chant_per_source)
     sigla_dict = {source.srclink: source.siglum for source in corpus.sources}
+    srclink_dict = {source.siglum: source.srclink for source in corpus.sources}
 
     if args.feast_reduction_threshold > 0:
         print(f"Constructing bipartite source-feast graph with feast reduction threshold: {args.feast_reduction_threshold} and minimum CIDs per source-feast pair: {args.min_cid_per_source_feast}")
@@ -98,6 +99,7 @@ def main(args):
 
 
     print('Starting infering...')
+
     # DC_SBM
     best_state = model.best_states['DC_SBM']['best_state']
     index_partitions, sigla_partitions, feasts_partitions = utils.get_partitions_from_state(best_state, sigla_dict)
@@ -108,10 +110,15 @@ def main(args):
     print()
     print('Saving DC_SBM partitions...')
     utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir, prefix="dc_sbm")
+    
+    print('Computing edges between DC_SBM partitions...')
+    between_edges, source_edges, feast_edges = utils.between_partitions_edges(g, source_map, feast_map, sigla_partitions, feasts_partitions, srclink_dict)
+    utils.save_between_edges_csv(sigla_partitions, feasts_partitions, between_edges, source_edges, feast_edges, output_dir, prefix="dc_sbm")
+    
     if args.do_vs_partitions:
         print('Computing source vs feast partition dataframe...')
         source_vs_feast_df = utils.get_sigla_vs_feast_partitions(corpus, sigla_partitions, feasts_partitions)
-        source_vs_feast_df.to_csv(os.path.join(args.output_dir, "dc_sbm_source_vs_feast_partitions.csv"), index=False)
+        source_vs_feast_df.to_csv(os.path.join(output_dir, "dc_sbm_source_vs_feast_partitions.csv"), index=False)
     
     # Nested_DC_SBM
     best_state = model.best_states['Nested_DC_SBM']['best_state']
@@ -146,10 +153,14 @@ def main(args):
     print('Saving DC_SBM_weighted partitions...')
     utils.save_partitions_txt(sigla_partitions, feasts_partitions, output_dir, prefix="dc_sbm_weighted")
 
+    print('Computing edges between DC_SBM partitions...')
+    between_edges, source_edges, feast_edges = utils.between_partitions_edges(g, source_map, feast_map, sigla_partitions, feasts_partitions, srclink_dict)
+    utils.save_between_edges_csv(sigla_partitions, feasts_partitions, between_edges, source_edges, feast_edges, output_dir, prefix="dc_sbm_weighted")
+    
     if args.do_vs_partitions:
         print('Computing source vs feast partition dataframe...')
         source_vs_feast_df = utils.get_sigla_vs_feast_partitions(corpus, sigla_partitions, feasts_partitions)
-        source_vs_feast_df.to_csv(os.path.join(args.output_dir, "dc_sbm_weighted_source_vs_feast_partitions.csv"), index=False)
+        source_vs_feast_df.to_csv(os.path.join(output_dir, "dc_sbm_weighted_source_vs_feast_partitions.csv"), index=False)
 
     # Nested_DC_SBM_weighted
     best_state = model.best_states['Weighted_Nested_DC_SBM']['best_state']
