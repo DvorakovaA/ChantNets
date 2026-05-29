@@ -40,13 +40,14 @@
 <body>
 <div id="controls">
     <button id="save_svg">Save SVG</button>
-    <button id="save_pdf">Save PDF</button>
+    <!-- <button id="save_pdf">Save PDF</button> -->
 </div>
 <svg id="dendro"></svg>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <!-- jsPDF + svg2pdf for client‑side PDF generation -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/svg2pdf.js/1.4.0/svg2pdf.umd.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+<!-- it seems that library svg2pdf does not exist anymore -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/svg2pdf.js/1.4.0/svg2pdf.umd.min.js"></script> -->
 <script>
     (async () => {
         const BRANCH_COLORS = [
@@ -251,12 +252,12 @@
         };
 
         // PDF (vector)
-        document.getElementById('save_pdf').onclick = () => {
-            const {jsPDF} = window.jspdf;
-            const pdf = new jsPDF({orientation: 'landscape', unit: 'mm', format: 'a4'});
-            window.svg2pdf(svg.node(), pdf, {x: 0, y: 0, width: 297, height: 210});
-            pdf.save("{{PDF_FPATH}}");
-        };
+        // document.getElementById('save_pdf').onclick = () => {
+        //     const {jsPDF} = window.jspdf;
+        //     const pdf = new jsPDF({orientation: 'landscape', unit: 'mm', format: 'a4'});
+        //     window.svg2pdf(svg.node(), pdf, {x: 0, y: 0, width: 297, height: 210});
+        //     pdf.save("{{PDF_FPATH}}");
+        // };
 
         function downloadBlob(blob, filename) {
             const url = URL.createObjectURL(blob);

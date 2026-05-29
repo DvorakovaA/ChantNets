@@ -11,6 +11,7 @@ import argparse
 import pickle
 import graph_tool as gt
 from pathlib import Path
+import json
 
 MODELS = [
     "DC_SBM",
@@ -74,23 +75,26 @@ def create_entropy_plot(models, blockmodeling_fpath="feast_blockmodeling_results
     plot_model_comparison(log_odds, plot_fpath)
     print(f"Created plot at: {plot_fpath}")
 
-def create_html_dendrogram(json_fpath, html_template_fpath="dendrogram_template.html", html_out_fpath="dentogram.html"):
+def create_html_dendrogram(json_fpath, html_template_fpath="dendrogram_template.html", html_out_fpath="dendrogram.html"):
     """
-    Creates html dendrogram based on existing template.
+    Creates html dendrogram based on existing template. Embeds JSON data inline to avoid CORS issues when opened as a local file.
     """
+    json_fpath = Path(json_fpath)
+    json_data = json_fpath.read_text(encoding="utf-8")
 
-    placeholders = {
-        "{{JSON_FPATH}}": json_fpath,
-        "{{SVG_FPATH}}": json_fpath.replace(".json", ".svg"),
-        "{{PDF_FPATH}}": json_fpath.replace(".json", ".pdf")
-    }
+    svg_fname = json_fpath.with_suffix(".svg").name 
+    pdf_fname = json_fpath.with_suffix(".pdf").name
 
-    html = Path(html_template_fpath).read_text()
+    html = Path(html_template_fpath).read_text(encoding="utf-8")
 
-    for placeholder, value in placeholders.items():
-        html = html.replace(placeholder, value)
+    html = html.replace(
+        'const data = await d3.json("{{JSON_FPATH}}")',
+        f'const data = {json_data}'
+    )
 
-    Path(html_out_fpath).write_text(html)
+    html = html.replace("{{SVG_FPATH}}", svg_fname)
+
+    Path(html_out_fpath).write_text(html, encoding="utf-8")
 
 
 def main(args):
@@ -123,8 +127,6 @@ def main(args):
         os.path.join(base_dir, "dendrogram_template.html"), 
         os.path.join(base_dir, args.input_dir, "nested_dc_sigla_dendro.html")
     )
-
-
 
 def build_arg_parser():
     parser = argparse.ArgumentParser(description="Analyse SBM modeling results.")
