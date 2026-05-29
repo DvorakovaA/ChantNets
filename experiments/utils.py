@@ -602,7 +602,7 @@ def plot_sanctorale_partition_histogram_vertical(feast_partitions, output_dir, p
 
     plt.legend(title="Feast type")
     plt.tight_layout()
-    plt.savefig(os.path.join(output_dir, f"{prefix}_sanctorale_temporale_partition_histogram.png"))
+    plt.savefig(os.path.join(output_dir, f"{prefix}_sanctorale_temporale_partition_histogram_vert.png"))
 
 
 # ~ Entropy comparison plot ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
