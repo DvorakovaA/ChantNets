@@ -490,7 +490,9 @@ def get_sanctorale_feasts_in_partitions(feast_partitions,  output_dir, prefix, s
     with counts of months
     """
     sanct_list = pd.read_csv(sanctorale_csv)
-
+    with open(os.path.join(output_dir, f"{prefix}_sanctorale_vs_temporale_feasts.txt"), "w") as f:
+        f.write("")
+        
     for partition, feasts in feast_partitions.items():
         sanct_month_counts = defaultdict(int)
         sanct_count = 0
@@ -508,9 +510,9 @@ def get_sanctorale_feasts_in_partitions(feast_partitions,  output_dir, prefix, s
             f.write(f"Total feasts: {len(feasts)}\n")
             f.write(f"Sanctorale feasts: {sanct_count}\n")
             f.write(f"By month: {sanct_month_counts} \n")
-            f.write(f"{[feast for feast in feasts if feast in sanct_list['feast'].values]}\n")
+            f.write(f"{sorted([feast for feast in feasts if feast in sanct_list['feast'].values])}\n")
             f.write('\n')
-            f.write(f"Temporal feasts:\n {[feast for feast in feasts if feast not in sanct_list['feast'].values]}\n")
+            f.write(f"Temporal feasts:\n {sorted([feast for feast in feasts if feast not in sanct_list['feast'].values])}\n")
             f.write("----------------------\n")
 
 
@@ -607,29 +609,29 @@ def largest_component_after_threshold(G, threshold):
     return set(largest)
 
 
-def compare_largest_cores(G1, G2, threshold):
+def compare_largest_cores(G1, G2, thresholds):
     """
     compare the LCCs of two thresholded networks.
     """
     g1_size = G1.number_of_nodes()
     g2_size = G2.number_of_nodes()
     G1, G2 = networks_reduction_on_shared_nodes(G1, G2)
-
-    core1 = largest_component_after_threshold(G1, threshold)
-    core2 = largest_component_after_threshold(G2, threshold)
-
-    shared = core1 & core2
-    union = core1 | core2
-
-    return {
+    result_line = {
         "network_1": G1.name,
         "network_2": G2.name,
         "network_1_size": g1_size,
         "network_2_size": g2_size,
         "reducted_size": len(G1.nodes()),
-        "threshold": threshold,
-        "core_size_1": len(core1),
-        "core_size_2": len(core2),
-        "shared_core_sources": len(shared),
-        "jaccard_core_overlap": len(shared)/len(union) if union else 0
     }
+    for threshold in thresholds:
+        core1 = largest_component_after_threshold(G1, threshold)
+        core2 = largest_component_after_threshold(G2, threshold)
+
+        shared = core1 & core2
+        union = core1 | core2
+        result_line[f"threshold_{threshold}_core1_size"] = len(core1)
+        result_line[f"threshold_{threshold}_core2_size"] = len(core2)
+        result_line[f"threshold_{threshold}_shared_core_size"] = len(shared)
+        result_line[f"threshold_{threshold}_jacc_core_overlap"] = len(shared) / len(union) if len(union) > 0 else 0
+
+    return result_line 

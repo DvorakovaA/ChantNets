@@ -29,14 +29,13 @@ def load_nets(nets_dir):
 
 def compute_lcc_cores_comparison(nets, dir): 
     rows = []
-    for feast1, feast2 in itertools.combinations(nets.keys(), 2):
-        for threshold in CORE_THRESHOLDS:
-            result = utils.compare_largest_cores(
-                nets[feast1],
-                nets[feast2],
-                threshold
-            )
-            rows.append(result)
+    for feast1, feast2 in itertools.combinations(sorted(list(nets.keys())), 2):
+        result = utils.compare_largest_cores(
+            nets[feast1],
+            nets[feast2],
+            CORE_THRESHOLDS
+        )
+        rows.append(result)
 
     core_comparison_df = pd.DataFrame(rows)
     core_comparison_df.to_csv(os.path.join(dir, "lcc_core_comparison.csv"), index=False)
