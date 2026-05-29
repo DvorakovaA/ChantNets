@@ -611,6 +611,10 @@ def compare_largest_cores(G1, G2, threshold):
     """
     compare the LCCs of two thresholded networks.
     """
+    g1_size = G1.number_of_nodes()
+    g2_size = G2.number_of_nodes()
+    G1, G2 = networks_reduction_on_shared_nodes(G1, G2)
+
     core1 = largest_component_after_threshold(G1, threshold)
     core2 = largest_component_after_threshold(G2, threshold)
 
@@ -620,9 +624,12 @@ def compare_largest_cores(G1, G2, threshold):
     return {
         "network_1": G1.name,
         "network_2": G2.name,
+        "network_1_size": g1_size,
+        "network_2_size": g2_size,
+        "reducted_size": len(G1.nodes()),
         "threshold": threshold,
         "core_size_1": len(core1),
         "core_size_2": len(core2),
         "shared_core_sources": len(shared),
-        "core_overlap": len(shared)/len(union) if union else 0
+        "jaccard_core_overlap": len(shared)/len(union) if union else 0
     }
