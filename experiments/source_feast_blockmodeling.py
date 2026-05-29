@@ -10,7 +10,7 @@ import sbmodel
 import argparse
 import os
 import pandas as pd
-
+import pickle
 
 
 def load_dataset(min_chants_per_source):
@@ -40,18 +40,6 @@ def load_dataset(min_chants_per_source):
 
 
 
-def build_arg_parser():
-    parser = argparse.ArgumentParser(description="Feast-based blockmodeling experiment")
-    parser.add_argument('--min_')
-    parser.add_argument('--min_chant_per_source', default=100, type=int, help="Minimum number of feasts a source must be associated with to be included in the analysis")
-    parser.add_argument('--feast_reduction_threshold', default=0, type=int, help="Minimum number of CIDs a feast must be associated with to be included in the analysis")
-    parser.add_argument('--min_cid_per_source_feast', default=0, type=int, help="Minimum number of CIDs a source-feast pair must be associated with to be included in the analysis")
-    parser.add_argument('--number_of_iterations', default=20, type=int, help="Number of iterations for the blockmodeling algorithm")
-    parser.add_argument('--output_dir', default='results', type=str, help="Directory to save the results")
-    parser.add_argument('--do_vs_partitions', action='store_true', default=False, help="Whether to compute source vs feast partitions dataframe")
-    return parser.parse_args()
-
-
 # ~ MAIN ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 def main(args):
     # Load and clean the dataset
@@ -61,17 +49,20 @@ def main(args):
 
     if args.feast_reduction_threshold > 0:
         print(f"Constructing bipartite source-feast graph with feast reduction threshold: {args.feast_reduction_threshold} and minimum CIDs per source-feast pair: {args.min_cid_per_source_feast}")
-        g = utils.construct_bipart_source_feast_reducted_graph(corpus, args.feast_reduction_threshold, args.min_cid_per_source_feast)
+        g, source_map, feast_map = utils.construct_bipart_source_feast_reducted_graph(corpus, args.feast_reduction_threshold, args.min_cid_per_source_feast)
     else:
         print(f"Constructing bipartite source-feast graph with minimum CIDs per source-feast pair: {args.min_cid_per_source_feast}")
-        g = utils.construct_bipart_source_feast_graph(corpus, args.min_cid_per_source_feast)
+        g, source_map, feast_map = utils.construct_bipart_source_feast_graph(corpus, args.min_cid_per_source_feast)
 
     output_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), args.output_dir)
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    utils.save_graph(g, os.path.join(output_dir, f"source_feast_bi_graph_min_{args.min_chant_per_source}.gt"))
-    
+    utils.save_graph(g, os.path.join(output_dir, f"nets/graph.gt"))
+    #pickle.dump(source_map, open(os.path.join(output_dir, f"nets/source_map.pkl"), "wb"))
+    #pickle.dump(feast_map, open(os.path.join(output_dir, f"nets/feast_map.pkl"), "wb"))
+    print(f"Saved graph and maps to {output_dir}/nets/")
+
     model = sbmodel.SBModel()
     model.graph = g
     print()
@@ -101,8 +92,8 @@ def main(args):
     print()
 
     # Save best states
-    model.save_states(os.path.join(output_dir, "feast_blockmodeling_results.pkl"))
-    print(f"Saved best states to {output_dir}/feast_blockmodeling_results.pkl")
+    model.save_states(os.path.join(output_dir, "best_states.pkl"))
+    print(f"Saved best states to {output_dir}/best_states.pkl")
     print()
 
 
@@ -181,6 +172,16 @@ def main(args):
                 columns.append(col)
     utils.get_dendro_json(nested_csv_path, columns, os.path.join(output_dir, "nested_dc_weighted_sigla_dendro.json"))
 
+
+def build_arg_parser():
+    parser = argparse.ArgumentParser(description="Feast-based blockmodeling experiment")
+    parser.add_argument('--min_chant_per_source', default=100, type=int, help="Minimum number of feasts a source must be associated with to be included in the analysis")
+    parser.add_argument('--feast_reduction_threshold', default=0, type=int, help="Minimum number of CIDs a feast must be associated with to be included in the analysis")
+    parser.add_argument('--min_cid_per_source_feast', default=0, type=int, help="Minimum number of CIDs a source-feast pair must be associated with to be included in the analysis")
+    parser.add_argument('--number_of_iterations', default=20, type=int, help="Number of iterations for the blockmodeling algorithm")
+    parser.add_argument('--output_dir', default='results', type=str, help="Directory to save the results")
+    parser.add_argument('--do_vs_partitions', action='store_true', default=False, help="Whether to compute source vs feast partitions dataframe")
+    return parser.parse_args()
 
 
 

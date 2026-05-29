@@ -7,10 +7,9 @@ import sbmodel
 import os
 import matplotlib.pyplot as plt
 import numpy as np
-
-N_INIT = 20
-MIN_CHANTS_PER_SOURCE = 100
-DIR_ABS_PATH = os.path.dirname(os.path.abspath(__file__))
+import argparse
+import pickle
+import graph_tool as gt
 
 MODELS = [
     "DC_SBM",
@@ -65,21 +64,41 @@ def plot_model_comparison(log_odds, out_path):
 
     fig.savefig(out_path, dpi = 300, bbox_inches = "tight")
 
-def create_entropy_plot(models, blockmodeling_fname="feast_blockmodeling_results.pkl"):
+def create_entropy_plot(models, blockmodeling_fpath="feast_blockmodeling_results.pkl", plot_fpath="model_comparison_plot.png"):
     """
     Create plot for comparing etropies of different models.
     """
-    blockmodeling_fpath = os.path.join(DIR_ABS_PATH, "results", blockmodeling_fname)
     entropies = utils.load_models_entropies(blockmodeling_fpath, models)
     log_odds = utils.compute_log_odds(entropies)
-    plot_fpath = os.path.join(DIR_ABS_PATH, "visual", f"model_comparison_{N_INIT}_min_{MIN_CHANTS_PER_SOURCE}.pdf")
     plot_model_comparison(log_odds, plot_fpath)
     print(f"Created plot at: {plot_fpath}")
 
-if __name__ == '__main__':
 
-    print("Creating entropy comparison plot.")
-    create_entropy_plot(MODELS)
+
+def main(args):
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Read models from input directory
+    best_states = pickle.load(open(os.path.join(base_dir, args.input_dir, "best_states.pkl"), "rb"))
+    print(f"Loaded best states for models: {list(best_states.keys())} from {os.path.join(base_dir, args.input_dir, 'best_states.pkl')}")
+    # Creating visualisation comparing models
+    create_entropy_plot(best_states.keys(), os.path.join(base_dir, args.input_dir, "best_states.pkl"), os.path.join(base_dir, args.input_dir, "model_comparison_plot.png"))
+    print(f"Saved model comparison plot to {os.path.join(base_dir, args.input_dir, 'model_comparison_plot.png')}")
+    print()
+
+    # 
+
+
+
+def build_arg_parser():
+    parser = argparse.ArgumentParser(description="Analyse SBM modeling results.")
+    parser.add_argument("--input_dir", type=str, default="sbm_results", help="Directory containing SBM results.")
+    return parser
+
+
+if __name__ == '__main__':
+    args = build_arg_parser().parse_args()
+    main(args)
     
 
 
