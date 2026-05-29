@@ -77,6 +77,7 @@ def create_entropy_plot(models, blockmodeling_fpath="feast_blockmodeling_results
 
 def main(args):
     base_dir = os.path.dirname(os.path.abspath(__file__))
+    sigla_dict = pickle.load(open(os.path.join(base_dir, "extra_data/sigla_dict.pkl"), "rb"))
 
     # Read models from input directory
     best_states = pickle.load(open(os.path.join(base_dir, args.input_dir, "best_states.pkl"), "rb"))
@@ -86,7 +87,18 @@ def main(args):
     print(f"Saved model comparison plot to {os.path.join(base_dir, args.input_dir, 'model_comparison_plot.png')}")
     print()
 
-    # 
+    for model_name, state in best_states.items():
+        print(f"Analyzing model: {model_name}")
+        if 'nested' in model_name.lower():
+            index_partitions, sigla_partitions, feast_partitions = utils.get_nested_partitions_from_state(state['best_state'], sigla_dict)
+            # Temporale vs Sanctorale comparison
+            utils.get_sanctorale_feasts_in_partitions(feast_partitions[0], os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
+            utils.plot_sanctorale_partition_histogram(feast_partitions[0], os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
+        else:
+            index_partitions, sigla_partitions, feast_partitions = utils.get_partitions_from_state(state['best_state'], sigla_dict)
+            # Temporale vs Sanctorale comparison
+            utils.get_sanctorale_feasts_in_partitions(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
+            utils.plot_sanctorale_partition_histogram(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
 
 
 
