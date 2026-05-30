@@ -109,7 +109,7 @@ def create_graphs(corpora, path):
             graph = utils.build_feast_network(feast_corpus, feast_name)
             office_networks[feast_name] = graph
             # clean the feast name, every character not a letter, digit, underscore or hyphen is replaced by underscore
-            filename = f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_{OFFICE_LABELS[office_code].lower()}_network.edgelist"
+            filename = f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_{OFFICE_LABELS[office_code].lower().replace(" ", "_")}_network.edgelist"
 
             output_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "nets", filename)
             nx.write_edgelist(graph, output_fpath)

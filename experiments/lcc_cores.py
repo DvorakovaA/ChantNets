@@ -17,11 +17,11 @@ CORE_THRESHOLDS = [0.2, 0.4, 0.6, 0.8]
 def load_nets(nets_dir):
     nets = {}
     for fname in os.listdir(nets_dir):
-        if fname.endswith("whole day_network.edgelist"):
+        if fname.endswith("whole_day_network.edgelist"):
             feast_name = fname.replace(".edgelist", "")
             net_path = os.path.join(nets_dir, fname)
             g = nx.read_edgelist(net_path)
-            name = feast_name.replace("_whole day_network", "")
+            name = feast_name.replace("_whole_day_network", "")
             g.name = name
             nets[name] = g
             print(f"Loaded network for feast: {name} with {len(nets[name].nodes())} nodes and {len(nets[name].edges())} edges from {net_path}")

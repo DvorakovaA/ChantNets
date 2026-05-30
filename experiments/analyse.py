@@ -142,7 +142,7 @@ def main(args):
 
 def build_arg_parser():
     parser = argparse.ArgumentParser(description="Analyse SBM modeling results.")
-    parser.add_argument("--input_dir", type=str, default="sbm_results", help="Directory containing SBM results.")
+    parser.add_argument("--input_dir", type=str, default="results", help="Directory containing SBM results.")
     return parser
 
 
