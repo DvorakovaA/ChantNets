@@ -13,6 +13,7 @@ import pandas as pd
 import json
 from pathlib import Path
 import sbmodel
+import matplotlib.pyplot as plt
 
 # ~ GRAPH CONSTRUCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -680,3 +681,23 @@ def compare_largest_cores(G1, G2, thresholds):
         result_line[f"threshold_{threshold}_jacc_core_overlap"] = len(shared) / len(union) if len(union) > 0 else 0
 
     return result_line 
+
+# ~ distribution of edge weights ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+def plot_weight_distribution(g, output_dir = "visual", weight_prop = "weight"):
+    """
+    plot and save the distribution of edge weights in a graph
+    """
+    os.makedirs(output_dir, exist_ok = True)
+    weights = [g.edge_properties[weight_prop][e] for e in g.edges()]
+
+    plt.figure(figsize = (10, 6))
+    plt.hist(weights, bins = 20)
+    plt.xlabel("Edge weight")
+    plt.ylabel("Number of edges")
+    plt.title("Distribution of edge weights")
+    plt.tight_layout()
+
+    output_path = os.path.join(output_dir, f"graph_weight_distribution.png")
+    plt.savefig(output_path, dpi = 300, bbox_inches = "tight")
+    plt.close()
