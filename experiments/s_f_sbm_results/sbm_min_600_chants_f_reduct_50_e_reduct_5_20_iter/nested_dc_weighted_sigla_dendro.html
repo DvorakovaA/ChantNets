@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<title>Manuscript dendrogram – circular A4 (colored top branches)</title>
+<link rel="stylesheet" href="charterfont/charter.css"/>
+<style>
+    body {
+        margin: 0;
+        font: 10px/1.3 sans-serif;
+        font-family: "Charter", serif; /* ← change this */
+    }
+
+    #controls {
+        position: fixed;
+        top: 6px;
+        left: 6px;
+        z-index: 10;
+        background: #fff;
+        padding: 3px 6px;
+        border-radius: 6px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .15)
+    }
+
+    #controls button {
+        margin-right: 4px;
+        font-size: 11px;
+        cursor: pointer
+    }
+
+    .link {
+        fill: none;
+        stroke-opacity: .35;
+        stroke-width: 1px
+    }
+
+    .leaf circle {
+        stroke: #333;
+        stroke-width: .4px
+    }
+</style>
+<body>
+<div id="controls">
+    <button id="save_svg">Save SVG</button>
+    <!-- <button id="save_pdf">Save PDF</button> -->
+</div>
+<svg id="dendro"></svg>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- jsPDF + svg2pdf for client‑side PDF generation -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> -->
+<!-- it seems that library svg2pdf does not exist anymore -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/svg2pdf.js/1.4.0/svg2pdf.umd.min.js"></script> -->
+<script>
+    (async () => {
+        const BRANCH_COLORS = [
+            '#ff7f0e',   // branch 1
+            '#1f77b4',   // branch 2
+            '#d62728',   // branch 3
+            '#2ca02c',    // branch 4
+            '#5900A1',   // branch 5
+            '#64AD00',   // branch 6
+            '#009FB0',    // branch 7     
+            '#B00072',   // brach 8 
+        ];
+
+        const PX_PER_MM = 96 / 25.4;
+        const W = 297 * PX_PER_MM;
+        const H = 280 * PX_PER_MM;
+        const R = Math.min(W, H) / 2 - 90;   // 50 px margin for labels
+
+        const data = {
+  "name": "root",
+  "children": [
+    {
+      "name": "1",
+      "children": [
+        {
+          "name": "3",
+          "children": [
+            {
+              "name": "3",
+              "children": [
+                {
+                  "name": "A-Gu 29 (olim 38/8 f.)"
+                },
+                {
+                  "name": "CZ-Pu VI.E.4c"
+                },
+                {
+                  "name": "CZ-Pu XIV.B.13"
+                },
+                {
+                  "name": "A-KN CCl 1010"
+                },
+                {
+                  "name": "A-KN CCl 1011"
+                },
+                {
+                  "name": "A-KN CCl 1015"
+                },
+                {
+                  "name": "A-KN CCl 1017"
+                },
+                {
+                  "name": "A-Wda C-11"
+                },
+                {
+                  "name": "B-TOb 63 (olim V)"
+                },
+                {
+                  "name": "B-TOb 64 (olim IV)"
+                },
+                {
+                  "name": "CDN-Hsmu M2149.L4 1554"
+                },
+                {
+                  "name": "CH-SGs 390"
+                },
+                {
+                  "name": "D-KNd 1161"
+                },
+                {
+                  "name": "D-MZb A"
+                },
+                {
+                  "name": "D-Mbs Clm 4303"
+                },
+                {
+                  "name": "DK-Kk Gl. Kgl. S. 3449 8o [02] II"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30847"
+                },
+                {
+                  "name": "H-Bu lat. 118"
+                },
+                {
+                  "name": "HR-Hf Cod. C Nr. 4"
+                },
+                {
+                  "name": "I-MC 542"
+                },
+                {
+                  "name": "I-VCd CLXX"
+                },
+                {
+                  "name": "PL-Kkar Ms.2 (rkp. Perg. 14)"
+                },
+                {
+                  "name": "PL-Kkar Ms.5 (rkp. Perg. 13)"
+                },
+                {
+                  "name": "HR-Hf Cod. D Nr. 5"
+                },
+                {
+                  "name": "I-BV V 19"
+                },
+                {
+                  "name": "F-Pn Lat. 9449"
+                }
+              ]
+            },
+            {
+              "name": "0",
+              "children": [
+                {
+                  "name": "A-Gu 30 (olim 38/9 f.)"
+                },
+                {
+                  "name": "CZ-Pu XIV C 20"
+                },
+                {
+                  "name": "A-KN CCl 1018"
+                },
+                {
+                  "name": "A-KN CCl 589"
+                },
+                {
+                  "name": "A-Wda C-10"
+                },
+                {
+                  "name": "CZ-Pu VI E 13"
+                },
+                {
+                  "name": "D-FUl Aa 55"
+                },
+                {
+                  "name": "I-BV V 20"
+                },
+                {
+                  "name": "NL-ZUa 6"
+                },
+                {
+                  "name": "SK-Sk 2"
+                },
+                {
+                  "name": "B-Gu Hs BKT.006"
+                },
+                {
+                  "name": "SI-Lna 19 (olim 18)"
+                },
+                {
+                  "name": "F-Pn Latin 15182"
+                },
+                {
+                  "name": "F-Pn Lat. 1030"
+                },
+                {
+                  "name": "CH-SGs 391"
+                },
+                {
+                  "name": "E-H Ms. 8 (ant. 6)"
+                },
+                {
+                  "name": "H-Bu lat. 119"
+                },
+                {
+                  "name": "HR-Hf Cod. F Nr. 6"
+                },
+                {
+                  "name": "PL-Kkar Ms.3 (rkp. Perg. 15)"
+                },
+                {
+                  "name": "PL-WRzno Rkp. 12025/IV"
+                },
+                {
+                  "name": "US-Cai 1911.142b"
+                },
+                {
+                  "name": "CZ-R R 17"
+                },
+                {
+                  "name": "SK-Bra BAI ECLad.3"
+                },
+                {
+                  "name": "F-Pn Latin 12601"
+                },
+                {
+                  "name": "A-KN CCl 1012"
+                },
+                {
+                  "name": "CZ-Bu R 387"
+                },
+                {
+                  "name": "CZ-Pu XII C 3"
+                },
+                {
+                  "name": "CZ-Pu XIII C 4"
+                },
+                {
+                  "name": "NZ-Wt MSR-03"
+                },
+                {
+                  "name": "D-MZb C"
+                },
+                {
+                  "name": "SK-BRl Rkp. 387"
+                }
+              ]
+            },
+            {
+              "name": "2",
+              "children": [
+                {
+                  "name": "CZ-Pn XV A 10"
+                },
+                {
+                  "name": "CZ-Pst DE I 7"
+                },
+                {
+                  "name": "E-BAR, s.s."
+                },
+                {
+                  "name": "E-H Ms. 2"
+                },
+                {
+                  "name": "E-H Ms. 7 (ant. 5)"
+                },
+                {
+                  "name": "F-TOm 149"
+                },
+                {
+                  "name": "SK-BRsa SNA 2"
+                },
+                {
+                  "name": "A-KN CCl 1013"
+                },
+                {
+                  "name": "CZ-Pu Pu XIV A 19"
+                },
+                {
+                  "name": "D-B Theol. Lat. Qu. 149"
+                },
+                {
+                  "name": "D-W Cod. Guelf. 29 Helmst. (Heinemann-Nr. 32)"
+                },
+                {
+                  "name": "E-SA 6"
+                },
+                {
+                  "name": "F-Pn Latin 15181"
+                },
+                {
+                  "name": "PL-Wn  rps 12720 V"
+                },
+                {
+                  "name": "SK-BRsa SNA 4"
+                },
+                {
+                  "name": "SK-Bra BAIII ECLad.6"
+                },
+                {
+                  "name": "CZ-Pn XII A 24"
+                },
+                {
+                  "name": "E-VI Mss. 113-114"
+                },
+                {
+                  "name": "CDN-Ttfl MSS 09700"
+                },
+                {
+                  "name": "F-Pn NAL 1411"
+                },
+                {
+                  "name": "PL-STAb ms. 2"
+                },
+                {
+                  "name": "E-Bbc M 705"
+                },
+                {
+                  "name": "PL-GD Mar. F 408"
+                },
+                {
+                  "name": "E-Bbc M 706"
+                }
+              ]
+            },
+            {
+              "name": "1",
+              "children": [
+                {
+                  "name": "PL-P\u0141sem MsEPl 12"
+                },
+                {
+                  "name": "E-Bbc Ms. 2322"
+                },
+                {
+                  "name": "E-E L. III. 3."
+                },
+                {
+                  "name": "E-H Ms. 9 (ant. 25)"
+                },
+                {
+                  "name": "F-Pn NAL 1412"
+                },
+                {
+                  "name": "P-AR Res. Ms. 025"
+                },
+                {
+                  "name": "Antifonario s.s."
+                },
+                {
+                  "name": "E-E L. III. 4."
+                },
+                {
+                  "name": "E-LUc s.s."
+                },
+                {
+                  "name": "CZ-Pu VI G 3a"
+                },
+                {
+                  "name": "CZ-Pn (Praha) XII A 21"
+                },
+                {
+                  "name": "D-W Cod. Guelf. 28 Helmst. (Heinemann-Nr. 31)"
+                },
+                {
+                  "name": "H-Bu lat. 122"
+                },
+                {
+                  "name": "US-NYcubl MS 1"
+                },
+                {
+                  "name": "F-R 248 (olim  A. 339)"
+                },
+                {
+                  "name": "D-Mbs Clm 4304"
+                },
+                {
+                  "name": "F-CH Ms 0050"
+                },
+                {
+                  "name": "H-Bu lat. 121"
+                },
+                {
+                  "name": "HR-Hf Cod. E Nr. 3"
+                },
+                {
+                  "name": "PL-Kkar Ms.1 (rkp. Perg. 12)"
+                },
+                {
+                  "name": "CZ-Pu XII E 15c"
+                },
+                {
+                  "name": "D-MZb E"
+                },
+                {
+                  "name": "D-Mbs Clm 4305"
+                }
+              ]
+            },
+            {
+              "name": "9",
+              "children": [
+                {
+                  "name": "P-BRs Ms. 028"
+                },
+                {
+                  "name": "P-Ln RES. 253 P."
+                },
+                {
+                  "name": "P-EVpc 000"
+                },
+                {
+                  "name": "P-BRs Ms. 034"
+                },
+                {
+                  "name": "P-AR Res. Ms. 021"
+                },
+                {
+                  "name": "P-BRs Ms. 032"
+                },
+                {
+                  "name": "E-SAu Ms 2637"
+                },
+                {
+                  "name": "P-Ln Iluminado 084"
+                },
+                {
+                  "name": "P-AR Res. Ms. 016"
+                }
+              ]
+            },
+            {
+              "name": "5",
+              "children": [
+                {
+                  "name": "E-L Ms 8"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30846"
+                },
+                {
+                  "name": "E-Tc 35.4"
+                },
+                {
+                  "name": "E-Mh Cod. 30"
+                },
+                {
+                  "name": "E-Tc 35.6"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30844"
+                },
+                {
+                  "name": "I-VEcap Codex Veronensis LXXXIX"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30845"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30851"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "1",
+          "children": [
+            {
+              "name": "4",
+              "children": [
+                {
+                  "name": "A-LIb 290 (olim 183; olim Gamma p 19)"
+                },
+                {
+                  "name": "A-Wn Cod. 1890"
+                },
+                {
+                  "name": "CH-E 611"
+                },
+                {
+                  "name": "D-KA Aug. LX"
+                },
+                {
+                  "name": "D-Sl HB.I.55"
+                },
+                {
+                  "name": "F-CA 38 (olim 40)"
+                },
+                {
+                  "name": "GB-WO F. 160 (olim 1247) (with hymnal)"
+                },
+                {
+                  "name": "GB-WO F. 160 (olim 1247) (facsimile)"
+                },
+                {
+                  "name": "A-SF XI 480"
+                },
+                {
+                  "name": "A-VOR 287 (olim XXIX)"
+                },
+                {
+                  "name": "A-Wn Cod. 1799**"
+                },
+                {
+                  "name": "CH-Fco Ms. 2"
+                },
+                {
+                  "name": "CH-SGs 388"
+                },
+                {
+                  "name": "CZ-Pu VI G 11"
+                },
+                {
+                  "name": "D-AAm G 20"
+                },
+                {
+                  "name": "D-B Mus. 40047"
+                },
+                {
+                  "name": "D-BAs Msc.Lit.25 (olim Ed.IV.11)"
+                },
+                {
+                  "name": "D-KNd 215"
+                },
+                {
+                  "name": "D-Ma 12o Cmm 1"
+                },
+                {
+                  "name": "D-Mbs Clm 4306"
+                },
+                {
+                  "name": "E-Bbc M 663"
+                },
+                {
+                  "name": "E-Bbc M 888"
+                },
+                {
+                  "name": "E-Bbc Ms. 619"
+                },
+                {
+                  "name": "E-Gs ms. 45 (olim Sant Feliu, 20)"
+                },
+                {
+                  "name": "E-SI MS 9"
+                },
+                {
+                  "name": "E-Tc 44.1"
+                },
+                {
+                  "name": "E-Tc 44.2"
+                },
+                {
+                  "name": "F-AI 44"
+                },
+                {
+                  "name": "F-AS 465 (CGM 893)"
+                },
+                {
+                  "name": "F-Pn Latin 1085"
+                },
+                {
+                  "name": "F-Pn Latin 1090"
+                },
+                {
+                  "name": "F-Pn Latin 12044"
+                },
+                {
+                  "name": "F-Pn Latin 1240"
+                },
+                {
+                  "name": "F-Pn Lat. 17296"
+                },
+                {
+                  "name": "F-Pn NAL 1236"
+                },
+                {
+                  "name": "F-VAL 114"
+                },
+                {
+                  "name": "GB-AB 20541 E"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30848"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30850"
+                },
+                {
+                  "name": "GB-Ob MS. Canon. Liturg. 202"
+                },
+                {
+                  "name": "GB-Ob MS. Laud Misc. 284"
+                },
+                {
+                  "name": "I-Ac 693"
+                },
+                {
+                  "name": "I-Ac 694"
+                },
+                {
+                  "name": "I-Ad 5"
+                },
+                {
+                  "name": "I-Far s.c."
+                },
+                {
+                  "name": "I-Fl Conv. sopp. 560"
+                },
+                {
+                  "name": "I-Lc 601"
+                },
+                {
+                  "name": "I-MZ 15/79"
+                },
+                {
+                  "name": "I-Nn vi. E. 20"
+                },
+                {
+                  "name": "I-PCd cod. 65"
+                },
+                {
+                  "name": "I-Rv C.5"
+                },
+                {
+                  "name": "Cantus MA Impr. 1537"
+                },
+                {
+                  "name": "NL-Uu Ms. 406 (shelfmark 3 J 7)"
+                },
+                {
+                  "name": "PL-KIk Ms. 1"
+                },
+                {
+                  "name": "PL-Klk 1"
+                },
+                {
+                  "name": "PL-WRu I F 401"
+                },
+                {
+                  "name": "PL-WRu Ms. R 503"
+                },
+                {
+                  "name": "SI-Lna 18 (olim 17)"
+                },
+                {
+                  "name": "TR-Itks Deissmann 42"
+                },
+                {
+                  "name": "US-Cn 24"
+                },
+                {
+                  "name": "V-CVbav San Pietro B.79"
+                },
+                {
+                  "name": "V-CVbav lat. 8737"
+                },
+                {
+                  "name": "A-Wda D-4"
+                },
+                {
+                  "name": "E-MO Ms. 72"
+                },
+                {
+                  "name": "A-KR Schachtel VI/258"
+                },
+                {
+                  "name": "F-CA Impr. XVI C 4"
+                },
+                {
+                  "name": "F-Pn NAL 1535"
+                },
+                {
+                  "name": "GB-Cu Mm.ii.9"
+                },
+                {
+                  "name": "GB-Lbl Add MS 30849"
+                },
+                {
+                  "name": "Cantus GOTTSCHALK"
+                },
+                {
+                  "name": "I-CHV s.c."
+                },
+                {
+                  "name": "F-LA Ms 263"
+                },
+                {
+                  "name": "GB-Lbl printed book IB.6753 (Augsburg Antiphoner 1495, olim AA Impr. 1495)"
+                },
+                {
+                  "name": "SK-BRsa SNA 17"
+                },
+                {
+                  "name": "I-AO 6"
+                },
+                {
+                  "name": "D-MZb D"
+                },
+                {
+                  "name": "PL-Kkar Ms.4 (rkp. Perg. 20)"
+                },
+                {
+                  "name": "F-CA Ms 0078 (79)"
+                },
+                {
+                  "name": "F-SO 596"
+                },
+                {
+                  "name": "CDN-Mrb MS Medieval 0234"
+                },
+                {
+                  "name": "F-Pn Lat. 10510"
+                },
+                {
+                  "name": "F-Pn Lat. 1135"
+                },
+                {
+                  "name": "CH-SGs Cod 378"
+                },
+                {
+                  "name": "GB-Ccc Ms 473"
+                },
+                {
+                  "name": "F-Pn Lat. 9448"
+                },
+                {
+                  "name": "F-Pn Lat. 1118"
+                },
+                {
+                  "name": "F-Pn Lat. 13252"
+                },
+                {
+                  "name": "CH-SGs Cod 380"
+                },
+                {
+                  "name": "CH-SGs Cod 484"
+                },
+                {
+                  "name": "E-Bbc M 662"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "2",
+          "children": [
+            {
+              "name": "6",
+              "children": [
+                {
+                  "name": "F-Collection priv\u00e9e Mont-Renaud"
+                },
+                {
+                  "name": "F-SOM Ms 0252"
+                },
+                {
+                  "name": "B-Br Ms 10127-44"
+                },
+                {
+                  "name": "F-Pn Lat. 17436"
+                },
+                {
+                  "name": "GB-Lbl Egerton 857"
+                },
+                {
+                  "name": "V-CVbav Vat. lat. 5319"
+                },
+                {
+                  "name": "PL-WRu I F 414"
+                },
+                {
+                  "name": "CH-SGs Cod 338"
+                },
+                {
+                  "name": "CZ-Pn XIV D 12"
+                },
+                {
+                  "name": "F-AUT Ms S 0012 (11)"
+                },
+                {
+                  "name": "F-CA Ms 0060 (61)"
+                },
+                {
+                  "name": "F-PR Ms 0012"
+                },
+                {
+                  "name": "V-CVbav Ross.0076"
+                },
+                {
+                  "name": "D-LEu Ms Thomas 391"
+                },
+                {
+                  "name": "B-Br Ms II 3823"
+                },
+                {
+                  "name": "CH-E Codex 121"
+                },
+                {
+                  "name": "CH-SGs Cod 339"
+                },
+                {
+                  "name": "F-AI Ms 0044"
+                },
+                {
+                  "name": "F-CA Ms 0061 (62)"
+                },
+                {
+                  "name": "F-CHRm Ms 0047 (40)"
+                },
+                {
+                  "name": "F-Pn Lat. 12050"
+                },
+                {
+                  "name": "GB-Lbl Harley 4951"
+                },
+                {
+                  "name": "I-BV 34"
+                },
+                {
+                  "name": "F-Pn Lat. 12584"
+                },
+                {
+                  "name": "D-KNd Ms 1001b"
+                },
+                {
+                  "name": "E-Bbc Ms. 1805"
+                },
+                {
+                  "name": "F-Pn Lat. 780"
+                },
+                {
+                  "name": "I-BGc MA 150 (Psi III.8)"
+                },
+                {
+                  "name": "I-Bc Q 09"
+                },
+                {
+                  "name": "F-Pn Lat. 1087"
+                },
+                {
+                  "name": "I-Tn G.V.20"
+                },
+                {
+                  "name": "E-Mh C\u00f3d. 51"
+                },
+                {
+                  "name": "V-CVbav Vat. lat. 4770"
+                },
+                {
+                  "name": "F-Pn Lat. 9439"
+                },
+                {
+                  "name": "CZ-Bm A 7115"
+                },
+                {
+                  "name": "D-KA Lichtenthal 002"
+                },
+                {
+                  "name": "E-Bbc M 1147"
+                },
+                {
+                  "name": "F-G Ms 84 (Ms. 395 R\u00e9s.)"
+                },
+                {
+                  "name": "F-NS Ms 0004"
+                },
+                {
+                  "name": "F-Pn NAL 1414"
+                },
+                {
+                  "name": "F-Pn NAL 1669"
+                },
+                {
+                  "name": "V-CVbav Archivio di San Pietro F.22"
+                },
+                {
+                  "name": "F-AN Ms 0091"
+                },
+                {
+                  "name": "D-B Ms mus 40078"
+                },
+                {
+                  "name": "D-Ful Aa 0006"
+                },
+                {
+                  "name": "E-Bbc M 648"
+                },
+                {
+                  "name": "F-LA Ms 239"
+                },
+                {
+                  "name": "CH-SGs Cod 340"
+                },
+                {
+                  "name": "CH-SGv VadSlg Ms 0295"
+                },
+                {
+                  "name": "D-BAa Msc Lit 6"
+                },
+                {
+                  "name": "D-Mbs Clm 03005"
+                },
+                {
+                  "name": "F-AUT Ms S 0010 (8*)"
+                },
+                {
+                  "name": "F-CA Ms 0075 (76)"
+                },
+                {
+                  "name": "F-LA Ms 118"
+                },
+                {
+                  "name": "F-LA Ms 236"
+                },
+                {
+                  "name": "F-Pm Ms 0384"
+                },
+                {
+                  "name": "F-Pn Lat. 2291"
+                },
+                {
+                  "name": "I-BGc MA 239 (Gamma III.18)"
+                },
+                {
+                  "name": "PL-Kl RL 1"
+                },
+                {
+                  "name": "US-Baw W.11"
+                },
+                {
+                  "name": "F-AS Ms 0437 (cat. 1011)"
+                },
+                {
+                  "name": "CH-SGs Cod 381"
+                },
+                {
+                  "name": "D-Mbs Clm 14965b"
+                },
+                {
+                  "name": "Reconstitution Sacramentaire de Tours (TU1)"
+                }
+              ]
+            },
+            {
+              "name": "7",
+              "children": [
+                {
+                  "name": "D-MZb B"
+                },
+                {
+                  "name": "D-Mbs Clm 02541"
+                },
+                {
+                  "name": "F-LA Ms 240"
+                },
+                {
+                  "name": "E-Mh C\u00f3d. 45"
+                },
+                {
+                  "name": "NL-Uu Hs. 0062"
+                },
+                {
+                  "name": "GB-Dru Cosin V.V.6"
+                },
+                {
+                  "name": "F-Pn Lat. 1136"
+                },
+                {
+                  "name": "E-Bbc M 889"
+                },
+                {
+                  "name": "E-Bbc Ms. 3180"
+                },
+                {
+                  "name": "PL-WRu I F 411"
+                },
+                {
+                  "name": "CZ-Pn XIII B 2"
+                },
+                {
+                  "name": "CZ-Pu XIII A 5c"
+                },
+                {
+                  "name": "D-BAa Msc Lit 7"
+                },
+                {
+                  "name": "E-Bbc M 784"
+                },
+                {
+                  "name": "F-Pn Lat. 9436"
+                },
+                {
+                  "name": "CH-Cobodmer C 0074"
+                },
+                {
+                  "name": "D-Kl Theol. quart 0015"
+                },
+                {
+                  "name": "CZ-OLu M III 6"
+                },
+                {
+                  "name": "SK-BRnm MUS I 78"
+                },
+                {
+                  "name": "F-Pn Lat. 18010"
+                },
+                {
+                  "name": "F-SEm Ms 018"
+                },
+                {
+                  "name": "F-Togs Ms 001"
+                },
+                {
+                  "name": "CZ-R R 396"
+                },
+                {
+                  "name": "F-VN Ms 0759"
+                },
+                {
+                  "name": "E-Tc 35.5"
+                },
+                {
+                  "name": "F-Pn Lat. 1134"
+                },
+                {
+                  "name": "E-Mn MSS/10110"
+                },
+                {
+                  "name": "D-BAa Msc Lit 5"
+                }
+              ]
+            },
+            {
+              "name": "8",
+              "children": [
+                {
+                  "name": "D-Mbs Clm 02542"
+                },
+                {
+                  "name": "PL-WRu I F 413"
+                },
+                {
+                  "name": "PL-WRu I F 416"
+                },
+                {
+                  "name": "PL-Wn Rps 12496 IV"
+                },
+                {
+                  "name": "D-HEu Cod. Sal. X,007"
+                },
+                {
+                  "name": "CH-SGs Cod 342"
+                },
+                {
+                  "name": "CH-SGs Cod 375"
+                },
+                {
+                  "name": "D-KWsr Drachenfels-Missale"
+                },
+                {
+                  "name": "F-Pa Ms 0135"
+                },
+                {
+                  "name": "F-Pa Ms 0197"
+                },
+                {
+                  "name": "F-Pn Lat. 17307"
+                },
+                {
+                  "name": "F-Pn Lat. 833"
+                },
+                {
+                  "name": "F-Pn Lat. 904"
+                },
+                {
+                  "name": "F-Pn Lat. 909"
+                },
+                {
+                  "name": "F-Pn Lat. 9441"
+                },
+                {
+                  "name": "A-KN Cod 588"
+                },
+                {
+                  "name": "CH-SGs Cod 376"
+                },
+                {
+                  "name": "D-W Cod Guelf Helmst 1008"
+                },
+                {
+                  "name": "F-Pn Lat. 1121"
+                },
+                {
+                  "name": "F-Pn Lat. 903"
+                },
+                {
+                  "name": "F-Pn NAL 1235"
+                },
+                {
+                  "name": "SK-Bra BMI EC Lad.3 EL18"
+                },
+                {
+                  "name": "E-Mn Mss/1361"
+                },
+                {
+                  "name": "F-LG Ms 0002 (17)"
+                },
+                {
+                  "name": "PL-Wn rps 12722 V"
+                },
+                {
+                  "name": "E-Mh C\u00f3d. 18"
+                },
+                {
+                  "name": "PL-SAk 40"
+                },
+                {
+                  "name": "CH-ROM Ms. liturg. FiD 5"
+                },
+                {
+                  "name": "E-Bbc M 785"
+                },
+                {
+                  "name": "NL-Uu Hs. 0415"
+                },
+                {
+                  "name": "A-Gu Ms 0807"
+                },
+                {
+                  "name": "A-KN Cod 73"
+                },
+                {
+                  "name": "CH-P 18"
+                },
+                {
+                  "name": "CZ-R R 418"
+                },
+                {
+                  "name": "D-DS Hs 0545"
+                },
+                {
+                  "name": "SK-Sk Graduale Scepusiense Nr.1"
+                },
+                {
+                  "name": "CH-SGs Cod 374"
+                },
+                {
+                  "name": "SK-BRsa SNA 67"
+                },
+                {
+                  "name": "US-NYcub Western MS 097"
+                },
+                {
+                  "name": "US-PHf Lewis E 158"
+                },
+                {
+                  "name": "D-TRp Hs 187"
+                },
+                {
+                  "name": "F-RS Ms 0264"
+                },
+                {
+                  "name": "F-Pn Lat. 1132"
+                },
+                {
+                  "name": "D-Sl HB I 246"
+                },
+                {
+                  "name": "F-Pn NAL 1890"
+                },
+                {
+                  "name": "CH-SGs Cod 343"
+                },
+                {
+                  "name": "F-VAL Ms 0121"
+                },
+                {
+                  "name": "GB-Lbl Additional 18032"
+                },
+                {
+                  "name": "F-CO Ms 0444 (217)"
+                },
+                {
+                  "name": "F-RS Ms 0221"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "0",
+      "children": [
+        {
+          "name": "0",
+          "children": [
+            {
+              "name": "10",
+              "children": [
+                {
+                  "name": "A-Wn Cod. 1812"
+                },
+                {
+                  "name": "TR-Itks 42"
+                },
+                {
+                  "name": "TR-Itks 2429"
+                },
+                {
+                  "name": "H-Efk\u00f6 MS I. 3. a"
+                },
+                {
+                  "name": "H-Efk\u00f6 MS I. 1 a-b"
+                },
+                {
+                  "name": "RO-Sb Ms. 759"
+                },
+                {
+                  "name": "SK-BRa EC Lad. 3, EL 18"
+                },
+                {
+                  "name": "H-Bn Clmae 172a, 172b"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}  
+        const root = d3.hierarchy(data, d => d.children);
+        d3.cluster().size([2 * Math.PI, R])(root);
+
+        function capitalizeFirstLetter(val) {
+            return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+        }
+
+        const levelRadii = Array.from(
+            new Set(
+                root.descendants()
+                    .filter(d => d.depth > 0 && d.children)   // skip the centre and leaves
+                    .map(d => d.y)
+            )
+        ).sort((a, b) => a - b);          // e.g.  [0.5 R, …]
+
+        const circleLevels = levelRadii.slice(0, 3);
+        const levelLabels = ['b\u00B2', 'b\u00B9', 'b\u2070']; // b⁰, b¹, b²
+
+
+        // root.children.forEach((c, i) => c.branchIndex = i);
+        // const branchIndex = n => (n.depth > 1 ? branchIndex(n.parent) : n.branchIndex);
+        let globalIndex = 0;
+        root.children.forEach(c =>
+            c.children?.forEach((cc) => { cc.branchIndex = globalIndex++; })
+        );
+        const branchIndex = n => (n.depth > 2 ? branchIndex(n.parent) : n.branchIndex);
+        const color = d3.scaleOrdinal().domain(d3.range(BRANCH_COLORS.length)).range(BRANCH_COLORS);
+
+        const toXY = (a, r) => [r * Math.cos(a - Math.PI / 2), r * Math.sin(a - Math.PI / 2)];
+
+        const MARGIN = 20;
+        const svg = d3.select('#dendro')
+            //.attr('viewBox', [-W / 2, -H / 2, W, H])
+            .attr('viewBox', [-W / 2 - MARGIN, -H / 2 - MARGIN, W + MARGIN * 2, H + MARGIN * 2])
+            .attr('width', W)
+            .attr('height', H);
+        const g = svg.append('g');
+
+
+        const guides = g.append('g');
+
+// Filled concentric level circles (L0, L1, L2)
+        guides.selectAll('circle.level')
+            .data(circleLevels)
+            .join('circle')
+            .attr('class', 'level')
+            .attr('r', d => d)
+            .attr('fill', '#999')
+            .attr('fill-opacity', (d, i) => 0.1) // progressively darker
+            .attr('stroke', 'none');
+
+// Add labels to L0-L2 levels
+        const LABEL_NUDGE = 3;
+        guides.selectAll('text.level-label')
+            .data(circleLevels)
+            .join('text')
+            .attr('class', 'level-label')
+            .attr('font-size', 15)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'middle')
+            .attr('transform', (d, i) => {
+                const [x, y] = toXY(0, d - 52);  // slightly inside the circle
+                return `translate(${x},${y})`;
+            })
+
+            .each(function (d, i) {
+                d3.select(this)
+                    .html(null)
+                    .append('tspan')
+                    .text('b')
+                    .attr('font-weight', 'bold')
+                    .attr('font-size', '15px');
+
+                d3.select(this)
+                    .append('tspan')
+                    .text(levelLabels[i].slice(1))
+                    .attr('baseline-shift', 'super')
+                    .attr('font-weight', 'lighter')
+                    .attr('font-size', '15px')
+                    .attr('dx', '-2px')
+                    .attr('dy', '2px');
+            });
+
+
+// Outer Node-Level circle
+        const maxLeafRadius = d3.max(root.leaves(), d => d.y);
+        const nodeLevelRadius = maxLeafRadius + 10;
+
+        guides.append('circle')
+            .attr('r', nodeLevelRadius - 6)
+            .attr('fill', '#000')
+            .attr('fill-opacity', 0.1)
+
+// Optional label for Node-Level "N"
+        guides.append('text')
+            .attr('font-size', 15)
+            .attr('text-anchor', 'middle')
+            .attr('alignment-baseline', 'baseline')
+            .attr('transform', () => {
+                const [x, y] = toXY(0, nodeLevelRadius - 60);
+                return `translate(${x},${y})`;
+            })
+            .attr('font-weight', "bold")
+            .text('M');
+
+        /* links */
+        g.append('g').selectAll('path').data(root.links()).join('path')
+            .attr('class', 'link')
+            .attr('fill', 'none')                // ensure Illustrator/LaTeX keep paths open
+            .attr('stroke', d => color(branchIndex(d.target)))
+            .attr('stroke-width', 0.9)
+            .attr('d', d3.linkRadial().angle(d => d.x).radius(d => d.y));
+
+
+        const leaves = root.leaves();
+        g.append('g').selectAll('circle').data(leaves).join('circle')
+            .attr('r', 2.4)
+            .attr('fill', d => color(branchIndex(d)))
+            .attr('transform', d => `translate(${toXY(d.x, d.y)})`);
+
+
+        const OFFSET = 6, FONT = 8;
+        const labels = g.append('g').selectAll('text').data(leaves).join('text')
+            .attr('font-size', FONT)
+            .attr('alignment-baseline', 'middle')
+            .attr('fill', d => color(branchIndex(d)))
+            .each(function (d) {
+                placeLabel(this, d, OFFSET);
+            })
+            .clone(true).lower().attr('stroke', 'white');
+
+        function placeLabel(node, d, extra) {
+            const ang = d.x, rad = d.y + extra;
+            const [x, y] = toXY(ang, rad);
+            let deg = ang * 180 / Math.PI - 90;
+            const flip = deg > 90 || deg < -90;
+            if (flip) deg += 180;
+            d3.select(node)
+                .attr('transform', `translate(${x},${y}) rotate(${deg})`)
+                .attr('text-anchor', flip ? 'end' : 'start')
+                .text(capitalizeFirstLetter(d.data.name));
+        }
+
+        await new Promise(r => requestAnimationFrame(r));
+
+        const items = labels.nodes().map((n, i) => ({node: n, leaf: leaves[i], r: OFFSET}));
+        const ITER = 4, STEP = 4;
+        const bbox = n => n.getBBox();
+        for (let k = 0; k < ITER; k++) {
+            let moved = false;
+            for (let i = 0; i < items.length; i++) {
+                for (let j = i + 1; j < items.length; j++) {
+                    const A = bbox(items[i].node), B = bbox(items[j].node);
+                    if (!(A.x2 < B.x1 || B.x2 < A.x1 || A.y2 < B.y1 || B.y2 < A.y1)) {
+                        items[i].r += STEP;
+                        items[j].r += STEP;
+                        moved = true;
+                        placeLabel(items[i].node, items[i].leaf, items[i].r);
+                        placeLabel(items[j].node, items[j].leaf, items[j].r);
+                    }
+                }
+            }
+            if (!moved) break;
+        }
+
+        // Allow SVG to grow vertically
+        /*
+        const svgNode = svg.node();
+        const bb = svgNode.getBBox();
+        const PAD = 10;
+        svg.attr('viewBox', [
+            bb.x - PAD,
+            bb.y - PAD,
+            bb.width + PAD * 2,
+            bb.height + PAD * 2
+        ]);
+        */
+
+        // SVG
+        document.getElementById('save_svg').onclick = () => {
+            const blob = new Blob([new XMLSerializer().serializeToString(svg.node())], {type: 'image/svg+xml'});
+            downloadBlob(blob, "nested_dc_weighted_sigla_dendro.svg");
+        };
+
+        // PDF (vector)
+        // document.getElementById('save_pdf').onclick = () => {
+        //     const {jsPDF} = window.jspdf;
+        //     const pdf = new jsPDF({orientation: 'landscape', unit: 'mm', format: 'a4'});
+        //     window.svg2pdf(svg.node(), pdf, {x: 0, y: 0, width: 297, height: 210});
+        //     pdf.save("{{PDF_FPATH}}");
+        // };
+
+        function downloadBlob(blob, filename) {
+            const url = URL.createObjectURL(blob);
+            const a = Object.assign(document.createElement('a'), {href: url, download: filename});
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    })();
+</script>
