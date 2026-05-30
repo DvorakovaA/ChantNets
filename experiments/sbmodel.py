@@ -73,6 +73,7 @@ class SBModel:
         self.states = defaultdict(list)
         print(f"Fitting SBM to graph with {self.graph.num_vertices()} vertices and {self.graph.num_edges()} edges...")
         for i in range(n_init):
+            gt.seed_rng(43 + i) # set seed for reproducibility
             print(f"Fitting SBM (init {i+1}/{n_init})...")
             args = dict(deg_corr=self.deg_corrected, clabel=self.graph.vp["type"])
             state = gt.minimize_blockmodel_dl(self.graph, state_args=args)
@@ -92,6 +93,7 @@ class SBModel:
         self.states = defaultdict(list)
         print(f"Fitting nested SBM to graph with {self.graph.num_vertices()} vertices and {self.graph.num_edges()} edges...")
         for i in range(n_init):
+            gt.seed_rng(43 + i) # set seed for reproducibility
             print(f"Fitting nested SBM (init {i+1}/{n_init})...")
             state = gt.minimize_nested_blockmodel_dl(self.graph,
                         state_args=dict(deg_corr=self.deg_corrected, clabel=self.graph.vp["type"]))
@@ -112,6 +114,7 @@ class SBModel:
         weight_prop = self.graph.ep[weight_label]
 
         for i in range(n_init):
+            gt.seed_rng(43 + i) # set seed for reproducibility
             print(f"Fitting weighted SBM (init {i+1}/{n_init})...")
 
             args = dict(
@@ -138,6 +141,7 @@ class SBModel:
         weight_prop = self.graph.ep[weight_label]
 
         for i in range(n_init):
+            gt.seed_rng(43 + i) # set seed for reproducibility
             print(f"Fitting weighted nested SBM (init {i+1}/{n_init})...")
 
             state = gt.minimize_nested_blockmodel_dl(
