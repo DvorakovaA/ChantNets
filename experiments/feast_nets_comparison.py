@@ -137,8 +137,18 @@ def print_nets_info(nets, path):
 
                     with redirect_stdout(f_info):
                         print("{:>12s} | '{:s}'".format('Office', OFFICE_LABELS[office_code]))
-                        utils.graph_info_nx(graph, fast=False)
+                        utils.graph_info_nx(graph)
                         print("--------------------------------")
+
+    # Create one plot for each feast (joined office)
+    office_code = next(iter(nets))
+    for feast_name in nets[office_code]:
+        graphs = {
+            OFFICE_LABELS[office_code]: office_nets[feast_name]
+            for office_code, office_nets in nets.items()
+        }
+        plot_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_degree_dist.png")
+        utils.plot_degree_distributions(graphs, feast_name, plot_fpath)
 
 def compare_edgewise_networks(nets):
 

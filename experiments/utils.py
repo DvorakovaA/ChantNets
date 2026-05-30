@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 import sbmodel
 import matplotlib.pyplot as plt
+import random
 
 # ~ GRAPH CONSTRUCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -405,10 +406,11 @@ def get_dendro_json(input_csv, columns, output_path):
 
 # ~ GRAPH INFO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-def graph_info_nx(G, fast = False):
+def graph_info_nx(G):
     """
     Print basic info about a NetworkX graph.
     """
+    
     print("{:>12s} | '{:s}'".format('Graph', G.name))
 
     n = G.number_of_nodes()
@@ -418,18 +420,53 @@ def graph_info_nx(G, fast = False):
     print("{:>12s} | {:,d} ({:,d})".format('Edges', m, nx.number_of_selfloops(G)))
     print("{:>12s} | {:.2f} ({:,d})".format('Degree', 2 * m / n, max([k for _, k in G.degree()])))
 
-    if not fast:
-        C = sorted(nx.connected_components(nx.MultiGraph(G)), key = len, reverse = True)
+    C = sorted(nx.connected_components(nx.MultiGraph(G)), key = len, reverse = True)
+    
+    # Chariracteristic path length
+    if len(C) > 0:
+        LCC = G.subgraph(C[0])
+        print("{:>12s} | {:.2f} ({:,d})".format('Distances', nx.average_shortest_path_length(LCC, weight = 'weight'), nx.diameter(LCC)))
 
-        print("{:>12s} | {:.1f}% ({:,d})".format('Components', 100 * len(C[0]) / n, len(C)))
+    print("{:>12s} | {:.1f}% ({:,d})".format('Components', 100 * len(C[0]) / n, len(C)))
 
-        print("{:>12s} | {:.4f}".format('Clustering', nx.average_clustering(G if type(G) == nx.Graph else nx.Graph(G))))
+    C = nx.community.louvain_communities(G, weight = 'weight')
+    Q = nx.community.modularity(G, C, weight = 'weight')
+    
+    print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
         
-        C = nx.community.louvain_communities(G, weight = 'weight')
-        Q = nx.community.modularity(G, C, weight = 'weight')
-        
-        print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
+    print("{:>12s} | {:.4f}".format('Density', nx.density(G)))
+    print("{:>12s} | {:.4f}".format('Clustering', nx.average_clustering(G, weight = 'weight')))
+    print("{:>12s} | {:.4f}".format('Pearson mixing', nx.degree_pearson_correlation_coefficient(G, weight = 'weight')))
+    
     print()
+
+
+def plot_degree_distributions(graphs_dict, title, plot_fpath="plot_degree_distr.png"):
+    plt.figure()
+    markers = ['o', 's', '*', 'v', 'D']
+    
+    for i, (label, G) in enumerate(graphs_dict.items()):
+        nk = {}
+        for _, k in G.degree():
+            if k not in nk:
+                nk[k] = 0
+            nk[k] += 1
+        ks = sorted(nk.keys())
+
+        if not ks:
+            continue
+            
+        plt.loglog(ks, [nk[k] / len(G) for k in ks], marker=markers[i], linestyle='', label=label)
+
+    plt.title(title)
+    plt.ylabel('$p_k$')
+    plt.xlabel('$k$')
+    plt.legend()
+
+    # plt.show()
+
+    plt.savefig(plot_fpath, bbox_inches='tight')
+    plt.close()
 
 
 # ~ For comparing graphs using pairs of edges
