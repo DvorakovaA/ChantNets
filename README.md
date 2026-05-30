@@ -1,6 +1,8 @@
 # ChantNets
 
-Repository for INA course project taken at FRI UL - network analysis on Gregorian Chant.
+Repository for INA course project taken at FRI UL - Network analysis on Gregorian Chant.  
+  
+By Anna Dvořaková, Ana Nikolić and Luka Pantar.
 
 ## Prerequisites & Installation
 
