@@ -101,6 +101,10 @@ def main(args):
     base_dir = os.path.dirname(os.path.abspath(__file__))
     sigla_dict = pickle.load(open(os.path.join(base_dir, "extra_data/sigla_dict.pkl"), "rb"))
 
+    # Graph analysis
+    graph = gt.load_graph(os.path.join(base_dir, args.input_dir, "nets/graph.gt"))
+    utils.plot_weight_distribution(graph, os.path.join(base_dir, args.input_dir), weight_prop="weight")
+    
     # Read models from input directory
     best_states = pickle.load(open(os.path.join(base_dir, args.input_dir, "best_states.pkl"), "rb"))
     print(f"Loaded best states for models: {list(best_states.keys())} from {os.path.join(base_dir, args.input_dir, 'best_states.pkl')}")
@@ -124,10 +128,16 @@ def main(args):
             utils.plot_sanctorale_partition_histogram(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
             utils.plot_sanctorale_partition_histogram_vertical(feast_partitions, os.path.join(base_dir, args.input_dir), prefix=model_name.lower())
 
+    print("Creating dendrogram visualisation for nested models...")
     create_html_dendrogram(
         os.path.join(base_dir, args.input_dir, "nested_dc_sigla_dendro.json"), 
         os.path.join(base_dir, "dendrogram_template.html"), 
         os.path.join(base_dir, args.input_dir, "nested_dc_sigla_dendro.html")
+    )
+    create_html_dendrogram(
+        os.path.join(base_dir, args.input_dir, "nested_dc_weighted_sigla_dendro.json"), 
+        os.path.join(base_dir, "dendrogram_template.html"), 
+        os.path.join(base_dir, args.input_dir, "nested_dc_weighted_sigla_dendro.html")
     )
 
 def build_arg_parser():

@@ -690,14 +690,14 @@ def plot_weight_distribution(g, output_dir = "visual", weight_prop = "weight"):
     """
     os.makedirs(output_dir, exist_ok = True)
     weights = [g.edge_properties[weight_prop][e] for e in g.edges()]
-
-    plt.figure(figsize = (10, 6))
-    plt.hist(weights, bins = 20)
-    plt.xlabel("Edge weight")
+    plt.figure(figsize = (8, 6))
+    plt.hist(weights, bins = 30)
+    plt.xlabel("Edge weight (log2 of chant count)")
     plt.ylabel("Number of edges")
     plt.title("Distribution of edge weights")
     plt.tight_layout()
 
-    output_path = os.path.join(output_dir, f"graph_weight_distribution.png")
+    output_path = os.path.join(output_dir, f"edge_weights_distribution.png")
     plt.savefig(output_path, dpi = 300, bbox_inches = "tight")
     plt.close()
+    print(f"Saved weight distribution plot to {output_path}")
