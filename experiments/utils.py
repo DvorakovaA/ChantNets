@@ -15,6 +15,8 @@ from pathlib import Path
 import sbmodel
 import matplotlib.pyplot as plt
 import random
+from scipy.stats import studentized_range
+import math
 
 # ~ GRAPH CONSTRUCTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -418,14 +420,15 @@ def graph_info_nx(G):
     
     print("{:>12s} | {:,d} ({:,d})".format('Nodes', n, nx.number_of_isolates(G)))
     print("{:>12s} | {:,d} ({:,d})".format('Edges', m, nx.number_of_selfloops(G)))
-    print("{:>12s} | {:.2f} ({:,d})".format('Degree', 2 * m / n, max([k for _, k in G.degree()])))
+    max_degree = max([k for _, k in G.degree()])
+    print("{:>12s} | {:.2f} ({:,d})".format('Degree', 2 * m / n, max_degree))
 
     C = sorted(nx.connected_components(nx.MultiGraph(G)), key = len, reverse = True)
-    
+
     # Chariracteristic path length
-    if len(C) > 0:
-        LCC = G.subgraph(C[0])
-        print("{:>12s} | {:.2f} ({:,d})".format('Distances', nx.average_shortest_path_length(LCC, weight = 'weight'), nx.diameter(LCC)))
+    LCC = G.subgraph(C[0])
+    avg_distances = nx.average_shortest_path_length(LCC, weight = 'weight')    
+    print("{:>12s} | {:.2f} ({:,d})".format('Distances', avg_distances, nx.diameter(LCC)))
 
     print("{:>12s} | {:.1f}% ({:,d})".format('Components', 100 * len(C[0]) / n, len(C)))
 
@@ -433,12 +436,30 @@ def graph_info_nx(G):
     Q = nx.community.modularity(G, C, weight = 'weight')
     
     print("{:>12s} | {:.4f} ({:,d})".format('Modularity from Louvain', Q, len(C)))
-        
-    print("{:>12s} | {:.4f}".format('Density', nx.density(G)))
-    print("{:>12s} | {:.4f}".format('Clustering', nx.average_clustering(G, weight = 'weight')))
+    
+    density = nx.density(G)
+    clustering = nx.average_clustering(G, weight = 'weight')
+    print("{:>12s} | {:.4f}".format('Density', density))
+    print("{:>12s} | {:.4f}".format('Clustering', clustering))
     print("{:>12s} | {:.4f}".format('Pearson mixing', nx.degree_pearson_correlation_coefficient(G, weight = 'weight')))
+
+    bc = np.array(list(nx.betweenness_centrality(G, weight="weight").values()))
+    betweenness_mean = bc.mean()
+    print("{:>12s} | {:.4f}".format('Betwenness centrality', betweenness_mean))
     
     print()
+    
+    return [
+        density,
+        len(C[0]) / n,
+        len(C),
+        avg_distances,
+        clustering,
+        2 * m / n,
+        max_degree,
+        betweenness_mean,
+        Q,
+    ]
 
 
 def plot_degree_distributions(graphs_dict, title, plot_fpath="plot_degree_distr.png"):
@@ -467,6 +488,54 @@ def plot_degree_distributions(graphs_dict, title, plot_fpath="plot_degree_distr.
 
     plt.savefig(plot_fpath, bbox_inches='tight')
     plt.close()
+
+def metric_comparison(metrics):
+
+    N = len(metrics)
+    K = len(metrics[0])
+    print(f"N: {N}, K: {K}")
+
+    x = np.array(metrics)
+    x_residual = np.zeros((N, K))
+    mu = np.zeros((N, K))
+    sigma = np.zeros((N, K))
+    R = np.zeros((N, K))
+
+    mean_R = np.zeros((N))
+
+    # u_ij = 1/(N-1) sum (k!=i) (x_kj)
+    mu = (x.sum(axis=0) - x) / (N - 1)
+
+    # sigma = sqrt(1/(N-2) * sum (k!=i) (x_kj - mu_ij)^2)
+    sigma = np.sqrt(
+        np.sum((x[None, :, :] - mu[:, None, :])**2, axis=1)
+        - (x - mu)**2
+    ) / np.sqrt(N - 2)
+
+    # x_residual_ij = (x_ij - mu_ij) / (sigma_ij * sqrt(1 - (1/N)))
+    x_residual = (x - mu) / (sigma * np.sqrt(1 - 1/N))
+
+    # R_ij = rank of |x_residual_ij|
+    abs_x_residual = np.abs(x_residual)
+    R = np.argsort(np.argsort(abs_x_residual, axis=0), axis=0) + 1
+    
+    # mean_R = 1/K * sum (j) (R_ij)
+    mean_R = R.mean(axis=1)
+    
+    print("Calculated mean rank of metrics")
+    print(mean_R)
+
+    alpha = 0.05
+    q = studentized_range.ppf(1 - alpha, N, np.inf)
+    critical_diff = q * math.sqrt(N * (N - 1) / (6 * K))
+
+    print(f"q: {q}, critical difference: {critical_diff}")
+
+    for i in range(N):
+        for j in range(i + 1, N):
+            print(f"diff: {abs(mean_R[i] - mean_R[j])}")
+            if abs(mean_R[i] - mean_R[j]) > critical_diff:
+                print(f"Networks {i} and {j} are dirrerent: {abs(mean_R[i] - mean_R[j])}")
 
 
 # ~ For comparing graphs using pairs of edges

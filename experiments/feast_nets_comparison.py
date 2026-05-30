@@ -123,6 +123,8 @@ def print_nets_info(nets, path):
     sizes_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "net_sizes.txt")
     info_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "net_info.txt")
 
+    metrics = []
+
     with open(sizes_fpath, 'w') as f_sizes:
         with open(info_fpath, 'w') as f_info:
             for office_code, office_nets in nets.items():
@@ -137,9 +139,9 @@ def print_nets_info(nets, path):
 
                     with redirect_stdout(f_info):
                         print("{:>12s} | '{:s}'".format('Office', OFFICE_LABELS[office_code]))
-                        utils.graph_info_nx(graph)
+                        metrics.append(utils.graph_info_nx(graph))
                         print("--------------------------------")
-
+                    
     # Create one plot for each feast (joined office)
     office_code = next(iter(nets))
     for feast_name in nets[office_code]:
@@ -149,6 +151,8 @@ def print_nets_info(nets, path):
         }
         plot_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_degree_dist.png")
         utils.plot_degree_distributions(graphs, feast_name, plot_fpath)
+
+    return metrics
 
 def compare_edgewise_networks(nets):
 
@@ -279,7 +283,8 @@ if __name__ == '__main__':
     # Data manipulation
     corpora = build_corpora(corpus, feast_names)
     nets = create_graphs(corpora, nets_path)
-    print_nets_info(nets, results_path)
+    metrics = print_nets_info(nets, results_path)
+    utils.metric_comparison(metrics)
     overlap_dfs = compare_edgewise_networks(nets)
 
     # Comparisons
