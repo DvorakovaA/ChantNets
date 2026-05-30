@@ -162,8 +162,8 @@ def perform_weighted_sbm_analysis(network, sigla_dict):
     model = sbmodel.SBModel()
     model.load_graph_nx(network)
     model.fit_sbm_weighted(weight_label='weight', n_init=N_INIT)
-    best_state = model.best_states['Weighted_DC_SBM']
-    partitions = utils.get_partitions_from_state(best_state, sigla_dict=sigla_dict)
+    best_state = model.best_states['Weighted_DC_SBM']['best_state']
+    partitions = utils.get_partitions_from_state(best_state, sigla_dict)
     return partitions
 
 def prepare_sbm_by_pairs(networks, sigla_dict):
