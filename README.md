@@ -22,9 +22,9 @@ The project uses **`graph-tool`** library, which is not installable via standard
 
 All scripts are located and should be run from the `experiments` directory.
 
-### 1. Bipartite Source-Feast Blockmodeling (SBM)
+### A. Bipartite Source-Feast Blockmodeling (SBM)
 
-This constructs a bipartite network linking manuscript sources to chant feasts and fits four different SBM variants:
+This constructs a bipartite network linking manuscript sources to feasts and fits four different SBM variants:
  - Degree-Corrected
  - Nested Degree-Corrected
  - Weighted Degree-Corrected
@@ -48,23 +48,23 @@ This constructs a bipartite network linking manuscript sources to chant feasts a
    ```
    - `--output_dir`: Directory containing SBM results. (default: `results`)
 
-### 2. Feast Network Comparison
+### B. Feast Network Comparison
 
-This script compares chant networks generated for specific feasts (e.g., Lent and Advent Sundays) across different offices (Lauds, Matins, Vespers, Second Vespers, or Whole Day).
+This script compares chant networks generated for specific feasts (e.g., Lent and Advent Sundays) across whole day and four different offices (Lauds, Matins, Vespers, Second Vespers).
 
 **Compare Feast Networks**:
    Run `feast_nets_comparison.py` to construct co-occurrence networks based on shared chants, write network edgelists, compare edgewise overlap under different thresholds, and check community structure alignment via ARI/NMI.
    ```bash
    python feast_nets_comparison.py
    ```
-   - `--feast-names-fpath`: File path of feast names, variants on one line separated by ';'. If left empty, default Lent Sunday feast names are used.
+   - `--feast-names-fpath`: File path of feast names, variants on one line separated by ';'. If left empty, default Sundays of Lent plus Palm and Resurrection Sundays are used.
    - `--min_chant_per_source`: Minimum number of chants a source have to be included in the analysis (default: `200`).
 
 
-### 3. Largest Connected Component (LCC) Core Analysis
+#### Largest Connected Component (LCC) Core Analysis
 
 To evaluate Jaccard similarity between the largest connected components of the feast networks across various edge weight thresholds:
 ```bash
 python lcc_cores.py --dir results
 ```
-- `--dir`: Directory to save the comparison results.
+- `--dir`: Directory to read the nets from `\nets` subdirectory and to save the comparison results into.
