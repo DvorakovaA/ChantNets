@@ -489,7 +489,7 @@ def plot_degree_distributions(graphs_dict, title, plot_fpath="plot_degree_distr.
     plt.savefig(plot_fpath, bbox_inches='tight')
     plt.close()
 
-def metric_comparison(metrics):
+def metric_comparison(metrics, feast_labels, office_labels, path):
 
     N = len(metrics)
     K = len(metrics[0])
@@ -535,6 +535,30 @@ def metric_comparison(metrics):
         for j in range(i + 1, N):
             if abs(mean_R[i] - mean_R[j]) > critical_diff:
                 print(f"Networks {i} and {j} are dirrerent: {abs(mean_R[i] - mean_R[j])}")
+
+    metric_names = ['density', 'lcc_fraction', 'num_components', 'avg_distances', 'clustering', 'avg_degree', 'max_degree', 'betweenness_mean', 'modularity']
+    
+    df_rows = []
+    idx = 0
+    for office_code, office_label in office_labels.items():
+        for feast in feast_labels:
+            
+            row = {
+                'office': office_label,
+                'feast': feast[0],
+                'mean_rank': mean_R[idx]
+            }
+            for k_idx, m_name in enumerate(metric_names):
+                if k_idx < K:
+                    row[m_name] = metrics[idx][k_idx]
+            df_rows.append(row)
+            idx += 1
+
+    metric_comparison_df = pd.DataFrame(df_rows)
+
+    csv_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "metrics_comparison.csv")
+    metric_comparison_df.to_csv(csv_fpath, index = False)
+    print(f"Metric comparison saved to {csv_fpath}")
 
 
 # ~ For comparing graphs using pairs of edges

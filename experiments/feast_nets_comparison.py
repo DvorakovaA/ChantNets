@@ -296,7 +296,7 @@ if __name__ == '__main__':
     corpora = build_corpora(corpus, feast_names)
     nets = create_graphs(corpora, nets_path)
     metrics = print_nets_info(nets, results_path)
-    utils.metric_comparison(metrics)
+    utils.metric_comparison(metrics, feast_names, OFFICE_LABELS, results_path)
     overlap_dfs = compare_edgewise_networks(nets)
 
     # Comparisons
