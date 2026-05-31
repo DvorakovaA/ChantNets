@@ -1,5 +1,14 @@
 """
-
+Script performing the comparison of networks built on different feasts and offices. 
+It includes the following steps:
+1. Load and clean the dataset (drop doxology and sources with less than a certain number of chants).
+2. Build separate corpora for each feast and office.
+3. Create networks for each feast and office, and save them as edgelist files.
+4. Print information about the networks (number of nodes, edges, degree distribution).
+5. Compare the networks edgewise, calculating the number of shared edges and edge overlap for different thresholds.
+6. Perform weighted SBM analysis on the networks and compare the resulting partitions using Adjusted Rand Index
+and Normalized Mutual Information.
+7. Save the comparison results in CSV files.
 """
 import pycantus
 import pycantus.data as data
@@ -109,7 +118,7 @@ def create_graphs(corpora, path):
             graph = utils.build_feast_network(feast_corpus, feast_name)
             office_networks[feast_name] = graph
             # clean the feast name, every character not a letter, digit, underscore or hyphen is replaced by underscore
-            filename = f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_{OFFICE_LABELS[office_code].lower().replace(" ", "_")}_network.edgelist"
+            filename = f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_{OFFICE_LABELS[office_code].lower().replace(' ', '_')}_network.edgelist"
 
             output_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "nets", filename)
             nx.write_edgelist(graph, output_fpath)
@@ -143,13 +152,16 @@ def print_nets_info(nets, path):
                         print("--------------------------------")
                     
     # Create one plot for each feast (joined office)
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, "degree_distribution_plots")
+    if not os.path.exists(path):
+        os.makedirs(path)
     office_code = next(iter(nets))
     for feast_name in nets[office_code]:
         graphs = {
             OFFICE_LABELS[office_code]: office_nets[feast_name]
             for office_code, office_nets in nets.items()
         }
-        plot_fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), path, f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_degree_dist.png")
+        plot_fpath = os.path.join(path, f"{re.sub(r'[^A-Za-z0-9_-]+', '_', feast_name)}_degree_dist.png")
         utils.plot_degree_distributions(graphs, feast_name, plot_fpath)
 
     return metrics
@@ -178,9 +190,9 @@ def perform_weighted_sbm_analysis(network, sigla_dict):
     model.fit_sbm_weighted(weight_label='weight', n_init=N_INIT)
     best_state = model.best_states['Weighted_DC_SBM']['best_state']
     partitions = utils.get_partitions_from_state(best_state, sigla_dict)
-    return partitions
+    return partitions # three dicts
 
-def prepare_sbm_by_pairs(networks, sigla_dict):
+def prepare_sbm_by_pairs(networks, sigla_dict, output_dir):
     sbm_results_by_pairs = {}
     for feast1, feast2 in itertools.combinations(networks.keys(), 2):
         network1, network2 = utils.networks_reduction_on_shared_nodes(networks[feast1], networks[feast2])
@@ -188,7 +200,7 @@ def prepare_sbm_by_pairs(networks, sigla_dict):
         partition2 = perform_weighted_sbm_analysis(network2, sigla_dict)[1]
         sbm_results_by_pairs[(feast1, feast2)] = (partition1, partition2)
     
-    fpath = os.path.join(os.path.dirname(os.path.abspath(__file__)), "visual", "sbm_results.pkl")
+    fpath = os.path.join(output_dir, "sbm_results.pkl")
     with open(fpath, 'wb') as f:
         pickle.dump(sbm_results_by_pairs, f)
 
@@ -225,7 +237,8 @@ def compare_weighted_sbm_partitions(sbm_on_nets):
 
 def summary_accross_feasts(nets, overlap_dfs, sigla_dict, path):
     edge_comparison_df = overlap_dfs[WHOLE_DAY_LABEL]
-    sbm_results_by_pairs = prepare_sbm_by_pairs(nets[WHOLE_DAY_LABEL], sigla_dict)
+    print('Starting SBM partitions analysis across feasts...')
+    sbm_results_by_pairs = prepare_sbm_by_pairs(nets[WHOLE_DAY_LABEL], sigla_dict, path)
     sbm_comparison_df = compare_weighted_sbm_partitions(sbm_results_by_pairs)
     comparison_df = edge_comparison_df.merge(sbm_comparison_df, on=["network_1", "network_2"])
 
@@ -233,7 +246,7 @@ def summary_accross_feasts(nets, overlap_dfs, sigla_dict, path):
     comparison_df.to_csv(csv_fpath, index=False)
     print(f"Feast comparison saved to {csv_fpath}")
 
-def summary_accross_office(overlap_dfs, path="visual"):
+def summary_accross_office(overlap_dfs, path):
     office_comparison_df = None
 
     for office_code, df in overlap_dfs.items():
@@ -255,7 +268,6 @@ def summary_accross_office(overlap_dfs, path="visual"):
 
 
 if __name__ == '__main__':
-
     # The file accepts single (optional) argument --feast-names-fpath with a name of the feast in each line
     parser = argparse.ArgumentParser()
     parser.add_argument("--feast-names-fpath", help="File path of feast names, variants on one line separated by ';'.", type=str, default="")
