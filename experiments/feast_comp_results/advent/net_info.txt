@@ -3,9 +3,13 @@
        Nodes | 248 (2)
        Edges | 14,437 (0)
       Degree | 116.43 (234)
+   Distances | 0.07 (3)
   Components | 98.0% (4)
-  Clustering | 0.9525
 Modularity from Louvain | 0.4269 (5)
+     Density | 0.4714
+  Clustering | 0.3953
+Pearson mixing | 0.4666
+Betwenness centrality | 0.0067
 
 --------------------------------
       Office | 'Whole day'
@@ -13,9 +17,13 @@ Modularity from Louvain | 0.4269 (5)
        Nodes | 243 (0)
        Edges | 13,984 (0)
       Degree | 115.09 (236)
+   Distances | 0.14 (3)
   Components | 98.8% (2)
-  Clustering | 0.9778
 Modularity from Louvain | 0.4102 (4)
+     Density | 0.4756
+  Clustering | 0.4312
+Pearson mixing | 0.5479
+Betwenness centrality | 0.0081
 
 --------------------------------
       Office | 'Whole day'
@@ -23,9 +31,13 @@ Modularity from Louvain | 0.4102 (4)
        Nodes | 254 (1)
        Edges | 14,627 (0)
       Degree | 115.17 (239)
+   Distances | 0.14 (3)
   Components | 97.2% (4)
-  Clustering | 0.9628
 Modularity from Louvain | 0.4385 (7)
+     Density | 0.4552
+  Clustering | 0.4085
+Pearson mixing | 0.4738
+Betwenness centrality | 0.0070
 
 --------------------------------
       Office | 'Whole day'
@@ -33,9 +45,13 @@ Modularity from Louvain | 0.4385 (7)
        Nodes | 254 (0)
        Edges | 14,610 (0)
       Degree | 115.04 (242)
+   Distances | 0.13 (4)
   Components | 98.4% (2)
-  Clustering | 0.9702
 Modularity from Louvain | 0.4952 (4)
+     Density | 0.4547
+  Clustering | 0.3056
+Pearson mixing | -0.0414
+Betwenness centrality | 0.0072
 
 --------------------------------
       Office | 'Whole day'
@@ -43,9 +59,13 @@ Modularity from Louvain | 0.4952 (4)
        Nodes | 305 (1)
        Edges | 22,975 (0)
       Degree | 150.66 (278)
+   Distances | 0.03 (4)
   Components | 99.7% (2)
-  Clustering | 0.9048
 Modularity from Louvain | 0.4530 (6)
+     Density | 0.4956
+  Clustering | 0.2711
+Pearson mixing | 0.2193
+Betwenness centrality | 0.0050
 
 --------------------------------
       Office | 'Whole day'
@@ -53,9 +73,13 @@ Modularity from Louvain | 0.4530 (6)
        Nodes | 253 (2)
        Edges | 15,256 (0)
       Degree | 120.60 (244)
+   Distances | 0.16 (4)
   Components | 98.4% (4)
-  Clustering | 0.9589
 Modularity from Louvain | 0.4293 (5)
+     Density | 0.4786
+  Clustering | 0.4243
+Pearson mixing | 0.5942
+Betwenness centrality | 0.0065
 
 --------------------------------
       Office | 'Lauds'
@@ -63,9 +87,13 @@ Modularity from Louvain | 0.4293 (5)
        Nodes | 105 (0)
        Edges | 5,020 (0)
       Degree | 95.62 (103)
+   Distances | 0.17 (3)
   Components | 100.0% (1)
-  Clustering | 0.9665
 Modularity from Louvain | 0.0323 (3)
+     Density | 0.9194
+  Clustering | 0.4674
+Pearson mixing | -0.0270
+Betwenness centrality | 0.0100
 
 --------------------------------
       Office | 'Lauds'
@@ -73,9 +101,13 @@ Modularity from Louvain | 0.0323 (3)
        Nodes | 100 (0)
        Edges | 4,698 (0)
       Degree | 93.96 (99)
+   Distances | 0.23 (2)
   Components | 100.0% (1)
-  Clustering | 0.9665
 Modularity from Louvain | 0.0407 (3)
+     Density | 0.9491
+  Clustering | 0.5073
+Pearson mixing | -0.0222
+Betwenness centrality | 0.0095
 
 --------------------------------
       Office | 'Lauds'
@@ -83,9 +115,13 @@ Modularity from Louvain | 0.0407 (3)
        Nodes | 109 (1)
        Edges | 5,260 (0)
       Degree | 96.51 (106)
+   Distances | 0.34 (3)
   Components | 99.1% (2)
-  Clustering | 0.9568
-Modularity from Louvain | 0.0451 (4)
+Modularity from Louvain | 0.0449 (4)
+     Density | 0.8936
+  Clustering | 0.5720
+Pearson mixing | -0.0170
+Betwenness centrality | 0.0112
 
 --------------------------------
       Office | 'Lauds'
@@ -93,9 +129,13 @@ Modularity from Louvain | 0.0451 (4)
        Nodes | 115 (0)
        Edges | 5,829 (0)
       Degree | 101.37 (112)
+   Distances | 0.21 (3)
   Components | 100.0% (1)
-  Clustering | 0.9611
 Modularity from Louvain | 0.0447 (2)
+     Density | 0.8892
+  Clustering | 0.5368
+Pearson mixing | -0.0243
+Betwenness centrality | 0.0107
 
 --------------------------------
       Office | 'Lauds'
@@ -103,9 +143,13 @@ Modularity from Louvain | 0.0447 (2)
        Nodes | 125 (1)
        Edges | 7,162 (0)
       Degree | 114.59 (121)
+   Distances | 0.23 (3)
   Components | 99.2% (2)
-  Clustering | 0.9871
-Modularity from Louvain | 0.0280 (6)
+Modularity from Louvain | 0.0292 (5)
+     Density | 0.9241
+  Clustering | 0.4042
+Pearson mixing | 0.0008
+Betwenness centrality | 0.0077
 
 --------------------------------
       Office | 'Lauds'
@@ -113,9 +157,13 @@ Modularity from Louvain | 0.0280 (6)
        Nodes | 113 (0)
        Edges | 5,926 (0)
       Degree | 104.88 (110)
+   Distances | 0.22 (3)
   Components | 100.0% (1)
-  Clustering | 0.9766
 Modularity from Louvain | 0.0697 (3)
+     Density | 0.9365
+  Clustering | 0.3688
+Pearson mixing | -0.0321
+Betwenness centrality | 0.0082
 
 --------------------------------
       Office | 'Vespers'
@@ -123,9 +171,13 @@ Modularity from Louvain | 0.0697 (3)
        Nodes | 112 (1)
        Edges | 4,236 (0)
       Degree | 75.64 (102)
+   Distances | 0.17 (3)
   Components | 97.3% (3)
-  Clustering | 0.8876
-Modularity from Louvain | 0.1417 (8)
+Modularity from Louvain | 0.1331 (7)
+     Density | 0.6815
+  Clustering | 0.1937
+Pearson mixing | -0.0023
+Betwenness centrality | 0.0075
 
 --------------------------------
       Office | 'Vespers'
@@ -133,9 +185,13 @@ Modularity from Louvain | 0.1417 (8)
        Nodes | 93 (5)
        Edges | 1,154 (0)
       Degree | 24.82 (53)
+   Distances | 0.31 (5)
   Components | 94.6% (6)
-  Clustering | 0.7115
-Modularity from Louvain | 0.3481 (8)
+Modularity from Louvain | 0.3474 (9)
+     Density | 0.2698
+  Clustering | 0.2055
+Pearson mixing | 0.2550
+Betwenness centrality | 0.0130
 
 --------------------------------
       Office | 'Vespers'
@@ -143,9 +199,13 @@ Modularity from Louvain | 0.3481 (8)
        Nodes | 102 (3)
        Edges | 2,421 (0)
       Degree | 47.47 (81)
+   Distances | 0.26 (4)
   Components | 95.1% (5)
-  Clustering | 0.8410
-Modularity from Louvain | 0.2086 (8)
+Modularity from Louvain | 0.2056 (8)
+     Density | 0.4700
+  Clustering | 0.2359
+Pearson mixing | 0.0836
+Betwenness centrality | 0.0100
 
 --------------------------------
       Office | 'Vespers'
@@ -153,9 +213,13 @@ Modularity from Louvain | 0.2086 (8)
        Nodes | 102 (10)
        Edges | 1,128 (0)
       Degree | 22.12 (62)
+   Distances | 0.37 (5)
   Components | 90.2% (11)
-  Clustering | 0.7186
-Modularity from Louvain | 0.3195 (16)
+Modularity from Louvain | 0.3185 (15)
+     Density | 0.2190
+  Clustering | 0.2207
+Pearson mixing | 0.2412
+Betwenness centrality | 0.0098
 
 --------------------------------
       Office | 'Vespers'
@@ -163,9 +227,13 @@ Modularity from Louvain | 0.3195 (16)
        Nodes | 120 (10)
        Edges | 1,986 (0)
       Degree | 33.10 (76)
+   Distances | 0.19 (4)
   Components | 91.7% (11)
-  Clustering | 0.7199
-Modularity from Louvain | 0.3017 (16)
+Modularity from Louvain | 0.3002 (16)
+     Density | 0.2782
+  Clustering | 0.1492
+Pearson mixing | 0.1943
+Betwenness centrality | 0.0097
 
 --------------------------------
       Office | 'Vespers'
@@ -173,9 +241,13 @@ Modularity from Louvain | 0.3017 (16)
        Nodes | 87 (4)
        Edges | 1,092 (0)
       Degree | 25.10 (61)
+   Distances | 0.26 (4)
   Components | 93.1% (6)
-  Clustering | 0.7215
-Modularity from Louvain | 0.4011 (10)
+Modularity from Louvain | 0.3945 (11)
+     Density | 0.2919
+  Clustering | 0.2278
+Pearson mixing | 0.2286
+Betwenness centrality | 0.0112
 
 --------------------------------
       Office | 'Second Vespers'
@@ -183,9 +255,13 @@ Modularity from Louvain | 0.4011 (10)
        Nodes | 99 (2)
        Edges | 3,349 (0)
       Degree | 67.66 (88)
+   Distances | 0.19 (3)
   Components | 96.0% (4)
-  Clustering | 0.8859
-Modularity from Louvain | 0.1284 (8)
+Modularity from Louvain | 0.1254 (8)
+     Density | 0.6904
+  Clustering | 0.2168
+Pearson mixing | 0.0429
+Betwenness centrality | 0.0075
 
 --------------------------------
       Office | 'Second Vespers'
@@ -193,9 +269,13 @@ Modularity from Louvain | 0.1284 (8)
        Nodes | 94 (4)
        Edges | 2,417 (0)
       Degree | 51.43 (77)
+   Distances | 0.23 (4)
   Components | 95.7% (5)
-  Clustering | 0.8729
-Modularity from Louvain | 0.1476 (9)
+Modularity from Louvain | 0.1480 (9)
+     Density | 0.5530
+  Clustering | 0.2879
+Pearson mixing | 0.2070
+Betwenness centrality | 0.0099
 
 --------------------------------
       Office | 'Second Vespers'
@@ -203,9 +283,13 @@ Modularity from Louvain | 0.1476 (9)
        Nodes | 96 (3)
        Edges | 1,770 (0)
       Degree | 36.88 (71)
+   Distances | 0.28 (3)
   Components | 94.8% (5)
-  Clustering | 0.8145
-Modularity from Louvain | 0.3256 (9)
+Modularity from Louvain | 0.3254 (9)
+     Density | 0.3882
+  Clustering | 0.2623
+Pearson mixing | 0.2487
+Betwenness centrality | 0.0098
 
 --------------------------------
       Office | 'Second Vespers'
@@ -213,9 +297,13 @@ Modularity from Louvain | 0.3256 (9)
        Nodes | 82 (6)
        Edges | 453 (0)
       Degree | 11.05 (31)
+   Distances | 0.62 (6)
   Components | 92.7% (7)
-  Clustering | 0.7563
 Modularity from Louvain | 0.5859 (14)
+     Density | 0.1364
+  Clustering | 0.3127
+Pearson mixing | 0.3254
+Betwenness centrality | 0.0180
 
 --------------------------------
       Office | 'Second Vespers'
@@ -223,9 +311,13 @@ Modularity from Louvain | 0.5859 (14)
        Nodes | 139 (7)
        Edges | 6,391 (0)
       Degree | 91.96 (121)
+   Distances | 0.13 (3)
   Components | 90.6% (10)
-  Clustering | 0.8797
-Modularity from Louvain | 0.0437 (13)
+Modularity from Louvain | 0.0433 (13)
+     Density | 0.6664
+  Clustering | 0.3235
+Pearson mixing | -0.0448
+Betwenness centrality | 0.0060
 
 --------------------------------
       Office | 'Second Vespers'
@@ -233,9 +325,13 @@ Modularity from Louvain | 0.0437 (13)
        Nodes | 66 (5)
        Edges | 1,222 (0)
       Degree | 37.03 (56)
+   Distances | 0.13 (3)
   Components | 92.4% (6)
-  Clustering | 0.8492
 Modularity from Louvain | 0.2320 (10)
+     Density | 0.5697
+  Clustering | 0.1830
+Pearson mixing | 0.0286
+Betwenness centrality | 0.0110
 
 --------------------------------
       Office | 'Matins'
@@ -243,9 +339,13 @@ Modularity from Louvain | 0.2320 (10)
        Nodes | 119 (3)
        Edges | 5,617 (0)
       Degree | 94.40 (112)
+   Distances | 0.06 (2)
   Components | 95.8% (5)
-  Clustering | 0.9070
-Modularity from Louvain | 0.1009 (8)
+Modularity from Louvain | 0.1015 (7)
+     Density | 0.8000
+  Clustering | 0.2271
+Pearson mixing | -0.0548
+Betwenness centrality | 0.0088
 
 --------------------------------
       Office | 'Matins'
@@ -253,9 +353,13 @@ Modularity from Louvain | 0.1009 (8)
        Nodes | 110 (1)
        Edges | 5,062 (0)
       Degree | 92.04 (105)
+   Distances | 0.09 (3)
   Components | 99.1% (2)
-  Clustering | 0.9601
-Modularity from Louvain | 0.1081 (5)
+Modularity from Louvain | 0.1067 (6)
+     Density | 0.8444
+  Clustering | 0.2887
+Pearson mixing | -0.0301
+Betwenness centrality | 0.0095
 
 --------------------------------
       Office | 'Matins'
@@ -263,9 +367,13 @@ Modularity from Louvain | 0.1081 (5)
        Nodes | 119 (0)
        Edges | 5,683 (0)
       Degree | 95.51 (111)
+   Distances | 0.09 (3)
   Components | 98.3% (2)
-  Clustering | 0.9445
-Modularity from Louvain | 0.1031 (6)
+Modularity from Louvain | 0.1026 (7)
+     Density | 0.8094
+  Clustering | 0.2859
+Pearson mixing | -0.0131
+Betwenness centrality | 0.0092
 
 --------------------------------
       Office | 'Matins'
@@ -273,9 +381,13 @@ Modularity from Louvain | 0.1031 (6)
        Nodes | 123 (0)
        Edges | 6,480 (0)
       Degree | 105.37 (118)
+   Distances | 0.09 (3)
   Components | 100.0% (1)
-  Clustering | 0.9741
-Modularity from Louvain | 0.0885 (3)
+Modularity from Louvain | 0.0878 (3)
+     Density | 0.8637
+  Clustering | 0.2981
+Pearson mixing | -0.0108
+Betwenness centrality | 0.0089
 
 --------------------------------
       Office | 'Matins'
@@ -283,9 +395,13 @@ Modularity from Louvain | 0.0885 (3)
        Nodes | 164 (9)
        Edges | 8,709 (0)
       Degree | 106.21 (138)
+   Distances | 0.06 (4)
   Components | 89.0% (12)
-  Clustering | 0.8789
-Modularity from Louvain | 0.0445 (16)
+Modularity from Louvain | 0.0451 (16)
+     Density | 0.6516
+  Clustering | 0.2683
+Pearson mixing | -0.0593
+Betwenness centrality | 0.0056
 
 --------------------------------
       Office | 'Matins'
@@ -293,8 +409,12 @@ Modularity from Louvain | 0.0445 (16)
        Nodes | 122 (2)
        Edges | 6,506 (0)
       Degree | 106.66 (118)
+   Distances | 0.12 (3)
   Components | 98.4% (3)
-  Clustering | 0.9390
-Modularity from Louvain | 0.0670 (6)
+Modularity from Louvain | 0.0689 (6)
+     Density | 0.8815
+  Clustering | 0.2704
+Pearson mixing | -0.0723
+Betwenness centrality | 0.0083
 
 --------------------------------
