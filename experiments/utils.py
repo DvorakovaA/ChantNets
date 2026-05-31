@@ -533,7 +533,6 @@ def metric_comparison(metrics):
 
     for i in range(N):
         for j in range(i + 1, N):
-            print(f"diff: {abs(mean_R[i] - mean_R[j])}")
             if abs(mean_R[i] - mean_R[j]) > critical_diff:
                 print(f"Networks {i} and {j} are dirrerent: {abs(mean_R[i] - mean_R[j])}")
 
